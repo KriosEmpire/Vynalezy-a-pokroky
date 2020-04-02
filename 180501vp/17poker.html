@@ -1,0 +1,569 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="cs-CZ">
+
+<head>
+<title>
+Pohrabáč - Vynálezy&nbsp;a&nbsp;pokroky - Krios Empire</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Index - Krios Empire - robot.cholerik.cz</title>
+<meta name="author" content="Dipl. Ing. Václav Bláha (www.robotik.cholerik.cz)" />
+<meta name="copyright" content="Dipl. Ing. Václav Bláha (www.robotik.cholerik.cz)" />
+<meta content="Václav Bláha, vývoj sw, programování, počítačová věda, umělá inteligence, kybernetika, statistika, robot, robotika, robotik, elektronika, válečná loď, válečné lodě, loďstvo, dělový člun, kolumbiáda, občanská válka, modely lodí, válečná hra, Naumachia, Krios, pára, parní stroj, ekcentr, parní kotel, programming, computer science, artificial intelligence, cybernetics, statistics, robot, robotic, robotics, electronics, ship, warship, navy, gunboat, columbiad, civil war, ship model, warship model, war game, steam, steam machine, steam engine, eccenter, steam boiler" name="keywords" />
+<link rel="shortcut icon" href="../../../favicon.ico" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<!-- link rel="shortcut icon" href="icons/favicon/robot_face01.ico" / -->
+<link rel="shortcut icon" href="icons/lin.gif" />
+
+<!-- ALPHABET -->
+<style id="gunplay" type="text/css">@font-face{font-family:"gunplay";src:url('gunplay.ttf');}</style>
+<style id="gunplay3" type="text/css">@font-face{font-family:"gunplay3";src:url('gunplay3.ttf');}</style>
+<style id="KAMIKZOM" type="text/css">@font-face{font-family:"KAMIKZOM";src:url('KAMIKZOM.ttf');}</style>
+<!-- style id="rexlia-free" type="text/css">@font-face{font-family:"rexlia_free";src:url('rexlia_free.ttf');}</style -->
+<style id="Note_this" type="text/css">@font-face{font-family:"Note_this";src:url('Note_this.ttf');}</style>
+
+<!-- BASIC STYLES -->
+<link rel="stylesheet" href="../../../style/buttons.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../style/normalize.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../style/style.css" type="text/css" media="screen" />
+<link rel="StyleSheet" href="../../../style/logo.css" type="text/css" media="screen" />
+<link rel="StyleSheet" href="../../../style/video-control.css" type="text/css" media="screen" />
+
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+
+<!-- SCRIPTS -->
+<script src="../../../scripts/popup.js" type="text/javascript"></script>
+<!-- script src="scripts/say_it.js" type="text/javascript"></script>
+<script src="scripts/countdown.js" type="text/javascript"></script>
+<script src="scripts/canvas.js" type="text/javascript"></script>
+<script src="scripts/code.js" type="text/javascript" language="JavaScript"></script -->
+
+<!-- link rel="stylesheet" media="all" href="../../scripts/aux/jquery.lightbox-0.5.css" type="text/css" />
+<script type="text/javascript" src="../../scripts/aux/modernizr-2.6.1.full.js"></script>
+<script type="text/javascript" src="../../scripts/aux/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../../scripts/aux/jquery.easing.1.2.js"></script>
+<script type="text/javascript" src="../../scripts/aux/jquery.nivo.slider.js"></script>
+<script type="text/javascript" src="../../scripts/aux/kendo/kendo.web.min.js"></script>
+<script type="text/javascript" src="../../scripts/aux/jquery.lightbox-0.5.js"></script>
+<script type="text/javascript" src="../../scripts/aux/tools.js"></script -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+<script type="text/javascript">
+	$(function() {
+		var pull 		= $('#pull');
+			menu 		= $('nav ul');
+			submenu 	= $('nav ul li ul');	/* MAIN SUBMENU */
+			logo 		= $('#logo');			/* LOGO */
+			leftMenu	= $('#article-index');	/* LEFT MENU */
+			menuHeight	= menu.height();
+
+		$(pull).on('click', function(e) {
+			e.preventDefault();
+			menu.slideToggle();
+			submenu.hide();						/* HIDE MAIN SUBMENU !!! */
+			logo.hide();						/* HIDE LOGO !!! */
+			leftMenu.hide();					/* HIDE LEFT MENU !!! */
+		});
+
+		$(window).resize(function(){
+       		var w = $(window).width();
+       		if(w > 320 && menu.is(':hidden')) {
+       			menu.removeAttr('style');
+				logo.hide();					/* HIDE LOGO !!! */
+				leftMenu.hide();				/* HIDE LEFT MENU !!! */
+       		}
+   		});
+	});
+</script>
+
+
+<!-- VIDEO FOR ANDROID -->
+<!--
+<script type="text/javascript">
+	var video = document.getElementById('video');
+	video.addEventListener('click',function(){
+		video.play();
+	},false);
+</script>
+-->
+
+<!-- PLAYER -->
+<link href="skin/blue.monday/jplayer.blue.monday.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+
+	$("#jquery_jplayer_1").jPlayer({
+		ready: function (event) {
+			$(this).jPlayer("setMedia", {
+//				mp3:"../../../music/marches/krios/boudin.mp3",
+				mp3:"http://robot.cholerik.cz/krios/music/marches/krios/boudin.mp3",
+			});
+		},
+		swfPath: "js",
+//		supplied: "m4a, oga, mp3",
+		supplied: "mp3",
+		wmode: "window"
+	});
+});
+//]]>
+</script>
+
+
+<!-- TITULKY - VIDEOSUB -->
+<script src="../../../scripts/videosub.js" type="text/javascript"></script>
+
+
+<!-- TITULKY - LEANBACKPLAYER -->
+<link rel="stylesheet" media="screen" type="text/css" href="../../../scripts/css.player/leanbackPlayer.default.css" />
+<script type="text/javascript" src="../../../scripts/js.player/leanbackPlayer.pack.js?1409676633"></script>
+<script type="text/javascript" src="../../../scripts/js.player/leanbackPlayer.en.js"></script>
+<script type="text/javascript" src="../../../scripts/js.player/leanbackPlayer.de.js"></script>
+<script type="text/javascript" src="../../../scripts/js.player/leanbackPlayer.fr.js"></script>
+<script type="text/javascript" src="../../../scripts/js.player/leanbackPlayer.nl.js"></script>
+<script type="text/javascript" src="../../../scripts/js.player/leanbackPlayer.es.js"></script>
+<script type="text/javascript" src="../../../scripts/js.player/leanbackPlayer.ru.js"></script>
+		
+<script type="text/javascript">
+	/* do: set player options */
+	LBP.options = {
+		showSubtitles: true,		// if there are subtitles, show controls element to change
+		defaultTimerFormat: "PASSED_HOVER_REMAINING",	// default timer format, could be "PASSED_DURATION" (default), "PASSED_REMAINING", "PASSED_HOVER_REMAINING"
+	};
+</script>
+		
+<link rel="stylesheet" media="screen" type="text/css" href="../../../scripts/css.player/leanbackPlayer.default.ext.txtPromo.css" />
+<script type="text/javascript" src="../../../scripts/js.player/leanbackPlayer.ext.txtPromo.pack.js"></script>
+<!-- SYNTAX-HIGHLIGHT -->
+<script type="text/javascript" src="../../../syntax/scripts/shCore.js"></script>
+<script type="text/javascript" src="../../../syntax/scripts/shBrushJScript.js"></script>
+<script type="text/javascript" src="../../../syntax/scripts/shBrushPython.js"></script>
+<link type="text/css" rel="stylesheet" href="../../syntax/styles/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+</head>
+
+
+
+<body id="engineering" class="all">
+
+<!-- LANGUAGES -->
+<!--
+<div id="versions" style="float:left">
+<img src="../../../icons/czech.gif" style="margin-right:2px"><img src="../../../icons/ameng.gif" style="margin-left:2px">
+</div>
+-->
+
+<!-- div id="top-plate" -->
+<div id="name-of-site-with-social-nets">
+
+<!-- SOCIAL-NETS -->
+<div id="social-nets" style="display:none;"><!-- !!!!! -->
+
+<!-- a href="" class="black" title="Přihlásit se na odběr rss" target="_blank" --><img src="../../icons/social-nets/rss.png" alt="Rss Feed" title="Není aktivováno !" /><!-- /a -->
+
+<!-- a href="http://twitter.com/" class="black" title="Sledovat můj twitter" target="_blank" --><img src="../../icons/social-nets/twitter.png" alt="Twitter" title="Není aktivováno !" /><!-- /a -->
+
+<a href="https://www.facebook.com/vaclav.blaha.77" class="black" title="Sledovat můj facebook" target="_blank"><img src="../../icons/social-nets/facebook.png" alt="Facebook" /></a>
+
+<!-- a href="" class="black" title="Sledovat můj digg" target="_blank" --><img src="../../icons/social-nets/digg.png" alt="Digg" title="Není aktivováno !" /><!-- /a -->
+
+<!-- a href="" class="black" title="Sledovat můj reddit" target="_blank" --><img src="../../icons/social-nets/reddit.png" alt="Reddit" title="Není aktivováno !" /><!-- /a -->
+
+<!-- a href="" class="black" title="Sledovat můj youtube kanál" target="_blank" --><img src="../../icons/social-nets/youtube.png" alt="Youtube" title="Není aktivováno !" /><!-- /a -->
+
+</div>
+<!-- END-OF-SOCIAL-NETS -->
+
+
+<!-- NAME-OF-SITE -->
+<a href="../../../index.html" title="Úvodní strana sajtu robotik.cholerik.cz/krios (otevřít v novém okně)" target="_blank"><h1 id="name-of-site" style="font-family:'WoskBlurCE',sans-serif;">robotik.cholerik.cz</h1></a>
+<!-- END-OF NAME-OF-SITE -->
+</div><!-- end of id="name-of-site-with-social-nets" -->
+<div class="cleaner"></div>
+
+
+<!-- -vvv-[ MAIN MENU - HORIZONTAL ]-vvv- /-->
+
+<!-- MAIN MENU -->
+<nav class="clearfix">
+<ul class="clearfix">
+<!--
+<li><a href="../../index.html" title="Úvodní strana: Novinky">Novinky</a>
+<ul class='children'>
+<li><a href="../about/01_pmap.html" title="Mapa stránek">Mapa stránek</a></li>
+<li><a href="../about/02_act.html" title="Archiv akcí">Archiv akcí</a></li>
+</ul></a></li>	
+-->
+<li><a href="#" title="">PRAVIDLA</a>
+<ul class='children'>
+<li><a href="#" title="">Stavba jednotek</a></li>
+<li><a href="#" title="">Stavba pevností</a></li>
+<li><a href="#" title="">Hraní fiktivní</a></li>
+<li><a href="#" title="">Hraní "de facto"</a></li>
+<li><a href="#" title="">Dodatky</a></li>
+<li><a href="#" title="">Uvažované změny</a></li>
+<li><a href="#" title="">Stará Pravidla</a></li>
+</ul></li>
+
+<li><a href="#" title="Robotika">LOĎSTVA</a>
+<ul class='children'>
+<li class="#"><a href="" title="">Arundel</a></li>
+<li class="#"><a href="" title="">Durango</a></li>
+<li class="#"><a href="" title="">Kreuzland</a></li>
+<li class="#"><a href="" title="">Krios</a></li>
+<li class="#"><a href="" title="">Orion</a></li>
+<li class="#"><a href="" title="">Sheenland</a></li>
+<li class="#"><a href="" title="">Zaniklé mocnosti</a></li>
+</ul></li>
+
+<li><a  href="#" title="">HRÁČI</a>
+<ul class='children'>
+<li class=""><a href="" title="">Síň slávy</a></li>
+</ul></li>
+
+<li><a href="#" title="">O KRIOSU</a>
+<ul class='children'>
+<li class=""><a href="" title="">Státní zřízení</a></li>
+<li class=""><a href="" title="">Panovnická rodina</a></li>
+<li class=""><a href="" title="">Vláda</a></li>
+<li class=""><a href="" title="">Slavné osobnosti</a></li>
+<li class=""><a href="" title="">Loďstvo</a></li>
+<li class=""><a href="" title="">Historie</a></li>
+<li class=""><a href="" title="">Mapy</a></li>
+</ul></li>
+
+<li><a href="../_index/index.html" title=""><!-- INDEX -->NEWS</a>
+<ul class='children'>
+<li class=""><a href="../_index/09.html" title="">2009 - 2013</a></li>
+<li class=""><a href="../../../1_html/news/_index/08.html" title="">2008</a></li>
+<li class=""><a href="../../../1_html/news/_index/07.html" title="">2007</a></li>
+<li class=""><a href="../../../1_html/news/_index/06.html" title="">2006</a></li>
+<li class=""><a href="../../../1_html/news/_index/05.html" title="">2005</a></li>
+<li class=""><a href="../../../1_html/news/_index/04.html" title="">2004</a></li>
+<li class=""><a href="../../../1_html/news/_index/03.html" title="">2003</a></li>
+<li class=""><a href="../../../1_html/news/_index/02.html" title="">2002</a></li>
+<li class=""><a href="../../../1_html/news/_index/01.html" title="">2001</a></li>
+<li class=""><a href="../../../1_html/news/_index/00.html" title="">2000</a></li>
+<li class=""><a href="../../../1_html/news/_index/99.html" title="">1999</a></li>
+<li class=""><a href="../../../1_html/news/_index/98.html" title="">1998</a></li>
+<li class=""><a href="../../../1_html/news/_index/older.html" title="">Starší</a></li>
+</ul></a></li>
+
+<li><a href="" title="">LINKY</a>
+<ul class='children'>
+<li class=""><a href="http://german-navy.tripod.com/" target="_blank" title="http://german-navy.tripod.com/ [ Otevřít v novém okně ]">German Navy WWI</a></li>
+<li class=""><a href="http://steelnavy.com" target="_blank" title="steelnavy.com [ Otevřít v novém okně ]">steelnavy.com</a></li>
+<li class=""><a href="http://www.arbeitskreis-historischer-schiffbau.de" target="_blank" title="www.arbeitskreis-historischer-schiffbau.de [ Otevřít v novém okně ]">Stavba mod.hist.lodí</a></li>
+<!-- li class=""><a href="http://xoomer.virgilio.it" target="_blank" title="xoomer.virgilio.it [ Otevřít v novém okně ]">Italští modeláři</a></li>
+</ul></a></li -->
+
+</ul>
+<!-- div class="cleaner"></div -->
+<a href="#" id="pull">MENU</a>
+<!-- div class="cleaner"></div -->
+</nav>
+<!-- END OF MAIN MENU - HORIZONTAL -->
+<div class="cleaner"></div>
+<!-- LEFT BAR -->
+<!-- END OF LEFT BAR -->
+
+
+<!-- MIDDLE SPACE WITH ARTICLE -->
+<!-- div id="middle-space">
+<p style="color:white">ahoj troubo</p -->
+
+<!-- MAIN BAR -->
+<div id="main-bar">
+
+
+<!-- LOKACE CLANKU -->
+<div id="article-location">
+<a href="../../index.html" title="Hlavní strana sajtu">Hlavní strana</a>&nbsp;&gt;&nbsp;<a href="../news/180501vp//01index.html" title="Oddíl">Vynálezy&nbsp;a&nbsp;pokroky</a>&nbsp;&gt;&nbsp;<a href="../news/180501vp//17poker.html" title="Tato strana">Pohrabáč</a>
+</div>
+
+
+<div id="article">
+
+
+<!-- HEADLINE SPACE -->
+<div id="headline-space">
+<h1 title=""><img src="../../../flags/krios_sm.gif" id="state" alt="Obrázek: Krioská vlajka" title="Krioská vlajka" style="margin-right:10px" /><span id="date">2. září 2017</span>Vynálezy&nbsp;a&nbsp;pokroky</h1></div>
+<img src="../../../pictures/technics/steam/boiler/vertical/poker/20180525_190508.jpg" id="headline-pict" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/poker/20180525_190508.jpg', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: "title="[ kliknutím zvětšíte ]"style="float:right" />
+<div id="headline" align="center"><h1 id="article-headline">L'Automoteur</h1>
+<h2>Rotační pohrabáč</h2>
+</div>
+<!-- KONEC NADPISU CLANKU -->
+
+
+<!-- SUBMENU PRO TABLETY A SMARTPHONY -->
+<!-- Generated by getSubmenuForTabletAndSmartphone() in page.py -->
+<div class="cleaner only-tablet-and-smartphone"></div><nav class="clearfix only-tablet-and-smartphone submenu"><ul class="clearfix submenu"><li><a class="submenu" href="01index.html" title="Otevřít stránku: L'Automoteur">L'Automoteur</a></li>
+<li><a class="submenu" href="02bullw1.html" title="Otevřít stránku: Dno kotle">Dno kotle</a></li>
+<li><a class="submenu" href="03bullw2.html" title="Otevřít stránku: Strop ohniště">Strop ohniště</a></li>
+<li><a class="submenu" href="04bunker.html" title="Otevřít stránku: Uhelný bunkr">Uhelný bunkr</a></li>
+<li><a class="submenu" href="05top.html" title="Otevřít stránku: Strop kotle">Strop kotle</a></li>
+<li><a class="submenu" href="06inner.html" title="Otevřít stránku: Plášť ohniště">Plášť ohniště</a></li>
+<li><a class="submenu" href="07outer.html" title="Otevřít stránku: Plášť kotle">Plášť kotle</a></li>
+<li><a class="submenu" href="08float.html" title="Otevřít stránku: Plovak">Plovak</a></li>
+<li><a class="submenu" href="09hole.html" title="Otevřít stránku: Otvor pro dvere">Otvor pro dvere</a></li>
+<li><a class="submenu" href="10pipes.html" title="Otevřít stránku: Trubky">Trubky</a></li>
+<li><a class="submenu" href="11bolts.html" title="Otevřít stránku: Svorníky">Svorníky</a></li>
+<li><a class="submenu" href="12rivets.html" title="Otevřít stránku: Nýtování">Nýtování</a></li>
+<li><a class="submenu" href="13solder.html" title="Otevřít stránku: Zatesneni">Zatesneni</a></li>
+<li><a class="submenu" href="14furnac.html" title="Otevřít stránku: Ohniště">Ohniště</a></li>
+<li><a class="submenu" href="15vent.html" title="Otevřít stránku: Ventilator">Ventilator</a></li>
+<li><a class="submenu" href="16door.html" title="Otevřít stránku: Dveře">Dveře</a></li>
+<li><a class="submenu" href="17poker.html" title="Otevřít stránku: Pohrabáč">Pohrabáč</a></li>
+<li><a class="submenu" href="18wgauge.html" title="Otevřít stránku: Vodoznak">Vodoznak</a></li>
+<li><a class="submenu" href="19exper.html" title="Otevřít stránku: Testy">Testy</a></li>
+<li><a class="submenu" href="20exper.html" title="Otevřít stránku: Testy">Testy</a></li>
+<li><a class="submenu" href="21exper.html" title="Otevřít stránku: Testy">Testy</a></li>
+<li><a class="submenu" href="22end.html" title="Otevřít stránku: Využití">Využití</a></li>
+</ul><a href="#" id="pull">Submenu</a></nav><div class="cleaner only-tablet-and-smartphone"></div><!-- END-OF SUBMENU PRO TABLETY A SMARTPHONY -->
+
+
+<!-- PEREX -->
+<div id="perex"><p>
+Vzhledem k tomu, že doba chodu kotle l'Automoteur často při řadě experimentů přesáhla hodinu a občas i hodiny dvě, se při těchto dlouhodobých testech ukázalo, že je občas nutné uhlí prohrábnout. Z tohotio důvodu byl do projektu kotle integrován i automatický pohrabáč. Zpočátku se uvažovalo o klasickém procházejícím dveřmi, nevyužití pohonu vnitřního ventilátoru umožnilo využití nového krioského vynálezu - rotačního pohrabáče.</p></div><!-- of-perex -->
+<!-- -^^^-[ PEREX ]-^^^- -->
+
+
+
+<!-- -vvv-[ TEXT CLANKU ]-vvv- -->
+<div id="news">
+<!-- div id="-NECO-JINEHO-" -->
+
+
+<div style="background-color:#f3eadb;">
+
+
+<img src="../../../icons/steam/governor.png" style="float:left; margin: 20px 0 0 0px; width:64px">
+<div class="paragraph">
+<h2>Revoluční koncepce pohrabáče</h2>
+</div>
+<div class="paragraph">
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/poker/2018-03-15 19.47.30.jpg" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/poker/2018-03-15 19.47.30.jpg', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px">Frézování pohrabáče<br />z&nbsp;ocelového plechu 1,5 mm</div></div>
+<p>Původně se předpokládalo, že pohrabáč bude do prostoru ohniště procházet výřezem při spodním okraji posuvných dveří tak aby nebránil jejich otvírání a&nbsp;zavírání. Tento pohrabáč se měl excentren namontovaným na elektromotoru s převodovkou posouvat asi o&nbsp;dva centimetry vpřed vzad. Uvnitř kotle by měl tvar tenkého prstence z&nbsp;ocelového plechu s výstupky kolmými na směr pohybu, případně tvar dvojité vidlice obepínající z&nbsp;větší části kuželové ohniště - ovšem opět se zmíněnými výstupky. Aby byl průchod pohrabáče volný, ale přitom co nejtěsnější měla mít jeho část procházející výsuvnými dveřmi lichoběžníkový průřez s užší horní stranou. Obdobný tvar by měl výřez v&nbsp;při dolním okraji dveří.</p>
+<div class="left-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/poker/2018-03-15 19.52.37.jpg" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/poker/2018-03-15 19.52.37.jpg', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px">Hrubý polotovar pohrabáče</div></div>
+<p>Nevyužití hřídele a&nbsp;převodu pro vnitřní ventilátor umožnilo celou koncepci zjednodušit a&nbsp;dá se říci i&nbsp;provést mnohem elegantněji.</p>
+<p>Pro otáčivý pohyb rotačního pohrabáče bylo využito ložisko v&nbsp;kruhovém roštu a&nbsp;ložisko v&nbsp;držáku standardní krioské vodotěsné tuby s olejem původně použité pro axiální ventilátor pod kruhovým roštem.</p>
+<p>Pohrabáč ve tvaru jakéhosi podivného "hákenkrojcu" je poměrně sofistikovaný. Po začištění okrajů vyfrézovaného polotovaru od grotů byla všechna čtyři ramena pohrabáče ohnuta směrem dolů v&nbsp;úhlu odpovídajícím úhlu kuželového roštu, takže se pohybují těsně nad ním.</p>
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/poker/2018-03-15 19.54.11.jpg" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/poker/2018-03-15 19.54.11.jpg', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px">Vylamování pohrabáče<br />z&nbsp;ocelové desky</div></div>
+<p>Směr otáčení je ve směru ohnutých konců které tak trochu podebítrají uhlí a&nbsp;část uhlí trochu nadhazují zpět nahoru na kužel roštu. Tento směr otáčení je též zvolen z&nbsp;důvodu pevného spojení pohrabáče s jeho pohonnou hřídelí. Na jejím konci je vyříznut běžný pravotočivý závit M4 o&nbsp;délce odpovídající síle materiálu pohrabáče a&nbsp;síle jedné kontramatky. V&nbsp;mase plechu pohrabáče je vyříznut obdobný závit M4. Takže při svém otáčení má plech pohrabáče tendenci se na hřídel utahovat. Upevnění je mimoto opatřeno kontramatkou. Dávat pérovou podložku by ztrácelo smysl, ocel podložky by brzy díky žáru přišla o&nbsp;svou pružnost.</p>
+<p>Pohrabáč je přes čelní ozubení poháněn <a href="https://www.postavrobota.cz/Motor-s-kovovou-prevodovkou-12V-d423.htm" target="_blank">elektromotorem s integrovanou kovovou převodovkou</a> od firmy <a href="https://www.postavrobota.cz/" target="_blank">postavrobota.cz</a>. Tento typ elektromotoru, též velice vhodný pro šnekové uhelné bunkry, byl vybrán jak z&nbsp;důvodu nízkých otáček na hřídeli převodovky, tak i&nbsp;pro náš účel dostatečného kroutícího momentu:</p>
+<ul>
+<li>Napájení: max 12V</li>
+<li>Otáčky: 60/min</li>
+<li>Točivý moment: 1kg/cm</li>
+<li>Rozměry: 42x16mm bez hřídele</li>
+<li>Hřídel: 12x3mm</li>
+<li>Hmotnost: 38g</li>
+</ul>
+</div>
+<div class="cleaner"></div>
+
+
+<img src="../../../icons/steam/governor.png" style="float:left; margin: 20px 0 0 0px; width:64px">
+<div class="paragraph">
+<h2>Domeček převodovky</h2>
+</div>
+<div class="paragraph">
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/poker/20180525_190611_0.jpg" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/poker/20180525_190611_0.jpg', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px">Pohrabáč nad kuželovým roštem<br />(pohled z&nbsp;boku)</div></div>
+<p>Ozubená kola pod roštem jsou ocelová a&nbsp;s poměrně velkým modulem. Pokud mezi zuby náhodně spadne nespálený kus uhlí, je zde taková síla, že zuby uhlí rozdrtí. Tím spíše by nemělo hrát roli případné znečištění popelem. Jiná je ovšem situace u&nbsp;vnější převodovky s ozubenými koly s modulem 0.5. Zde jsme pro jistotu umístili převodovku do uzavřeného pouzdra. Toto pouzdro je svařeno z&nbsp;jednomilimetrového hliníkového plechu. Aby se na ozubená kola neprášilo je ve frémě vyfrézována drážka o&nbsp;šířce 1mm a&nbsp;hloubce 1.2mm do které kryt přesně zapadne.</p>
+<p>Máme za to, že tento rotační pohrabáč zůstane v&nbsp;krioském námořnictvu jako atypický vyjímkou, neboť je poplatný kruhovému půdorysu kotle. Následující řadové kotle budou obdélníkové a&nbsp;proto budou vybaveny soustavou lineárních pohrabáčů pohybujících se sem-tam, poháněny zvnějšku kotle excentrem. První takový pohrabáč by měl být umístěn v&nbsp;novém hliníkovém kotli pro kolesový dělový člun Miami.</p>
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/poker/20180525_190654.jpg" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/poker/20180525_190654.jpg', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px">Pohrabáč nad kuželovým roštem<br />(pohled shora)</div></div>
+</div>
+<div class="cleaner"></div>
+
+
+<img src="../../../icons/steam/governor.png" style="float:left; margin: 20px 0 0 0px; width:64px">
+<div class="paragraph">
+<h2>Řízení pohrabáče</h2>
+</div>
+<div class="paragraph">
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/poker/20180527_120702.jpg" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/poker/20180527_120702.jpg', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px">Svařování hliníkového krytu<br />ozubených kol převodovky</div></div>
+<p>Je otázkou, zda je lepší zvolit trvalý, velmi pomalý pohyb rotačního pohrabáče (pak by se pohrabáč zcela obešel bez elektroniky), nebo jen občasný, ať už pomalý, či trochu rychlejší pohyb. To ukáží až další následné experimenty a&nbsp;zejména pak dlouhodobé zkušenosti na vodě s kotlem zamontovaným v&nbsp;lodi. Trvalý pomalý pohyb je lepší z&nbsp;hlediska jednoduchosti konstrukce - dostatečně zpřevodovaný motor pomalu otáčí pohrabáčem nad roštem - k&nbsp;tomu jistě netřeba žádná řídící elektronika, natož počítač. V&nbsp;případě použití jednoduché elektroniky by stačil časovač postavený například na základě dnes již legendárního analogového obvodu <a href="https://cs.wikipedia.org/wiki/NE555" target="_blank">NE555</a> vyráběného <a href="https://technet.idnes.cz/hans-camenzind-vynalezce-555-timer-chip-dxg-/sw_internet.aspx?c=A121008_150143_sw_internet_pka" target="_blank">nepřetržitě od roku 1971 (!) až dosud</a> v&nbsp;miliardových sériích ročně.</p> <div class="left-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/poker/20180527_125649.jpg" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/poker/20180527_125649.jpg', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px">Fréma převodovky s drážkou<br />a&nbsp;kryt převodovky</div></div>
+<p>Tento univerzální obvod schopný sloužit jako klopný obvod různého typu či schopný generovat velmi pomalé, či naopak velmi rychlé pulzy různého tvaru (obdélníkové, lichoběžníkové, pilovité) a&nbsp;tím i&nbsp;při výstupu na reproduktor generovat různé zvuky (např Krautánie na jeho základě postavila asi před patnácti lety velmi efektní houkačku pro torpedoborec Onion, je navíc nesmírně levný - stojí pouhých <a href="https://www.gme.cz/ne555-dip8-texas-instruments" target="_blank">6 až 8&nbsp;Kč</a>. Legálně a&nbsp;volně je ke stažení k&nbsp;dispozici kniha autora a&nbsp;vynálezce čipu 555 <a href="http://www.designinganalogchips.com/_count/designinganalogchips.pdf" target="_blank">"Designing Analog Chips"</a>. Obvod 555 by v&nbsp;pravidelných intervalech na chvilku, vždy po uběhnutí nastaveného času spustil pohon pohrabáče. Dokonce by bylo možno jako pomocný signál vést k&nbsp;obvodu NE555 informaci o&nbsp;požadovaném výkonu (danou polohou serva otevírajícího ventil na potrubí k&nbsp;parnímu stroji nebo přímo serva ovládajícího polohu kulisy excentrů parního stroje, takže např v&nbsp;případě forsáže by kotel pracoval na vyšší či plný výkon. Pohrabáč je tedy použitelný jak bez elektroniky, tak s ní.</p>
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/poker/20180527_125816.jpg" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/poker/20180527_125816.jpg', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px">Kompletní prachotěsná převodovka</div></div>
+<p>Toto vše však nemusí být ale optimální řešení z&nbsp;hlediska hoření paliva ve vztahu k&nbsp;okamžitému požadovanému výkonu stroje. Krioští konstruktéři pro úplnou optimalizaci předpokládají řízení pohonu pohrabáče pomocí jednočipového počítače. Je otevřená otázka, zda se použije například v&nbsp;Krioském Impériu oblíbený jednoduchý jednočipový počítač <a href="http://poli.cs.vsb.cz/edu/arp/down/pic16f84a.html" target="_blank">PIC16F84A</a> programovaný samozřejmě v&nbsp;Assembleru, či se vydáme "zlatou střední cestou" - tedy využijeme nějaký hotový modul <a href="https://cs.wikipedia.org/wiki/Arduino" target="_blank">Arduino</a> s procesorem ATmega, tolik oblíbený konstruktéry Orionského království. Není ani vyloučeno bez mezistupňů přímé použití v&nbsp;Kriosu oblíbeného výkonného miniaturního počítače velikosti kreditní karty <a gref="https://cs.wikipedia.org/wiki/Raspberry_Pi" target="_blank">Raspberry Pi</a> s operačním systémem Linux, který má dostatek pinů a&nbsp;sběrnic a&nbsp;který má být tak jako tak použit jako hlavní systém řízení lodí přes WiFi. Ať už použijeme jakýkoli z&nbsp;výše uvedených počítačů, budou mu dostupná nejen data o&nbsp;právě požadovaném výkonu, ale i&nbsp;data o&nbsp;teplotě v&nbsp;ohništi, na výstupu kouřových plynů a&nbsp;tlaku páry. Tato čidla jsou již do konstrukce našeho kotle integrována.</p>
+</div>
+<div class="cleaner"></div>
+
+
+<!--
+2017-10-21 14.59.25.jpg  2017-10-22 14.18.04.jpg  2017-10-26 18.25.56.jpg       2018-02-03 11.42.02.jpg  
+2017-10-22 12.39.07.jpg  2017-10-22 17.26.30.jpg  2018-02-03 10.46.49.jpg       2018-02-03 11.42.18.jpg  
+2017-10-22 12.39.21.jpg  2017-10-22 19.02.55.jpg  2018-02-03 10.54.00.jpg       
+2017-10-22 12.45.14.jpg  2017-10-22 19.03.44.jpg  2018-02-03 11.00.40.jpg       
+2017-10-22 14.08.32.jpg  2017-10-23 20.17.42.jpg  2018-02-03 11.11.36.jpg       
+2017-10-22 14.17.36.jpg  2017-10-23 20.22.31.jpg  2018-02-03 11.11.36_orig.jpg  
+-->
+
+
+</div><!-- END-OF BACKGROUND COLOR FOR GOVERNORS -->
+
+<div class="cleaner"></div>
+
+
+<div class="division"> 
+<hr /> 
+</div> 
+
+
+<div id="bottom-of-page" style="width:100%;padding:50px 0 50px 0;" align="center">
+<!-- a&nbsp;href="" target="_blank" --><!img src="../../../icons/emblems/krios/imperial.png" alt="Krioský velký imperiální znak" title="Krioský velký imperiální znak" /><!-- /a -->
+<img src="../../../pictures/emblems/vynalezy.png" style="width:320px" />
+</div>
+
+
+<!-- -vvv-[ MUSIC ]-vvv- -->
+<!--
+<div class="bottom-audio" align="center">
+<audio type="audio/midi" controls autoplay>
+<source src="../../../music/marches/fasci/giovani2.mp3" type="audio/mpeg" />
+<object name="bgmusic" type="audio/midi">
+<param name="id" value="bgmusic" />
+<param name="src" value="../../../music/marches/fasci/giovani2.mp3" />
+<param name="controller" value="true" />
+<param name="autoplay" value="true" />
+<param name="volume" value="100" />
+<embed name="_bgmusic" data = "../../../music/marches/fasci/giovani2.mp3" type="audio/mpeg" autostart="true" volume="100">
+<noembed><bgsound src="../../../music/marches/fasci/giovani2.mp3" loop="1"></noembed>
+</embed></object></audio>
+</div>
+-->
+<div class="cleaner"></div>
+<!-- param name="hidden" value="false" / -->
+<!-- param width="448px" height="30px" / -->
+<!-- -^^^-[ MUSIC ]-^^^- -->
+
+
+<!/div><!-- END OF id="news | monarch | imperial | steam-man" -->
+<!-- -^^^-[ TEXT CLANKU ]-^^^- -->
+<!-- -^^^-[ TEXT CLANKU ]-^^^- -->
+
+
+<!-- /div --><!-- of id="news" -->
+<div class="cleaner"></div>
+<!-- /div -->
+
+
+<!-- ODKAZY -->
+<div id="predecessor-page-of-article"><a href="16door.html"><button class="btn btn-warning">Předchozí</button><span class="no-in-smartphone">Předchozí&nbsp;článek</span></a></div>
+<div id="next-page-of-article"><a href="18wgauge.html"><button class="btn btn-next">Další&nbsp;...</button><span class="no-in-smartphone">Další&nbsp;článek</span></a></div>
+</div><!-- of id="article" -->
+<div id="predecessor-article"><a href="02bunker.html"><button class="btn btn-warning">Předch.&nbsp;č.</button><span class="no-in-smartphone">Předchozí&nbsp;časopis</span></a></div><div id="next-article"><a href="../../../1_html/news/_index/09.html"><button class="btn btn-warning">Další&nbsp;čas.</button><span class="no-in-smartphone">Další&nbsp;časopis</span></a></div><!-- -^^^-[ ODKAZY ]-^^^- -->
+
+
+</div><!-- END-OF id="main-bar" -->
+<!-- END OF MAIN BAR -->
+
+<!-- /div --><!-- END-OF id="middle-space" -->
+<!-- END OF MIDDLE SPACE WITH ARTICLE -->
+
+
+<div class="cleaner"></div>
+
+
+<!-- div class="skyscraperad" style="position:absolute;left:1005px;top:155px;margin:30px 0 0 5px;border:solid 1px #fff;">
+<ul>
+<li><a href="http://robodoupe.cz/" target="_blank">robodoupe.cz</a></li>
+<li><a href="http://forum.robodoupe.cz/" target="_blank">forum.robodoupe.cz</a></li>
+<li><a href="http://www.snailshop.cz/" target="_blank">snailshop.cz</a></li>
+</ul>
+</div -->
+
+
+<div id="article-index"><!-- VLASTNI POSTRANNI MENU -->
+<a href="01index.html" title="Otevřít stránku: L'Automoteur">L'Automoteur</a><br class="only-pc" />
+<a href="02bullw1.html" title="Otevřít stránku: Dno kotle">Dno kotle</a><br class="only-pc" />
+<a href="03bullw2.html" title="Otevřít stránku: Strop ohniště">Strop ohniště</a><br class="only-pc" />
+<a href="04bunker.html" title="Otevřít stránku: Uhelný bunkr">Uhelný bunkr</a><br class="only-pc" />
+<a href="05top.html" title="Otevřít stránku: Strop kotle">Strop kotle</a><br class="only-pc" />
+<a href="06inner.html" title="Otevřít stránku: Plášť ohniště">Plášť ohniště</a><br class="only-pc" />
+<a href="07outer.html" title="Otevřít stránku: Plášť kotle">Plášť kotle</a><br class="only-pc" />
+<a href="08float.html" title="Otevřít stránku: Plovak">Plovak</a><br class="only-pc" />
+<a href="09hole.html" title="Otevřít stránku: Otvor pro dvere">Otvor pro dvere</a><br class="only-pc" />
+<a href="10pipes.html" title="Otevřít stránku: Trubky">Trubky</a><br class="only-pc" />
+<a href="11bolts.html" title="Otevřít stránku: Svorníky">Svorníky</a><br class="only-pc" />
+<a href="12rivets.html" title="Otevřít stránku: Nýtování">Nýtování</a><br class="only-pc" />
+<a href="13solder.html" title="Otevřít stránku: Zatesneni">Zatesneni</a><br class="only-pc" />
+<a href="14furnac.html" title="Otevřít stránku: Ohniště">Ohniště</a><br class="only-pc" />
+<a href="15vent.html" title="Otevřít stránku: Ventilator">Ventilator</a><br class="only-pc" />
+<a href="16door.html" title="Otevřít stránku: Dveře">Dveře</a><br class="only-pc" />
+<a href="17poker.html" title="Otevřít stránku: Pohrabáč">Pohrabáč</a><br class="only-pc" />
+<a href="18wgauge.html" title="Otevřít stránku: Vodoznak">Vodoznak</a><br class="only-pc" />
+<a href="19exper.html" title="Otevřít stránku: Testy">Testy</a><br class="only-pc" />
+<a href="20exper.html" title="Otevřít stránku: Testy">Testy</a><br class="only-pc" />
+<a href="21exper.html" title="Otevřít stránku: Testy">Testy</a><br class="only-pc" />
+<a href="22end.html" title="Otevřít stránku: Využití">Využití</a><br class="only-pc" />
+</div><!-- END-OF id="article-index" -->
+
+
+<!-- BOTTOM LOGO -->
+<!--
+<table id="bottom-logo"><tr>
+<td align="center"><div id="copyright">
+Copyright &copy; 2000-2014 Vaclav Blaha<br />All rights reserved<br />
+<a href="mailto:vaclavblaha@yahoo.com" id="design-by"
+title="Send mail to Vaclav Blaha">Responsible Web Site<br />Design by Vaclav Blaha</a></div></td></tr></table>
+<div class="cleaner"></div>
+-->
+
+
+<!-- TOP LEFT TOP LOGO -->
+<!-- div id="logo"><img src="../../icons/krios.png" id="logo_image"></div -->
+<!-- TOP LEFT LOGO "KRIOS EMPIRE" -->
+<div id="logo-plate"><img src="../../../bkg/logo_plt.png" alt="Podklad loga" /></div>
+<div id="logo"><img src="../../../icons/logo.gif" alt="Logo Krios Empire" id="logo_image" /></div>
+
+
+<!-- VALIDATION -->
+<!--
+<a href="http://validator.w3.org/check/referer" target="_blank">
+<img src="../../icons/valxhtml.png" id="validation_xhtml" title="Valid XHTML 1.0 !"
+alt="[ Valid XHTML ]" /></a>
+<a href="http://jigsaw.w3.org/css-validator/check/referer/" target="_blank">
+<img src="../../icons/valcss.png" id="validation_css2" title="Valid CSS !"
+alt="[ Valid CSS ]" /></a></div>
+
+
+<div id="tests"><p>Programmed in HTLM5 and CSS3 under LINUX &reg; Fedora Core 14 Operating System<br />Tested under: LINUX &reg; and WINDOWS &reg; Operating Systems and Internet Viewer: Google Chrome, Mozilla, Opera, Konqueror and Microsoft Internet Explorer for Windows</p></div>
+-->
+
+
+<!-- BOTTOM LOGO -->
+<!-- =========== -->
+<!-- table id="bottom_logo"><tr>
+<td align="center" -->
+<!-- div id="bottom_logo" -->
+<div id="copyright">
+Copyright &copy; Václav&nbsp;Bláha<br />2000-2018<br />All rights reserved<br />
+Responsive Web&nbsp;Design: <br class="only-tablet-and-smartphone" /><a href="mailto:krios@volny.cz" class="design-by" title="Send mail to ...">Václav&nbsp;Bláha</a></div><!-- /div --><!-- /td></tr></table -->
+<div class="cleaner"></div>
+
+
+<!-- VALIDATION -->
+<!-- ========== -->
+<a href="http://validator.w3.org/check/referer" target="_blank">
+<img src="../../../icons/valxhtml.png" id="validation_xhtml" title="Valid XHTML 1.0 !"
+alt="[ Valid XHTML ]" /></a>
+<a href="http://jigsaw.w3.org/css-validator/check/referer/" target="_blank">
+<img src="../../../icons/valcss.png" id="validation_css2" title="Valid CSS !"
+alt="[ Valid CSS ]" /></a>
+<div class="cleaner"></div>
+
+
+<hr />
+
+
+<div id="tests">
+<p><span class="headline">Programmed in:</span><br />HTLM5 and CSS3 under LINUX &reg; Xubuntu Operating System as&nbsp;<a href="http://en.wikipedia.org/wiki/Responsive_web_design" style="external" target="_blank">Responsive&nbsp;Web&nbsp;Design</a> (RWD).</p>
+<p><span class="headline">Tested under:</span><br />LINUX &reg; and&nbsp;WINDOWS &reg; Operating Systems and&nbsp;Internet Viewers: Google Chrome, Mozilla, Opera, Konqueror and&nbsp;Microsoft Internet Explorer for&nbsp;Windows</p>
+</div>
+
+
+</body>
+</html>

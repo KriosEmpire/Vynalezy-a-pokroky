@@ -1,0 +1,563 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="cs-CZ">
+
+<head>
+<title>
+Plášť ohniště - Vynálezy&nbsp;a&nbsp;pokroky - Krios Empire</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Index - Krios Empire - robot.cholerik.cz</title>
+<meta name="author" content="Dipl. Ing. Václav Bláha (www.robotik.cholerik.cz)" />
+<meta name="copyright" content="Dipl. Ing. Václav Bláha (www.robotik.cholerik.cz)" />
+<meta content="Václav Bláha, vývoj sw, programování, počítačová věda, umělá inteligence, kybernetika, statistika, robot, robotika, robotik, elektronika, válečná loď, válečné lodě, loďstvo, dělový člun, kolumbiáda, občanská válka, modely lodí, válečná hra, Naumachia, Krios, pára, parní stroj, ekcentr, parní kotel, programming, computer science, artificial intelligence, cybernetics, statistics, robot, robotic, robotics, electronics, ship, warship, navy, gunboat, columbiad, civil war, ship model, warship model, war game, steam, steam machine, steam engine, eccenter, steam boiler" name="keywords" />
+<link rel="shortcut icon" href="../../../favicon.ico" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<!-- link rel="shortcut icon" href="icons/favicon/robot_face01.ico" / -->
+<link rel="shortcut icon" href="icons/lin.gif" />
+
+<!-- ALPHABET -->
+<style id="gunplay" type="text/css">@font-face{font-family:"gunplay";src:url('gunplay.ttf');}</style>
+<style id="gunplay3" type="text/css">@font-face{font-family:"gunplay3";src:url('gunplay3.ttf');}</style>
+<style id="KAMIKZOM" type="text/css">@font-face{font-family:"KAMIKZOM";src:url('KAMIKZOM.ttf');}</style>
+<!-- style id="rexlia-free" type="text/css">@font-face{font-family:"rexlia_free";src:url('rexlia_free.ttf');}</style -->
+<style id="Note_this" type="text/css">@font-face{font-family:"Note_this";src:url('Note_this.ttf');}</style>
+
+<!-- BASIC STYLES -->
+<link rel="stylesheet" href="../../../style/buttons.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../style/normalize.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../style/style.css" type="text/css" media="screen" />
+<link rel="StyleSheet" href="../../../style/logo.css" type="text/css" media="screen" />
+<link rel="StyleSheet" href="../../../style/video-control.css" type="text/css" media="screen" />
+
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+
+<!-- SCRIPTS -->
+<script src="../../../scripts/popup.js" type="text/javascript"></script>
+<!-- script src="scripts/say_it.js" type="text/javascript"></script>
+<script src="scripts/countdown.js" type="text/javascript"></script>
+<script src="scripts/canvas.js" type="text/javascript"></script>
+<script src="scripts/code.js" type="text/javascript" language="JavaScript"></script -->
+
+<!-- link rel="stylesheet" media="all" href="../../scripts/aux/jquery.lightbox-0.5.css" type="text/css" />
+<script type="text/javascript" src="../../scripts/aux/modernizr-2.6.1.full.js"></script>
+<script type="text/javascript" src="../../scripts/aux/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../../scripts/aux/jquery.easing.1.2.js"></script>
+<script type="text/javascript" src="../../scripts/aux/jquery.nivo.slider.js"></script>
+<script type="text/javascript" src="../../scripts/aux/kendo/kendo.web.min.js"></script>
+<script type="text/javascript" src="../../scripts/aux/jquery.lightbox-0.5.js"></script>
+<script type="text/javascript" src="../../scripts/aux/tools.js"></script -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+<script type="text/javascript">
+	$(function() {
+		var pull 		= $('#pull');
+			menu 		= $('nav ul');
+			submenu 	= $('nav ul li ul');	/* MAIN SUBMENU */
+			logo 		= $('#logo');			/* LOGO */
+			leftMenu	= $('#article-index');	/* LEFT MENU */
+			menuHeight	= menu.height();
+
+		$(pull).on('click', function(e) {
+			e.preventDefault();
+			menu.slideToggle();
+			submenu.hide();						/* HIDE MAIN SUBMENU !!! */
+			logo.hide();						/* HIDE LOGO !!! */
+			leftMenu.hide();					/* HIDE LEFT MENU !!! */
+		});
+
+		$(window).resize(function(){
+       		var w = $(window).width();
+       		if(w > 320 && menu.is(':hidden')) {
+       			menu.removeAttr('style');
+				logo.hide();					/* HIDE LOGO !!! */
+				leftMenu.hide();				/* HIDE LEFT MENU !!! */
+       		}
+   		});
+	});
+</script>
+
+
+<!-- VIDEO FOR ANDROID -->
+<!--
+<script type="text/javascript">
+	var video = document.getElementById('video');
+	video.addEventListener('click',function(){
+		video.play();
+	},false);
+</script>
+-->
+
+<!-- PLAYER -->
+<link href="skin/blue.monday/jplayer.blue.monday.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+
+	$("#jquery_jplayer_1").jPlayer({
+		ready: function (event) {
+			$(this).jPlayer("setMedia", {
+//				mp3:"../../../music/marches/krios/boudin.mp3",
+				mp3:"http://robot.cholerik.cz/krios/music/marches/krios/boudin.mp3",
+			});
+		},
+		swfPath: "js",
+//		supplied: "m4a, oga, mp3",
+		supplied: "mp3",
+		wmode: "window"
+	});
+});
+//]]>
+</script>
+
+
+<!-- TITULKY - VIDEOSUB -->
+<script src="../../../scripts/videosub.js" type="text/javascript"></script>
+
+
+<!-- TITULKY - LEANBACKPLAYER -->
+<link rel="stylesheet" media="screen" type="text/css" href="../../../scripts/css.player/leanbackPlayer.default.css" />
+<script type="text/javascript" src="../../../scripts/js.player/leanbackPlayer.pack.js?1409676633"></script>
+<script type="text/javascript" src="../../../scripts/js.player/leanbackPlayer.en.js"></script>
+<script type="text/javascript" src="../../../scripts/js.player/leanbackPlayer.de.js"></script>
+<script type="text/javascript" src="../../../scripts/js.player/leanbackPlayer.fr.js"></script>
+<script type="text/javascript" src="../../../scripts/js.player/leanbackPlayer.nl.js"></script>
+<script type="text/javascript" src="../../../scripts/js.player/leanbackPlayer.es.js"></script>
+<script type="text/javascript" src="../../../scripts/js.player/leanbackPlayer.ru.js"></script>
+		
+<script type="text/javascript">
+	/* do: set player options */
+	LBP.options = {
+		showSubtitles: true,		// if there are subtitles, show controls element to change
+		defaultTimerFormat: "PASSED_HOVER_REMAINING",	// default timer format, could be "PASSED_DURATION" (default), "PASSED_REMAINING", "PASSED_HOVER_REMAINING"
+	};
+</script>
+		
+<link rel="stylesheet" media="screen" type="text/css" href="../../../scripts/css.player/leanbackPlayer.default.ext.txtPromo.css" />
+<script type="text/javascript" src="../../../scripts/js.player/leanbackPlayer.ext.txtPromo.pack.js"></script>
+<!-- SYNTAX-HIGHLIGHT -->
+<script type="text/javascript" src="../../../syntax/scripts/shCore.js"></script>
+<script type="text/javascript" src="../../../syntax/scripts/shBrushJScript.js"></script>
+<script type="text/javascript" src="../../../syntax/scripts/shBrushPython.js"></script>
+<link type="text/css" rel="stylesheet" href="../../syntax/styles/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+</head>
+
+
+
+<body id="engineering" class="all">
+
+<!-- LANGUAGES -->
+<!--
+<div id="versions" style="float:left">
+<img src="../../../icons/czech.gif" style="margin-right:2px"><img src="../../../icons/ameng.gif" style="margin-left:2px">
+</div>
+-->
+
+<!-- div id="top-plate" -->
+<div id="name-of-site-with-social-nets">
+
+<!-- SOCIAL-NETS -->
+<div id="social-nets" style="display:none;"><!-- !!!!! -->
+
+<!-- a href="" class="black" title="Přihlásit se na odběr rss" target="_blank" --><img src="../../icons/social-nets/rss.png" alt="Rss Feed" title="Není aktivováno !" /><!-- /a -->
+
+<!-- a href="http://twitter.com/" class="black" title="Sledovat můj twitter" target="_blank" --><img src="../../icons/social-nets/twitter.png" alt="Twitter" title="Není aktivováno !" /><!-- /a -->
+
+<a href="https://www.facebook.com/vaclav.blaha.77" class="black" title="Sledovat můj facebook" target="_blank"><img src="../../icons/social-nets/facebook.png" alt="Facebook" /></a>
+
+<!-- a href="" class="black" title="Sledovat můj digg" target="_blank" --><img src="../../icons/social-nets/digg.png" alt="Digg" title="Není aktivováno !" /><!-- /a -->
+
+<!-- a href="" class="black" title="Sledovat můj reddit" target="_blank" --><img src="../../icons/social-nets/reddit.png" alt="Reddit" title="Není aktivováno !" /><!-- /a -->
+
+<!-- a href="" class="black" title="Sledovat můj youtube kanál" target="_blank" --><img src="../../icons/social-nets/youtube.png" alt="Youtube" title="Není aktivováno !" /><!-- /a -->
+
+</div>
+<!-- END-OF-SOCIAL-NETS -->
+
+
+<!-- NAME-OF-SITE -->
+<a href="../../../index.html" title="Úvodní strana sajtu robotik.cholerik.cz/krios (otevřít v novém okně)" target="_blank"><h1 id="name-of-site" style="font-family:'WoskBlurCE',sans-serif;">robotik.cholerik.cz</h1></a>
+<!-- END-OF NAME-OF-SITE -->
+</div><!-- end of id="name-of-site-with-social-nets" -->
+<div class="cleaner"></div>
+
+
+<!-- -vvv-[ MAIN MENU - HORIZONTAL ]-vvv- /-->
+
+<!-- MAIN MENU -->
+<nav class="clearfix">
+<ul class="clearfix">
+<!--
+<li><a href="../../index.html" title="Úvodní strana: Novinky">Novinky</a>
+<ul class='children'>
+<li><a href="../about/01_pmap.html" title="Mapa stránek">Mapa stránek</a></li>
+<li><a href="../about/02_act.html" title="Archiv akcí">Archiv akcí</a></li>
+</ul></a></li>	
+-->
+<li><a href="#" title="">PRAVIDLA</a>
+<ul class='children'>
+<li><a href="#" title="">Stavba jednotek</a></li>
+<li><a href="#" title="">Stavba pevností</a></li>
+<li><a href="#" title="">Hraní fiktivní</a></li>
+<li><a href="#" title="">Hraní "de facto"</a></li>
+<li><a href="#" title="">Dodatky</a></li>
+<li><a href="#" title="">Uvažované změny</a></li>
+<li><a href="#" title="">Stará Pravidla</a></li>
+</ul></li>
+
+<li><a href="#" title="Robotika">LOĎSTVA</a>
+<ul class='children'>
+<li class="#"><a href="" title="">Arundel</a></li>
+<li class="#"><a href="" title="">Durango</a></li>
+<li class="#"><a href="" title="">Kreuzland</a></li>
+<li class="#"><a href="" title="">Krios</a></li>
+<li class="#"><a href="" title="">Orion</a></li>
+<li class="#"><a href="" title="">Sheenland</a></li>
+<li class="#"><a href="" title="">Zaniklé mocnosti</a></li>
+</ul></li>
+
+<li><a  href="#" title="">HRÁČI</a>
+<ul class='children'>
+<li class=""><a href="" title="">Síň slávy</a></li>
+</ul></li>
+
+<li><a href="#" title="">O KRIOSU</a>
+<ul class='children'>
+<li class=""><a href="" title="">Státní zřízení</a></li>
+<li class=""><a href="" title="">Panovnická rodina</a></li>
+<li class=""><a href="" title="">Vláda</a></li>
+<li class=""><a href="" title="">Slavné osobnosti</a></li>
+<li class=""><a href="" title="">Loďstvo</a></li>
+<li class=""><a href="" title="">Historie</a></li>
+<li class=""><a href="" title="">Mapy</a></li>
+</ul></li>
+
+<li><a href="../_index/index.html" title=""><!-- INDEX -->NEWS</a>
+<ul class='children'>
+<li class=""><a href="../_index/09.html" title="">2009 - 2013</a></li>
+<li class=""><a href="../../../1_html/news/_index/08.html" title="">2008</a></li>
+<li class=""><a href="../../../1_html/news/_index/07.html" title="">2007</a></li>
+<li class=""><a href="../../../1_html/news/_index/06.html" title="">2006</a></li>
+<li class=""><a href="../../../1_html/news/_index/05.html" title="">2005</a></li>
+<li class=""><a href="../../../1_html/news/_index/04.html" title="">2004</a></li>
+<li class=""><a href="../../../1_html/news/_index/03.html" title="">2003</a></li>
+<li class=""><a href="../../../1_html/news/_index/02.html" title="">2002</a></li>
+<li class=""><a href="../../../1_html/news/_index/01.html" title="">2001</a></li>
+<li class=""><a href="../../../1_html/news/_index/00.html" title="">2000</a></li>
+<li class=""><a href="../../../1_html/news/_index/99.html" title="">1999</a></li>
+<li class=""><a href="../../../1_html/news/_index/98.html" title="">1998</a></li>
+<li class=""><a href="../../../1_html/news/_index/older.html" title="">Starší</a></li>
+</ul></a></li>
+
+<li><a href="" title="">LINKY</a>
+<ul class='children'>
+<li class=""><a href="http://german-navy.tripod.com/" target="_blank" title="http://german-navy.tripod.com/ [ Otevřít v novém okně ]">German Navy WWI</a></li>
+<li class=""><a href="http://steelnavy.com" target="_blank" title="steelnavy.com [ Otevřít v novém okně ]">steelnavy.com</a></li>
+<li class=""><a href="http://www.arbeitskreis-historischer-schiffbau.de" target="_blank" title="www.arbeitskreis-historischer-schiffbau.de [ Otevřít v novém okně ]">Stavba mod.hist.lodí</a></li>
+<!-- li class=""><a href="http://xoomer.virgilio.it" target="_blank" title="xoomer.virgilio.it [ Otevřít v novém okně ]">Italští modeláři</a></li>
+</ul></a></li -->
+
+</ul>
+<!-- div class="cleaner"></div -->
+<a href="#" id="pull">MENU</a>
+<!-- div class="cleaner"></div -->
+</nav>
+<!-- END OF MAIN MENU - HORIZONTAL -->
+<div class="cleaner"></div>
+<!-- LEFT BAR -->
+<!-- END OF LEFT BAR -->
+
+
+<!-- MIDDLE SPACE WITH ARTICLE -->
+<!-- div id="middle-space">
+<p style="color:white">ahoj troubo</p -->
+
+<!-- MAIN BAR -->
+<div id="main-bar">
+
+
+<!-- LOKACE CLANKU -->
+<div id="article-location">
+<a href="../../index.html" title="Hlavní strana sajtu">Hlavní strana</a>&nbsp;&gt;&nbsp;<a href="../news/180501vp//01index.html" title="Oddíl">Vynálezy&nbsp;a&nbsp;pokroky</a>&nbsp;&gt;&nbsp;<a href="../news/180501vp//06inner.html" title="Tato strana">Plášť ohniště</a>
+</div>
+
+
+<div id="article">
+
+
+<!-- HEADLINE SPACE -->
+<div id="headline-space">
+<h1 title=""><img src="../../../flags/krios_sm.gif" id="state" alt="Obrázek: Krioská vlajka" title="Krioská vlajka" style="margin-right:10px" /><span id="date">2. září 2017</span>Vynálezy&nbsp;a&nbsp;pokroky</h1></div>
+<img src="../../../pictures/technics/steam/boiler/vertical/casing/inner1/2017-09-04 11.24.34.jpg" id="headline-pict" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/casing/inner1/2017-09-04 11.24.34.jpg', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: "title="[ kliknutím zvětšíte ]"style="float:right" />
+<div id="headline" align="center"><h1 id="article-headline">Stáložárný kotel l'Automoteur</h1>
+<h2>Plášť ohniště</h2>
+</div>
+<!-- KONEC NADPISU CLANKU -->
+
+
+<!-- SUBMENU PRO TABLETY A SMARTPHONY -->
+<!-- Generated by getSubmenuForTabletAndSmartphone() in page.py -->
+<div class="cleaner only-tablet-and-smartphone"></div><nav class="clearfix only-tablet-and-smartphone submenu"><ul class="clearfix submenu"><li><a class="submenu" href="01index.html" title="Otevřít stránku: L'Automoteur">L'Automoteur</a></li>
+<li><a class="submenu" href="02bullw1.html" title="Otevřít stránku: Dno kotle">Dno kotle</a></li>
+<li><a class="submenu" href="03bullw2.html" title="Otevřít stránku: Strop ohniště">Strop ohniště</a></li>
+<li><a class="submenu" href="04bunker.html" title="Otevřít stránku: Uhelný bunkr">Uhelný bunkr</a></li>
+<li><a class="submenu" href="05top.html" title="Otevřít stránku: Strop kotle">Strop kotle</a></li>
+<li><a class="submenu" href="06inner.html" title="Otevřít stránku: Plášť ohniště">Plášť ohniště</a></li>
+<li><a class="submenu" href="07outer.html" title="Otevřít stránku: Plášť kotle">Plášť kotle</a></li>
+<li><a class="submenu" href="08float.html" title="Otevřít stránku: Plovak">Plovak</a></li>
+<li><a class="submenu" href="09hole.html" title="Otevřít stránku: Otvor pro dvere">Otvor pro dvere</a></li>
+<li><a class="submenu" href="10pipes.html" title="Otevřít stránku: Trubky">Trubky</a></li>
+<li><a class="submenu" href="11bolts.html" title="Otevřít stránku: Svorníky">Svorníky</a></li>
+<li><a class="submenu" href="12rivets.html" title="Otevřít stránku: Nýtování">Nýtování</a></li>
+<li><a class="submenu" href="13solder.html" title="Otevřít stránku: Zatesneni">Zatesneni</a></li>
+<li><a class="submenu" href="14furnac.html" title="Otevřít stránku: Ohniště">Ohniště</a></li>
+<li><a class="submenu" href="15vent.html" title="Otevřít stránku: Ventilator">Ventilator</a></li>
+<li><a class="submenu" href="16door.html" title="Otevřít stránku: Dveře">Dveře</a></li>
+<li><a class="submenu" href="17poker.html" title="Otevřít stránku: Pohrabáč">Pohrabáč</a></li>
+<li><a class="submenu" href="18wgauge.html" title="Otevřít stránku: Vodoznak">Vodoznak</a></li>
+<li><a class="submenu" href="19exper.html" title="Otevřít stránku: Testy">Testy</a></li>
+<li><a class="submenu" href="20exper.html" title="Otevřít stránku: Testy">Testy</a></li>
+<li><a class="submenu" href="21exper.html" title="Otevřít stránku: Testy">Testy</a></li>
+<li><a class="submenu" href="22end.html" title="Otevřít stránku: Využití">Využití</a></li>
+</ul><a href="#" id="pull">Submenu</a></nav><div class="cleaner only-tablet-and-smartphone"></div><!-- END-OF SUBMENU PRO TABLETY A SMARTPHONY -->
+
+
+<!-- PEREX -->
+<div id="perex"><p>
+Vnitřní plášť ohniště byl podobně jako vnější plášť kotle i středový válcový uhelný bunkr stáčen na válcovací stolici Warco. Při výrobě bylo dosaženo pozoruhodné přesnosti.</p></div><!-- of-perex -->
+<!-- -^^^-[ PEREX ]-^^^- -->
+
+
+
+<!-- -vvv-[ TEXT CLANKU ]-vvv- -->
+<div id="news">
+<!-- div id="-NECO-JINEHO-" -->
+
+<!-- START-OF BACKGROUND COLOR FOR GOVERNORS -->
+<div style="background-color:#f3eadb;">
+
+
+<img src="../../../icons/steam/governor.png" style="float:left; margin: 20px 0 0 0px; width:64px">
+<div class="paragraph">
+<h2>Vnitřní plášť kotle čili plášť ohniště</h2>
+</div>
+<div class="paragraph">
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/casing/inner1/2017-09-03 15.36.45.jpg" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/casing/inner1/2017-09-03 15.36.45.jpg', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px">Stáčení pláště ohniště</div></div>
+<p>Vnitřní plášť kotle byl podobně jako vnější plášť stáčen na válcovací stolici Warco. Konce plechu byly před stáčením zabroušeny na malé brusce Proxxon. Když jsme kotel navrhovali, zvažovali jsme dvě možnosti napojení konců stáčeného plechu. První možností je udělat plech delší o&nbsp;přesah a&nbsp;jednoduše na přesahu snýtovat. Druhou možností je udělat plech se srazem konců "na tupo" a&nbsp;tyto konce překrýt pomocným zakrouženým plechem. Překrytí může být vnější, vnitřní nebo oboje současně. Poslední uvedené je samozřemě nejpevnější, to proto, že síla působící na nýty, které jsou zde standardně namáhány na střih, je vyrovnaná. U&nbsp;samostatného vnitřního nebo vnějšího přeplátování má radiální síla tendenci nýty páčit.</p>
+<div class="left-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/casing/inner1/2017-09-03 16.10.12.jpg" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/casing/inner1/2017-09-03 16.10.12.jpg', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px">Kontrola přesnosti<br />zasunutím do dna kotle</div></div>
+<p>Všechny výše uvedené možnosti, jak jednoduché snýtování konců plechu, tak i&nbsp;snýtování s pomocným překrývajícím plechem zvnějšku, zvnitřku či obojí současně byly v&nbsp;kotlárenství standardně v&nbsp;devatenáctém a&nbsp;na počátku dvacátého století používány.</p>
+<p>Vzhledem k&nbsp;tomu, že vnitřní plášť našeho kotle je ve své dolní části vsazen do prstencového dna kotle, ve své horní části pak do pomocného prstence střední přepážky kotle, resp. stropu ohniště, je přeplátování spoje zde provedeno zevnitř pláště. Tím se nijak nenaruší dokonalý vnější kruhový tvar pláště. Uvnitř pomocný překryvný plech nevadí.</p>
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/casing/inner1/2017-09-03 16.13.26.jpg" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/casing/inner1/2017-09-03 16.13.26.jpg', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px">Po zasunutí do obou prstenců</div></div>
+<p>Zvažovali jsme, zda použít ještě druhý vnější pomocný plech, který by byl samozřejmě kratší, takže by byl jen v&nbsp;prostoru mezi vnitřním ohnutým okrajem prstencového dna kotle a&nbsp;horním ohnutým okrajem pomocného prstence nanýtovaného na stropu ohniště, ale po zralé úvaze jsme tuto variantu zamítnuli jako zbytečnou komplikaci. Důvody byly hned dva. Vzhledem k&nbsp;tomu, že jsme postupovali velice pečlivě a&nbsp;vnitřní plášť kotle je tedy vyroben naprosto přesně, mezi na tupo dotýkající se konce stočeného plechu se nevešel nikde ani vlas. Doslova! Přestože plech je silný toliko 1mm, tlaková síla působící rovnoměrně ze všech stran zvnějšku na válcový plášť ohniště má tendenci tyto na tupo o&nbsp;sebe opřené konce plechu k&nbsp;sobě ještě více srazit, ale ty díky vysoké přesnosti výroby jak okrajů plechu, tak i&nbsp;obou prstenců, do nichž sice bylo možno vtlačit plášť ohniště pouhými dlaněmi, ale za využití poměrně velikého násilí, již nemají kam uhnout.</p>
+<div class="left-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/casing/inner1/2017-09-03 16.13.40.jpg" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/casing/inner1/2017-09-03 16.13.40.jpg', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px">Kontrola přesnosti zabroušení navazujících konců plechu</div></div>
+<p>I bez překrytí vnitřním pomocným plechem - který ale samozřejmě bude nanýtován - by se tedy do jistého, nikoli zcela malého tlaku chovaly tak, jako by se nejednalo o&nbsp;pouhý stočený plech, ale o&nbsp;bezešvou plechovou trubku.</p>
+<p>Při současném vrtání prvních dvou-čtyř otvorů do pláště ohniště a&nbsp;vnitřního vertikálního překryvného plechu jsme s úspěchem použili svorky z&nbsp;Obi. První díry mají tendenci vždy trochu uskočit. Takže s tím počítáme a&nbsp;úmyslně je umístíme trochu "nepřesně" - posunutě do prostoru kde malá nepřesnost nebude vadit. V&nbsp;případě, že to opravdu trochu ujede, opravíme otvory kulatým jehlovým pilníkem tak, aby bylo možno plechy pevně sešroubovat do přesně požadované polohy. Ke stažení používáme nerezové imbus šrouby a&nbsp;matky M2. Jakmile je možno za tyto díry součástky sešroubovat pomocnými šrouby jsou svorky zbytečné a&nbsp;vrtáme řadu otvorů pro nýty. Vzhledem k&nbsp;umístění pláště ohniště na poměrně velkém čtvercovém stole Proxxon je to snadné.</p>
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/casing/inner1/2017-09-04 10.28.18.jpg" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/casing/inner1/2017-09-04 10.28.18.jpg', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px">Vrtání otvorů pro nýty na otočném stole Warco</div></div>
+Pro společné vrtání otvorů pro nýty do pláště ohniště a&nbsp;dna kotle, resp. pomocného prestence stropu ohniště jsme plášť ohniště umístili na otočný stůl Warko umístěný do vertikální polohy na křížový stůl Proxxon o&nbsp;rozměrech 20 x 20 cm.
+
+<div class="cleaner"></div>
+
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/casing/inner1/2017-09-04 11.24.34.jpg" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/casing/inner1/2017-09-04 11.24.34.jpg', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px">Plášť ohniště s vyvrtanými otvory pro&nbsp;nýty</div></div>
+
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/casing/inner1/2017-09-04 11.24.54.jpg" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/casing/inner1/2017-09-04 11.24.54.jpg', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px">Pohled na plášť ohniště zespodu</div></div>
+
+<div class="cleaner"></div>
+
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/casing/inner1/2017-09-04 14.42.31.jpg" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/casing/inner1/2017-09-04 14.42.31.jpg', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px"></div></div>
+
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/casing/inner1/2017-09-04 14.56.40.jpg" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/casing/inner1/2017-09-04 14.56.40.jpg', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px"></div></div>
+
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/casing/inner1/2017-09-04 17.58.33.jpg" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/casing/inner1/2017-09-04 17.58.33.jpg', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px"></div></div>
+
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/casing/inner1/2017-09-04 18.00.53.jpg" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/casing/inner1/2017-09-04 18.00.53.jpg', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px"></div></div>
+
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/casing/inner1/2017-09-03 16.14.43.jpg" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/casing/inner1/2017-09-03 16.14.43.jpg', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px">Vnitřek kotle s nasazenými přepážkami</div></div>
+
+</div>
+
+<div class="cleaner"></div>
+
+
+<img src="../../../icons/steam/governor.png" style="float:left; margin: 20px 0 0 0px; width:64px">
+<div class="paragraph">
+<h2>Otvory pro nyty uhelného bunkru a&nbsp;vnějšího pláště</h2>
+</div>
+<div class="paragraph">
+
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/casing/inner2/2017-09-06 18.45.46.jpg" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/casing/inner2/2017-09-06 18.45.46.jpg', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px"></div></div>
+
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/casing/inner2/2017-09-06 18.49.30.jpg" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/casing/inner2/2017-09-06 18.49.30.jpg', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px"></div></div>
+
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/casing/inner2//2017-09-06 18.57.11.jpg" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/casing/inner2/2017-09-06 18.57.11.jpg', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px"></div></div>
+
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/casing/inner2//2017-09-06 19.00.48.jpg" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/casing/inner2/2017-09-06 19.00.48.jpg', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px"></div></div>
+
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/casing/casing4/2017-09-11 12.10.17.jpg" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/plast4/2017-09-11 12.10.17.jpg', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px"></div></div>
+
+</div>
+<div class="cleaner"></div>
+
+
+<img src="../../../icons/steam/governor.png" style="float:left; margin: 20px 0 0 0px; width:64px">
+<div class="paragraph">
+<h2>Otvory pro žárové trubky a&nbsp;vertikální vzpěry</h2>
+</div>
+<div class="paragraph">
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/bulwarks/middle/phase4/2017-11-04 18.45.18.jpg" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/bulwarks/middle/phase4/2017-11-04 18.45.18.jpg', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px">Vrtání otvorů do&nbsp;prstencového dna&nbsp;kotle</div></div>
+<p>Po dlouhém zvažování a&nbsp;řadě 3D grafických simulací, zda u&nbsp;kotle mít dva či tři soustředné kruhy svislých žárových trubek, byla zvolena umírněnější varianta se dvěma řadami trubek v&nbsp;kruhu. Zvolili jsem trubky o&nbsp;průměru 10/8 mm - to z&nbsp;toho důvodu, že do jejich vnitřního průměru 8 mm lze ještě v&nbsp;budoucnosti umístit přehřívače páry podobné jako jsou u&nbsp;parních lokomotiv, kde jsou jsou ovšem trubky pro přehřátou páru umístěny vodorovně. Aby zbylo okolo trubek dost materiálu - a&nbsp;to jak z&nbsp;důvodu pevnosti, tak i&nbsp;z důvodu dostatečného vodního a&nbsp;parního prostoru (kotel nemá žádný parní dóm) - jsem se rozhodli pro 16 trubek ve vnější a&nbsp;8 ve vnitřní řadě s&nbsp;tím, že v&nbsp;mezipolohách budou umístěny mosazné vertikální svorníky o&nbsp;průměru 4 mm mezi stropem ohniště a&nbsp;stropem kotle.</p>
+<div class="left-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/bulwarks/middle/phase4/2017-11-04 18.15.17.jpg" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/bulwarks/middle/phase4/2017-11-04 18.15.17.jpg', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px">Strop ohniště a&nbsp;prstencové dno kotle s&nbsp;vyvrtanými otvory</div></div>
+<p>V části kotle s plovákem snímajícím výšku hladiny samozřejmě žádné trubky nemohou být, takže nám nakonec vyšlo, že ve vnější kruhové řadě trubek bude 14 trubek a&nbsp;ve vnitřní pak 6.
+Přestože u&nbsp;hliníkového kotle "Scotia" se při testech vodorovné trubky o&nbsp;průměru 8/6 mm nijak zvlášť sazemi nezanášely, rozhodli jsme se pro testování zanášení menších trubek dvě pozice "obětovat" pro jednu menší měděnou trubku 8/6 mm a&nbsp;pro jednu měděnou trubku 6/4 mm.</p>
+<p>Jedna pozice navíc musí být využita pro výstup páry. Pára by samozřejmě mohla být odváděna radiální trubkou z&nbsp;horní části boku kotle, ale díky nutné přírubě (připájet trubku "jen tak" do díry nepřipadá v&nbsp;Kriosu v&nbsp;úvahu) by pára byla z&nbsp;kotle odváděna v&nbsp;nižší poloze dané šířkou příruby, čímž by s sebou strhávala více vodních kapiček. Navíc vzhledem k&nbsp;tomu, že v&nbsp;budoucnosti se předpokládá využití přehřívače páry v&nbsp;prostoru pod horním krytem kotle by se pak pára musela zase nějakým způsobem vracet do tohoto prostoru a&nbsp;to by zkomplikovalo celou konstrukci, neboť bychom museli řešit utěsněný průchod trubky do tohoto prostoru.</p>
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/bulwarks/middle/phase4/2017-11-04 17.58.51.jpg" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/bulwarks/middle/phase4/2017-11-04 17.58.51.jpg', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px">Zkušebně sešroubovaný strop ohniště</div></div>
+<p>V prstencovém dnu kotle jsou otvory o&nbsp;průměru 3mm pro protažení mosazných svorníků o&nbsp;průměru 3 mm. V&nbsp;spodní přepážce tvořící též strop ohniště jsou v&nbsp;těchto místech otvory o&nbsp;průměru 4 mm (aby mohla voda kolem svorníků proudit) a&nbsp;mimoto řada otvorů o&nbsp;průměru 2 mm pro nýty spojující strop ohniště a&nbsp;prstenec určený k&nbsp;přinýtování pláště ohniště. Na tyto vnitřní nýty nepůsobí žádný tlak, přesněji řečeno tlak působí ze všech stran a&nbsp;tak nejsou nijak namáhány.</p>
+  
+
+</div>
+
+<div class="cleaner"></div>
+
+
+</div><!-- END-OF BACKGROUND COLOR FOR GOVERNORS -->
+<div class="cleaner"></div>
+
+
+<div class="division"> 
+<hr /> 
+</div> 
+
+
+<div id="bottom-of-page" style="width:100%;padding:50px 0 50px 0;" align="center">
+<img src="../../../pictures/emblems/vynalezy.png" style="width:320px" />
+</div>
+
+
+
+<!/div><!-- END OF id="news | monarch | imperial | steam-man" -->
+<!-- -^^^-[ TEXT CLANKU ]-^^^- -->
+
+
+<!-- /div --><!-- of id="news" -->
+<div class="cleaner"></div>
+<!-- /div -->
+
+
+<!-- ODKAZY -->
+<div id="predecessor-page-of-article"><a href="05top.html"><button class="btn btn-warning">Předchozí</button><span class="no-in-smartphone">Předchozí&nbsp;článek</span></a></div>
+<div id="next-page-of-article"><a href="07outer.html"><button class="btn btn-next">Další&nbsp;...</button><span class="no-in-smartphone">Další&nbsp;článek</span></a></div>
+</div><!-- of id="article" -->
+<div id="predecessor-article"><a href="02bunker.html"><button class="btn btn-warning">Předch.&nbsp;č.</button><span class="no-in-smartphone">Předchozí&nbsp;časopis</span></a></div><div id="next-article"><a href="../../../1_html/news/_index/09.html"><button class="btn btn-warning">Další&nbsp;čas.</button><span class="no-in-smartphone">Další&nbsp;časopis</span></a></div><!-- -^^^-[ ODKAZY ]-^^^- -->
+
+
+</div><!-- END-OF id="main-bar" -->
+<!-- END OF MAIN BAR -->
+
+<!-- /div --><!-- END-OF id="middle-space" -->
+<!-- END OF MIDDLE SPACE WITH ARTICLE -->
+
+
+<div class="cleaner"></div>
+
+
+<!-- div class="skyscraperad" style="position:absolute;left:1005px;top:155px;margin:30px 0 0 5px;border:solid 1px #fff;">
+<ul>
+<li><a href="http://robodoupe.cz/" target="_blank">robodoupe.cz</a></li>
+<li><a href="http://forum.robodoupe.cz/" target="_blank">forum.robodoupe.cz</a></li>
+<li><a href="http://www.snailshop.cz/" target="_blank">snailshop.cz</a></li>
+</ul>
+</div -->
+
+
+<div id="article-index"><!-- VLASTNI POSTRANNI MENU -->
+<a href="01index.html" title="Otevřít stránku: L'Automoteur">L'Automoteur</a><br class="only-pc" />
+<a href="02bullw1.html" title="Otevřít stránku: Dno kotle">Dno kotle</a><br class="only-pc" />
+<a href="03bullw2.html" title="Otevřít stránku: Strop ohniště">Strop ohniště</a><br class="only-pc" />
+<a href="04bunker.html" title="Otevřít stránku: Uhelný bunkr">Uhelný bunkr</a><br class="only-pc" />
+<a href="05top.html" title="Otevřít stránku: Strop kotle">Strop kotle</a><br class="only-pc" />
+<a href="06inner.html" title="Otevřít stránku: Plášť ohniště">Plášť ohniště</a><br class="only-pc" />
+<a href="07outer.html" title="Otevřít stránku: Plášť kotle">Plášť kotle</a><br class="only-pc" />
+<a href="08float.html" title="Otevřít stránku: Plovak">Plovak</a><br class="only-pc" />
+<a href="09hole.html" title="Otevřít stránku: Otvor pro dvere">Otvor pro dvere</a><br class="only-pc" />
+<a href="10pipes.html" title="Otevřít stránku: Trubky">Trubky</a><br class="only-pc" />
+<a href="11bolts.html" title="Otevřít stránku: Svorníky">Svorníky</a><br class="only-pc" />
+<a href="12rivets.html" title="Otevřít stránku: Nýtování">Nýtování</a><br class="only-pc" />
+<a href="13solder.html" title="Otevřít stránku: Zatesneni">Zatesneni</a><br class="only-pc" />
+<a href="14furnac.html" title="Otevřít stránku: Ohniště">Ohniště</a><br class="only-pc" />
+<a href="15vent.html" title="Otevřít stránku: Ventilator">Ventilator</a><br class="only-pc" />
+<a href="16door.html" title="Otevřít stránku: Dveře">Dveře</a><br class="only-pc" />
+<a href="17poker.html" title="Otevřít stránku: Pohrabáč">Pohrabáč</a><br class="only-pc" />
+<a href="18wgauge.html" title="Otevřít stránku: Vodoznak">Vodoznak</a><br class="only-pc" />
+<a href="19exper.html" title="Otevřít stránku: Testy">Testy</a><br class="only-pc" />
+<a href="20exper.html" title="Otevřít stránku: Testy">Testy</a><br class="only-pc" />
+<a href="21exper.html" title="Otevřít stránku: Testy">Testy</a><br class="only-pc" />
+<a href="22end.html" title="Otevřít stránku: Využití">Využití</a><br class="only-pc" />
+</div><!-- END-OF id="article-index" -->
+
+
+<!-- BOTTOM LOGO -->
+<!--
+<table id="bottom-logo"><tr>
+<td align="center"><div id="copyright">
+Copyright &copy; 2000-2014 Vaclav Blaha<br />All rights reserved<br />
+<a href="mailto:vaclavblaha@yahoo.com" id="design-by"
+title="Send mail to Vaclav Blaha">Responsible Web Site<br />Design by Vaclav Blaha</a></div></td></tr></table>
+<div class="cleaner"></div>
+-->
+
+
+<!-- TOP LEFT TOP LOGO -->
+<!-- div id="logo"><img src="../../icons/krios.png" id="logo_image"></div -->
+<!-- TOP LEFT LOGO "KRIOS EMPIRE" -->
+<div id="logo-plate"><img src="../../../bkg/logo_plt.png" alt="Podklad loga" /></div>
+<div id="logo"><img src="../../../icons/logo.gif" alt="Logo Krios Empire" id="logo_image" /></div>
+
+
+<!-- VALIDATION -->
+<!--
+<a href="http://validator.w3.org/check/referer" target="_blank">
+<img src="../../icons/valxhtml.png" id="validation_xhtml" title="Valid XHTML 1.0 !"
+alt="[ Valid XHTML ]" /></a>
+<a href="http://jigsaw.w3.org/css-validator/check/referer/" target="_blank">
+<img src="../../icons/valcss.png" id="validation_css2" title="Valid CSS !"
+alt="[ Valid CSS ]" /></a></div>
+
+
+<div id="tests"><p>Programmed in HTLM5 and CSS3 under LINUX &reg; Fedora Core 14 Operating System<br />Tested under: LINUX &reg; and WINDOWS &reg; Operating Systems and Internet Viewer: Google Chrome, Mozilla, Opera, Konqueror and Microsoft Internet Explorer for Windows</p></div>
+-->
+
+
+<!-- BOTTOM LOGO -->
+<!-- =========== -->
+<!-- table id="bottom_logo"><tr>
+<td align="center" -->
+<!-- div id="bottom_logo" -->
+<div id="copyright">
+Copyright &copy; Václav&nbsp;Bláha<br />2000-2018<br />All rights reserved<br />
+Responsive Web&nbsp;Design: <br class="only-tablet-and-smartphone" /><a href="mailto:krios@volny.cz" class="design-by" title="Send mail to ...">Václav&nbsp;Bláha</a></div><!-- /div --><!-- /td></tr></table -->
+<div class="cleaner"></div>
+
+
+<!-- VALIDATION -->
+<!-- ========== -->
+<a href="http://validator.w3.org/check/referer" target="_blank">
+<img src="../../../icons/valxhtml.png" id="validation_xhtml" title="Valid XHTML 1.0 !"
+alt="[ Valid XHTML ]" /></a>
+<a href="http://jigsaw.w3.org/css-validator/check/referer/" target="_blank">
+<img src="../../../icons/valcss.png" id="validation_css2" title="Valid CSS !"
+alt="[ Valid CSS ]" /></a>
+<div class="cleaner"></div>
+
+
+<hr />
+
+
+<div id="tests">
+<p><span class="headline">Programmed in:</span><br />HTLM5 and CSS3 under LINUX &reg; Xubuntu Operating System as&nbsp;<a href="http://en.wikipedia.org/wiki/Responsive_web_design" style="external" target="_blank">Responsive&nbsp;Web&nbsp;Design</a> (RWD).</p>
+<p><span class="headline">Tested under:</span><br />LINUX &reg; and&nbsp;WINDOWS &reg; Operating Systems and&nbsp;Internet Viewers: Google Chrome, Mozilla, Opera, Konqueror and&nbsp;Microsoft Internet Explorer for&nbsp;Windows</p>
+</div>
+
+
+</body>
+</html>

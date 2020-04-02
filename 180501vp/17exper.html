@@ -1,0 +1,781 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="cs-CZ">
+
+<head>
+<title>
+Testy - Vynálezy&nbsp;a&nbsp;pokroky - Krios Empire</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Index - Krios Empire - robot.cholerik.cz</title>
+<meta name="author" content="Dipl. Ing. Václav Bláha (www.robotik.cholerik.cz)" />
+<meta name="copyright" content="Dipl. Ing. Václav Bláha (www.robotik.cholerik.cz)" />
+<meta content="Václav Bláha, vývoj sw, programování, počítačová věda, umělá inteligence, kybernetika, statistika, robot, robotika, robotik, elektronika, válečná loď, válečné lodě, loďstvo, dělový člun, kolumbiáda, občanská válka, modely lodí, válečná hra, Naumachia, Krios, pára, parní stroj, ekcentr, parní kotel, programming, computer science, artificial intelligence, cybernetics, statistics, robot, robotic, robotics, electronics, ship, warship, navy, gunboat, columbiad, civil war, ship model, warship model, war game, steam, steam machine, steam engine, eccenter, steam boiler" name="keywords" />
+<link rel="shortcut icon" href="../../../favicon.ico" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<!-- link rel="shortcut icon" href="icons/favicon/robot_face01.ico" / -->
+<link rel="shortcut icon" href="icons/lin.gif" />
+
+<!-- ALPHABET -->
+<style id="gunplay" type="text/css">@font-face{font-family:"gunplay";src:url('gunplay.ttf');}</style>
+<style id="gunplay3" type="text/css">@font-face{font-family:"gunplay3";src:url('gunplay3.ttf');}</style>
+<style id="KAMIKZOM" type="text/css">@font-face{font-family:"KAMIKZOM";src:url('KAMIKZOM.ttf');}</style>
+<!-- style id="rexlia-free" type="text/css">@font-face{font-family:"rexlia_free";src:url('rexlia_free.ttf');}</style -->
+<style id="Note_this" type="text/css">@font-face{font-family:"Note_this";src:url('Note_this.ttf');}</style>
+
+<!-- BASIC STYLES -->
+<link rel="stylesheet" href="../../../style/buttons.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../style/normalize.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../style/style.css" type="text/css" media="screen" />
+<link rel="StyleSheet" href="../../../style/logo.css" type="text/css" media="screen" />
+<link rel="StyleSheet" href="../../../style/video-control.css" type="text/css" media="screen" />
+
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+
+<!-- SCRIPTS -->
+<script src="../../../scripts/popup.js" type="text/javascript"></script>
+<!-- script src="scripts/say_it.js" type="text/javascript"></script>
+<script src="scripts/countdown.js" type="text/javascript"></script>
+<script src="scripts/canvas.js" type="text/javascript"></script>
+<script src="scripts/code.js" type="text/javascript" language="JavaScript"></script -->
+
+<!-- link rel="stylesheet" media="all" href="../../scripts/aux/jquery.lightbox-0.5.css" type="text/css" />
+<script type="text/javascript" src="../../scripts/aux/modernizr-2.6.1.full.js"></script>
+<script type="text/javascript" src="../../scripts/aux/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../../scripts/aux/jquery.easing.1.2.js"></script>
+<script type="text/javascript" src="../../scripts/aux/jquery.nivo.slider.js"></script>
+<script type="text/javascript" src="../../scripts/aux/kendo/kendo.web.min.js"></script>
+<script type="text/javascript" src="../../scripts/aux/jquery.lightbox-0.5.js"></script>
+<script type="text/javascript" src="../../scripts/aux/tools.js"></script -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+<script type="text/javascript">
+	$(function() {
+		var pull 		= $('#pull');
+			menu 		= $('nav ul');
+			submenu 	= $('nav ul li ul');	/* MAIN SUBMENU */
+			logo 		= $('#logo');			/* LOGO */
+			leftMenu	= $('#article-index');	/* LEFT MENU */
+			menuHeight	= menu.height();
+
+		$(pull).on('click', function(e) {
+			e.preventDefault();
+			menu.slideToggle();
+			submenu.hide();						/* HIDE MAIN SUBMENU !!! */
+			logo.hide();						/* HIDE LOGO !!! */
+			leftMenu.hide();					/* HIDE LEFT MENU !!! */
+		});
+
+		$(window).resize(function(){
+       		var w = $(window).width();
+       		if(w > 320 && menu.is(':hidden')) {
+       			menu.removeAttr('style');
+				logo.hide();					/* HIDE LOGO !!! */
+				leftMenu.hide();				/* HIDE LEFT MENU !!! */
+       		}
+   		});
+	});
+</script>
+
+
+<!-- VIDEO FOR ANDROID -->
+<!--
+<script type="text/javascript">
+	var video = document.getElementById('video');
+	video.addEventListener('click',function(){
+		video.play();
+	},false);
+</script>
+-->
+
+<!-- PLAYER -->
+<link href="skin/blue.monday/jplayer.blue.monday.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+
+	$("#jquery_jplayer_1").jPlayer({
+		ready: function (event) {
+			$(this).jPlayer("setMedia", {
+//				mp3:"../../../music/marches/krios/boudin.mp3",
+				mp3:"http://robot.cholerik.cz/krios/music/marches/krios/boudin.mp3",
+			});
+		},
+		swfPath: "js",
+//		supplied: "m4a, oga, mp3",
+		supplied: "mp3",
+		wmode: "window"
+	});
+});
+//]]>
+</script>
+
+
+<!-- TITULKY - VIDEOSUB -->
+<script src="../../../scripts/videosub.js" type="text/javascript"></script>
+
+
+<!-- TITULKY - LEANBACKPLAYER -->
+<link rel="stylesheet" media="screen" type="text/css" href="../../../scripts/css.player/leanbackPlayer.default.css" />
+<script type="text/javascript" src="../../../scripts/js.player/leanbackPlayer.pack.js?1409676633"></script>
+<script type="text/javascript" src="../../../scripts/js.player/leanbackPlayer.en.js"></script>
+<script type="text/javascript" src="../../../scripts/js.player/leanbackPlayer.de.js"></script>
+<script type="text/javascript" src="../../../scripts/js.player/leanbackPlayer.fr.js"></script>
+<script type="text/javascript" src="../../../scripts/js.player/leanbackPlayer.nl.js"></script>
+<script type="text/javascript" src="../../../scripts/js.player/leanbackPlayer.es.js"></script>
+<script type="text/javascript" src="../../../scripts/js.player/leanbackPlayer.ru.js"></script>
+		
+<script type="text/javascript">
+	/* do: set player options */
+	LBP.options = {
+		showSubtitles: true,		// if there are subtitles, show controls element to change
+		defaultTimerFormat: "PASSED_HOVER_REMAINING",	// default timer format, could be "PASSED_DURATION" (default), "PASSED_REMAINING", "PASSED_HOVER_REMAINING"
+	};
+</script>
+		
+<link rel="stylesheet" media="screen" type="text/css" href="../../../scripts/css.player/leanbackPlayer.default.ext.txtPromo.css" />
+<script type="text/javascript" src="../../../scripts/js.player/leanbackPlayer.ext.txtPromo.pack.js"></script>
+<!-- SYNTAX-HIGHLIGHT -->
+<script type="text/javascript" src="../../../syntax/scripts/shCore.js"></script>
+<script type="text/javascript" src="../../../syntax/scripts/shBrushJScript.js"></script>
+<script type="text/javascript" src="../../../syntax/scripts/shBrushPython.js"></script>
+<link type="text/css" rel="stylesheet" href="../../syntax/styles/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+</head>
+
+
+
+<body id="nil">
+
+<!-- LANGUAGES -->
+<!--
+<div id="versions" style="float:left">
+<img src="../../../icons/czech.gif" style="margin-right:2px"><img src="../../../icons/ameng.gif" style="margin-left:2px">
+</div>
+-->
+
+<!-- div id="top-plate" -->
+<div id="name-of-site-with-social-nets">
+
+<!-- SOCIAL-NETS -->
+<div id="social-nets" style="display:none;"><!-- !!!!! -->
+
+<!-- a href="" class="black" title="Přihlásit se na odběr rss" target="_blank" --><img src="../../icons/social-nets/rss.png" alt="Rss Feed" title="Není aktivováno !" /><!-- /a -->
+
+<!-- a href="http://twitter.com/" class="black" title="Sledovat můj twitter" target="_blank" --><img src="../../icons/social-nets/twitter.png" alt="Twitter" title="Není aktivováno !" /><!-- /a -->
+
+<a href="https://www.facebook.com/vaclav.blaha.77" class="black" title="Sledovat můj facebook" target="_blank"><img src="../../icons/social-nets/facebook.png" alt="Facebook" /></a>
+
+<!-- a href="" class="black" title="Sledovat můj digg" target="_blank" --><img src="../../icons/social-nets/digg.png" alt="Digg" title="Není aktivováno !" /><!-- /a -->
+
+<!-- a href="" class="black" title="Sledovat můj reddit" target="_blank" --><img src="../../icons/social-nets/reddit.png" alt="Reddit" title="Není aktivováno !" /><!-- /a -->
+
+<!-- a href="" class="black" title="Sledovat můj youtube kanál" target="_blank" --><img src="../../icons/social-nets/youtube.png" alt="Youtube" title="Není aktivováno !" /><!-- /a -->
+
+</div>
+<!-- END-OF-SOCIAL-NETS -->
+
+
+<!-- NAME-OF-SITE -->
+<a href="../../../index.html" title="Úvodní strana sajtu robotik.cholerik.cz/krios (otevřít v novém okně)" target="_blank"><h1 id="name-of-site" style="font-family:'WoskBlurCE',sans-serif;">robotik.cholerik.cz</h1></a>
+<!-- END-OF NAME-OF-SITE -->
+</div><!-- end of id="name-of-site-with-social-nets" -->
+<div class="cleaner"></div>
+
+
+<!-- -vvv-[ MAIN MENU - HORIZONTAL ]-vvv- /-->
+
+<!-- MAIN MENU -->
+<nav class="clearfix">
+<ul class="clearfix">
+<!--
+<li><a href="../../index.html" title="Úvodní strana: Novinky">Novinky</a>
+<ul class='children'>
+<li><a href="../about/01_pmap.html" title="Mapa stránek">Mapa stránek</a></li>
+<li><a href="../about/02_act.html" title="Archiv akcí">Archiv akcí</a></li>
+</ul></a></li>	
+-->
+<li><a href="#" title="">PRAVIDLA</a>
+<ul class='children'>
+<li><a href="#" title="">Stavba jednotek</a></li>
+<li><a href="#" title="">Stavba pevností</a></li>
+<li><a href="#" title="">Hraní fiktivní</a></li>
+<li><a href="#" title="">Hraní "de facto"</a></li>
+<li><a href="#" title="">Dodatky</a></li>
+<li><a href="#" title="">Uvažované změny</a></li>
+<li><a href="#" title="">Stará Pravidla</a></li>
+</ul></li>
+
+<li><a href="#" title="Robotika">LOĎSTVA</a>
+<ul class='children'>
+<li class="#"><a href="" title="">Arundel</a></li>
+<li class="#"><a href="" title="">Durango</a></li>
+<li class="#"><a href="" title="">Kreuzland</a></li>
+<li class="#"><a href="" title="">Krioské Impérium</a></li>
+<li class="#"><a href="" title="">Sheenland</a></li>
+<li class="#"><a href="" title="">Zaniklé mocnosti</a></li>
+</ul></li>
+
+<li><a  href="#" title="">HRÁČI</a>
+<ul class='children'>
+<li class=""><a href="" title="">Síň slávy</a></li>
+</ul></li>
+
+<li><a href="#" title="">O KRIOSU</a>
+<ul class='children'>
+<li class=""><a href="" title="">Státní zřízení</a></li>
+<li class=""><a href="" title="">Panovnická rodina</a></li>
+<li class=""><a href="" title="">Vláda</a></li>
+<li class=""><a href="" title="">Slavné osobnosti</a></li>
+<li class=""><a href="" title="">Loďstvo</a></li>
+<li class=""><a href="" title="">Historie</a></li>
+<li class=""><a href="" title="">Mapy</a></li>
+</ul></li>
+
+<li><a href="../_index/index.html" title=""><!-- INDEX -->NEWS</a>
+<ul class='children'>
+<li class=""><a href="../_index/09.html" title="">2009 - 2013</a></li>
+<li class=""><a href="../../../1_html/news/_index/08.html" title="">2008</a></li>
+<li class=""><a href="../../../1_html/news/_index/07.html" title="">2007</a></li>
+<li class=""><a href="../../../1_html/news/_index/06.html" title="">2006</a></li>
+<li class=""><a href="../../../1_html/news/_index/05.html" title="">2005</a></li>
+<li class=""><a href="../../../1_html/news/_index/04.html" title="">2004</a></li>
+<li class=""><a href="../../../1_html/news/_index/03.html" title="">2003</a></li>
+<li class=""><a href="../../../1_html/news/_index/02.html" title="">2002</a></li>
+<li class=""><a href="../../../1_html/news/_index/01.html" title="">2001</a></li>
+<li class=""><a href="../../../1_html/news/_index/00.html" title="">2000</a></li>
+<li class=""><a href="../../../1_html/news/_index/99.html" title="">1999</a></li>
+<li class=""><a href="../../../1_html/news/_index/98.html" title="">1998</a></li>
+<li class=""><a href="../../../1_html/news/_index/older.html" title="">Starší</a></li>
+</ul></a></li>
+
+<li><a href="" title="">LINKY</a>
+<ul class='children'>
+<li class=""><a href="http://german-navy.tripod.com/" target="_blank" title="http://german-navy.tripod.com/ [ Otevřít v novém okně ]">German Navy WWI</a></li>
+<li class=""><a href="http://steelnavy.com" target="_blank" title="steelnavy.com [ Otevřít v novém okně ]">steelnavy.com</a></li>
+<li class=""><a href="http://www.arbeitskreis-historischer-schiffbau.de" target="_blank" title="www.arbeitskreis-historischer-schiffbau.de [ Otevřít v novém okně ]">Stavba mod.hist.lodí</a></li>
+<!-- li class=""><a href="http://xoomer.virgilio.it" target="_blank" title="xoomer.virgilio.it [ Otevřít v novém okně ]">Italští modeláři</a></li>
+</ul></a></li -->
+
+</ul>
+<!-- div class="cleaner"></div -->
+<a href="#" id="pull">MENU</a>
+<!-- div class="cleaner"></div -->
+</nav>
+<!-- END OF MAIN MENU - HORIZONTAL -->
+<div class="cleaner"></div>
+<!-- LEFT BAR -->
+<!-- END OF LEFT BAR -->
+
+
+<!-- MIDDLE SPACE WITH ARTICLE -->
+<!-- div id="middle-space">
+<p style="color:white">ahoj troubo</p -->
+
+<!-- MAIN BAR -->
+<div id="main-bar">
+
+
+<!-- LOKACE CLANKU -->
+<div id="article-location">
+<a href="../../index.html" title="Hlavní strana sajtu">Hlavní strana</a>&nbsp;&gt;&nbsp;<a href="../news/180501vp//01index.html" title="Oddíl">Vynálezy&nbsp;a&nbsp;pokroky</a>&nbsp;&gt;&nbsp;<a href="../news/180501vp//17exper.html" title="Tato strana">Testy</a>
+</div>
+
+
+<div id="article">
+
+
+<!-- HEADLINE SPACE -->
+<div id="headline-space">
+<h1 title=""><span id="date">8. května 2018</span>Vynálezy&nbsp;a&nbsp;pokroky</h1></div>
+<img src="../../../pictures/technics/steam/boiler/vertical/tests/2018-05-08 15.48.46.jpg" id="headline-pict" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/tests/2018-05-08 15.48.46.jpg', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: "title="[ kliknutím zvětšíte ]"style="float:right" />
+<div id="headline" align="center"><h1 id="article-headline">L'Automoteur</h1>
+<h2>PLNOU PAROU&nbsp;!<br />Ostrý test kotle<br />pohánějícího parní stroj</h2>
+</div>
+<!-- KONEC NADPISU CLANKU -->
+
+
+<!-- SUBMENU PRO TABLETY A SMARTPHONY -->
+<!-- Generated by getSubmenuForTabletAndSmartphone() in page.py -->
+<div class="cleaner only-tablet-and-smartphone"></div><nav class="clearfix only-tablet-and-smartphone submenu"><ul class="clearfix submenu"><li><a class="submenu" href="01index.html" title="Otevřít stránku: L'Automoteur">L'Automoteur</a></li>
+<li><a class="submenu" href="02bullw1.html" title="Otevřít stránku: Dno kotle">Dno kotle</a></li>
+<li><a class="submenu" href="03bullw2.html" title="Otevřít stránku: Strop ohniště">Strop ohniště</a></li>
+<li><a class="submenu" href="04bunker.html" title="Otevřít stránku: Uhelný bunkr">Uhelný bunkr</a></li>
+<li><a class="submenu" href="05top.html" title="Otevřít stránku: Strop kotle">Strop kotle</a></li>
+<li><a class="submenu" href="06inner.html" title="Otevřít stránku: Plášť ohniště">Plášť ohniště</a></li>
+<li><a class="submenu" href="08float.html" title="Otevřít stránku: Plovak">Plovak</a></li>
+<li><a class="submenu" href="09hole.html" title="Otevřít stránku: Otvor pro dvere">Otvor pro dvere</a></li>
+<li><a class="submenu" href="10pipes.html" title="Otevřít stránku: Trubky">Trubky</a></li>
+<li><a class="submenu" href="11bolts.html" title="Otevřít stránku: Svorníky">Svorníky</a></li>
+<li><a class="submenu" href="12rivets.html" title="Otevřít stránku: Nýtování">Nýtování</a></li>
+<li><a class="submenu" href="13solder.html" title="Otevřít stránku: Zatesneni">Zatesneni</a></li>
+<li><a class="submenu" href="14furnac.html" title="Otevřít stránku: Ohniště">Ohniště</a></li>
+<li><a class="submenu" href="15vent.html" title="Otevřít stránku: Ventilator">Ventilator</a></li>
+<li><a class="submenu" href="16door.html" title="Otevřít stránku: Dveře">Dveře</a></li>
+<li><a class="submenu" href="17exper.html" title="Otevřít stránku: Testy">Testy</a></li>
+<li><a class="submenu" href="Pump.html" title="Otevřít stránku: Plocha plungeru je 3.1416 * 0.3^2 = 0.283 cm2">Plocha plungeru je 3.1416 * 0.3^2 = 0.283 cm2</a></li>
+</ul><a href="#" id="pull">Submenu</a></nav><div class="cleaner only-tablet-and-smartphone"></div><!-- END-OF SUBMENU PRO TABLETY A SMARTPHONY -->
+
+
+<!-- PEREX -->
+<div id="perex"><p>
+Po mnoha experimentech s kotlem otevřeným volně do atmosféry, při kterých bylo testování hoření hnědého a černého uhlí, jakož i antracitu různé hrubosti na různých kruhových roštech, testována účinnost několika typů interních axiálních ventilátorů a naposledy i radiální odstředivý ventilátor pro Miami a též spotřeba paliva nutného k odpaření daného množství vody, bylo konečně po zatěsnění kotle přistoupeno k testu naostro. Ačkoli kotli dosud chybí motor pohánějící rotační pohrabáč a vodní pumpa s odpovídajícím výkonem, nutno konstatovat že test dopadl na jedničku.</p></div><!-- of-perex -->
+<!-- -^^^-[ PEREX ]-^^^- -->
+
+
+
+<!-- -vvv-[ TEXT CLANKU ]-vvv- -->
+<div id="news">
+<!-- div id="-NECO-JINEHO-" -->
+
+<!-- START-OF BACKGROUND COLOR FOR GOVERNORS -->
+<div style="background-color:#f3eadb;">
+
+
+<p>Motto:</p>
+<style>
+#verne {padding:10px;background-color:#003;color:#fff;font-size:80%;}
+#verne p {margin:0;padding:0;}
+</style>
+<div id="verne">
+<p>Záklopky byly zatíženy. Uhlí mizelo v&nbsp;topeništích. Ventilátory vháněly pod rošty proudy vzduchu. Rychlost <i>Abrahama Lincolna</i> vzrůstala. Stěžně se chvěly až ve svých základech a&nbsp;chuchvalce kouře se sotva prodíraly příliš úzkými komíny.</p>
+<p>Podruhé byl vyhozen rychloměr.</p>
+<p>"Kolik kormidelníku?", ptal se kapitán Faragut.</p>
+<p>"Třicet pět a&nbsp;půl kilometru, pane kapitáne."</p>
+<p>"Přiložte ještě víc!"</p>
+<p>Inženýr poslechl. Manometr ukazoval deset atmosfér. Ale kytovec "přiložil" také, protože bez námahy plul též rychlostí pětatřiceti a&nbsp;půl kilometru.</p>
+<p>Jaké to pronásledování! ...</p>
+<p>&nbsp;</p>
+<p>Jules Verne: Dvacet tisíc mil pod mořem</p>
+<p>Honba za domnělým narvalem obrovským, Kapitola VI - PLNOU PAROU!</p>
+</div>
+
+
+<img src="../../../icons/steam/governor.png" style="float:left; margin: 20px 0 0 0px; width:64px">
+<div class="paragraph">
+<h2>Příprava testu</h2>
+</div>
+<div class="paragraph">
+<p>Kotel má maximální kapacitu 650 cm3 vody. Vzhledem k&nbsp;tomu, že tento typ kotlů již z&nbsp;podstaty své konstrukce postrádá parní dóm jsme pro první "ostrý" test tohoto kotle kdy voda v&nbsp;něm bude poprvé vařit pod tlakem dali poněkud menší počáteční náplň 550 cm3 vody. Do uhelného bunkru bylo naloženo 130g hnědého uhlí plus navrch 30g černého uhlí, celkem tedy 160g, čímž byl centrální, poměrně malý uhelný bunkr zcela zaplněn. Podle zkušeností z&nbsp;mnoha předchozích testů hoření při kotli otevřeném do atmoférického tlaku by toto množství mělo při polovičním výkonu ventilátoru a&nbsp;nepříliš častém prohrábnutí roštu mělo stačit na přibližně 50 minut chodu.</p>
+<p>Vzhledem k&nbsp;tomu, že kotel není dosud vybaven vodoznakem jsme vědomě podstupovali jisté riziko - totiž, že se voda předčasně vyvaří a&nbsp;cínové těsnění nýtovaných spojů někde povolí. Leč i&nbsp;zde jsme již měli jisté zkušenosti jak dlouho voda přibližně vydrží do prvního doplňování.</p>
+</div>
+<div class="cleaner"></div>
+
+
+
+
+<img src="../../../icons/steam/governor.png" style="float:left; margin: 20px 0 0 0px; width:64px">
+<div class="paragraph">
+<h2>Šest minut po ukončení zážehu</h2>
+</div>
+<div class="cleaner"></div>
+<img src="../../../icons/steampnk/movie.png" class="paragraph-icon">
+<div class="paragraph">
+<!-- div class="full-size-video-plate" --><!-- class="full-size-pict" -->
+<div class="full-size-video-container">
+
+<!-- VIDEO -->
+<video autobuffer controls onclick="this.play();" poster="../../../video/techn/steam/20180508/_.png" rotate="90"><!-- class="full-size-video" -->
+<source src="../../../video/techn/steam/20180508/15-45-00.mp4"><!-- type="video/mpeg" -->
+<source src="../../../video/actions/120726/manev_1.mp4"><!-- type="video/mpeg" -->
+<source src="../../../video/actions/120726/manev_1.m4v"><!-- iPhone, Android -->
+<source src="../../../video/actions/120726/manev_1.webm" type="video/webm" />
+<source src="../../../video/actions/120726/manev_1.ogv" type="video/ogv" />
+<!-- source src="../../../video/actions/120726/manev_1.mp4" type="video/mp4" / -->
+<source src="../../../video/actions/120726/manev_1.mpg" type="video/mpeg" />
+<source src="../../../video/actions/120726/manev_1.mov" type="video/mov" />
+<source src="../../../video/actions/120726/manev_1.wmv" type="video/x-ms-wmv" />
+
+<!-- OBJECT -->
+<object name="manevre_2012" type="video/mpeg">
+<!-- style="float:left;width:720px;height:568px;" -->
+<param name="src" value="../../../video/techn/steam/20180508/15-45-00.mp4" />
+<param name="controller" value="true" />
+<param name="autoplay" value="true" />
+<param name="standby" value="Společné kriosko-sheenlandské manévry v&nbsp;létě 2012" />
+<param name="wmode" value="transparent" />
+
+<!-- EMBED -->
+<embed src="../../../video/techn/steam/20180508/15-45-00.mp4" autostart="true" controls>
+<!-- style="width:720px;height:568px" -->
+<noembed><div align="center"><img src="../../../pictures/.jpg"></div>
+<div align="center">You have no codecs for this video.</div></noembed>
+
+</embed></object></video>
+</div><!-- END-OF "full-size-video-container" -->
+<!-- /div -->
+<div class="pict-comment"><!-- style="margin:0; text-align:center; text-indent:0px; color:#036; background-color: #ccc;padding:15px" -->Roztápění kotle</div>
+
+<div class="bottom-video-comments">
+<div class="left-video-comment">
+<a href="../../about/troubles/index.html" target="_blank">
+Nepřehrává video <img src="../../../icons/questmrk.gif" alt="Otevřít v&nbsp;novém okně: Problémy s kodeky a&nbsp;jejich řešení..." title="Otevřít v&nbsp;novém okně: Problémy s kodeky a&nbsp;jejich řešení..." /></a></div>
+<div class="center-video-comment" align="center" onclick="alert('Autorská práva:\n\nFilm: Vlastní tvorba\nAutor: Dipl.Ing.Václav Bláha III\nNázev díla: Summer 2012\nAutorská práva: Copyleft (volná)\n\nFormát: mp3\n\nZvuková stopa:\nArchiv zvukaře Václava Bláhy II')">Info <img src="../../../icons/questmrk.gif" alt="Autorská práva..." title="Autorská práva..." /></div>
+<div class="right-video-comment">
+Stáhnout: [<a href="../../../video/actions/120726/manev_1.wmv" target="_blank" title="Stahněte ve formátu pro Windows WMV a&nbsp;pusťte přímo ve svém počitači!"><span class="abbr">wmv</span></a>] [<a href="../../../video/actions/120726/manev_1.mpg" target="_blank" title="Stahněte v&nbsp;univerzálním formátu MPEG a&nbsp;pusťte přímo ve svém počitači!"><span class="abbr">mpg</span></a>] [<a href="../../../video/actions/120726/manev_1.webm" target="_blank" title="Stahněte v&nbsp;internetovém formátu WEBM a&nbsp;pusťte přímo ve svém počitači!"><span class="abbr">webm</span></a>]</div>
+</div><!-- END-OF "bottom-video-comments" -->
+</div><!-- END-OF "paragraph" -->
+<div class="cleaner"></div>
+
+
+
+
+<img src="../../../icons/steam/governor.png" style="float:left; margin: 20px 0 0 0px; width:64px">
+<div class="paragraph">
+<h2>Osm minut po ukončení zážehu</h2>
+</div>
+<div class="cleaner"></div>
+<img src="../../../icons/steampnk/movie.png" class="paragraph-icon">
+<div class="paragraph">
+<!-- div class="full-size-video-plate" --><!-- class="full-size-pict" -->
+<div class="full-size-video-container">
+
+<!-- VIDEO -->
+<video autobuffer controls onclick="this.play();" poster="../../../video/techn/steam/20180508/_.png" rotate="90"><!-- class="full-size-video" -->
+<source src="../../../video/techn/steam/20180508/15-47-10.mp4"><!-- type="video/mpeg" -->
+<source src="../../../video/actions/120726/manev_1.mp4"><!-- type="video/mpeg" -->
+<source src="../../../video/actions/120726/manev_1.m4v"><!-- iPhone, Android -->
+<source src="../../../video/actions/120726/manev_1.webm" type="video/webm" />
+<source src="../../../video/actions/120726/manev_1.ogv" type="video/ogv" />
+<!-- source src="../../../video/actions/120726/manev_1.mp4" type="video/mp4" / -->
+<source src="../../../video/actions/120726/manev_1.mpg" type="video/mpeg" />
+<source src="../../../video/actions/120726/manev_1.mov" type="video/mov" />
+<source src="../../../video/actions/120726/manev_1.wmv" type="video/x-ms-wmv" />
+
+<!-- OBJECT -->
+<object name="manevre_2012" type="video/mpeg">
+<!-- style="float:left;width:720px;height:568px;" -->
+<param name="src" value="../../../video/techn/steam/20180508/15-47-10.mp4" />
+<param name="controller" value="true" />
+<param name="autoplay" value="true" />
+<param name="standby" value="Společné kriosko-sheenlandské manévry v&nbsp;létě 2012" />
+<param name="wmode" value="transparent" />
+
+<!-- EMBED -->
+<embed src="../../../video/techn/steam/20180508/15-47-10.mp4" autostart="true" controls>
+<!-- style="width:720px;height:568px" -->
+<noembed><div align="center"><img src="../../../pictures/.jpg"></div>
+<div align="center">You have no codecs for this video.</div></noembed>
+
+</embed></object></video>
+</div><!-- END-OF "full-size-video-container" -->
+<!-- /div -->
+<div class="pict-comment"><!-- style="margin:0; text-align:center; text-indent:0px; color:#036; background-color: #ccc;padding:15px" -->Roztápění kotle</div>
+
+<div class="bottom-video-comments">
+<div class="left-video-comment">
+<a href="../../about/troubles/index.html" target="_blank">
+Nepřehrává video <img src="../../../icons/questmrk.gif" alt="Otevřít v&nbsp;novém okně: Problémy s kodeky a&nbsp;jejich řešení..." title="Otevřít v&nbsp;novém okně: Problémy s kodeky a&nbsp;jejich řešení..." /></a></div>
+<div class="center-video-comment" align="center" onclick="alert('Autorská práva:\n\nFilm: Vlastní tvorba\nAutor: Dipl.Ing.Václav Bláha III\nNázev díla: Summer 2012\nAutorská práva: Copyleft (volná)\n\nFormát: mp3\n\nZvuková stopa:\nArchiv zvukaře Václava Bláhy II')">Info <img src="../../../icons/questmrk.gif" alt="Autorská práva..." title="Autorská práva..." /></div>
+<div class="right-video-comment">
+Stáhnout: [<a href="../../../video/actions/120726/manev_1.wmv" target="_blank" title="Stahněte ve formátu pro Windows WMV a&nbsp;pusťte přímo ve svém počitači!"><span class="abbr">wmv</span></a>] [<a href="../../../video/actions/120726/manev_1.mpg" target="_blank" title="Stahněte v&nbsp;univerzálním formátu MPEG a&nbsp;pusťte přímo ve svém počitači!"><span class="abbr">mpg</span></a>] [<a href="../../../video/actions/120726/manev_1.webm" target="_blank" title="Stahněte v&nbsp;internetovém formátu WEBM a&nbsp;pusťte přímo ve svém počitači!"><span class="abbr">webm</span></a>]</div>
+</div><!-- END-OF "bottom-video-comments" -->
+</div><!-- END-OF "paragraph" -->
+<div class="cleaner"></div>
+
+
+
+
+<img src="../../../icons/steam/governor.png" style="float:left; margin: 20px 0 0 0px; width:64px">
+<div class="paragraph">
+<h2>Deset minut po ukončení zážehu</h2>
+</div>
+<div class="cleaner"></div>
+<img src="../../../icons/steampnk/movie.png" class="paragraph-icon">
+<div class="paragraph">
+<!-- div class="full-size-video-plate" --><!-- class="full-size-pict" -->
+<div class="full-size-video-container">
+
+<!-- VIDEO -->
+<video autobuffer controls onclick="this.play();" poster="../../../video/techn/steam/20180508/_.png" rotate="90"><!-- class="full-size-video" -->
+<source src="../../../video/techn/steam/20180508/15-49-11.mp4"><!-- type="video/mpeg" -->
+<source src="../../../video/actions/120726/manev_1.mp4"><!-- type="video/mpeg" -->
+<source src="../../../video/actions/120726/manev_1.m4v"><!-- iPhone, Android -->
+<source src="../../../video/actions/120726/manev_1.webm" type="video/webm" />
+<source src="../../../video/actions/120726/manev_1.ogv" type="video/ogv" />
+<!-- source src="../../../video/actions/120726/manev_1.mp4" type="video/mp4" / -->
+<source src="../../../video/actions/120726/manev_1.mpg" type="video/mpeg" />
+<source src="../../../video/actions/120726/manev_1.mov" type="video/mov" />
+<source src="../../../video/actions/120726/manev_1.wmv" type="video/x-ms-wmv" />
+
+<!-- OBJECT -->
+<object name="manevre_2012" type="video/mpeg">
+<!-- style="float:left;width:720px;height:568px;" -->
+<param name="src" value="../../../video/techn/steam/20180508/15-49-11.mp4" />
+<param name="controller" value="true" />
+<param name="autoplay" value="true" />
+<param name="standby" value="Společné kriosko-sheenlandské manévry v&nbsp;létě 2012" />
+<param name="wmode" value="transparent" />
+
+<!-- EMBED -->
+<embed src="../../../video/techn/steam/20180508/15-49-11.mp4" autostart="true" controls>
+<!-- style="width:720px;height:568px" -->
+<noembed><div align="center"><img src="../../../pictures/.jpg"></div>
+<div align="center">You have no codecs for this video.</div></noembed>
+
+</embed></object></video>
+</div><!-- END-OF "full-size-video-container" -->
+<!-- /div -->
+<div class="pict-comment"><!-- style="margin:0; text-align:center; text-indent:0px; color:#036; background-color: #ccc;padding:15px" -->Roztápění kotle</div>
+
+<div class="bottom-video-comments">
+<div class="left-video-comment">
+<a href="../../about/troubles/index.html" target="_blank">
+Nepřehrává video <img src="../../../icons/questmrk.gif" alt="Otevřít v&nbsp;novém okně: Problémy s kodeky a&nbsp;jejich řešení..." title="Otevřít v&nbsp;novém okně: Problémy s kodeky a&nbsp;jejich řešení..." /></a></div>
+<div class="center-video-comment" align="center" onclick="alert('Autorská práva:\n\nFilm: Vlastní tvorba\nAutor: Dipl.Ing.Václav Bláha III\nNázev díla: Summer 2012\nAutorská práva: Copyleft (volná)\n\nFormát: mp3\n\nZvuková stopa:\nArchiv zvukaře Václava Bláhy II')">Info <img src="../../../icons/questmrk.gif" alt="Autorská práva..." title="Autorská práva..." /></div>
+<div class="right-video-comment">
+Stáhnout: [<a href="../../../video/actions/120726/manev_1.wmv" target="_blank" title="Stahněte ve formátu pro Windows WMV a&nbsp;pusťte přímo ve svém počitači!"><span class="abbr">wmv</span></a>] [<a href="../../../video/actions/120726/manev_1.mpg" target="_blank" title="Stahněte v&nbsp;univerzálním formátu MPEG a&nbsp;pusťte přímo ve svém počitači!"><span class="abbr">mpg</span></a>] [<a href="../../../video/actions/120726/manev_1.webm" target="_blank" title="Stahněte v&nbsp;internetovém formátu WEBM a&nbsp;pusťte přímo ve svém počitači!"><span class="abbr">webm</span></a>]</div>
+</div><!-- END-OF "bottom-video-comments" -->
+</div><!-- END-OF "paragraph" -->
+<div class="cleaner"></div>
+
+
+
+
+<img src="../../../icons/steam/governor.png" style="float:left; margin: 20px 0 0 0px; width:64px">
+<div class="paragraph">
+<h2>Stroj se rozbíhá</h2>
+</div>
+<div class="paragraph">
+<p>Vzhledem k&nbsp;tomu, že výkon ventilátoru jsme nastavili na jednu třetinu se voda začala vařit po jedenácti minutách po ukončení zážehu. Za další minutu již byl tlak dostatečný k&nbsp;tomu aby se stroj rozběhl. Následující video je z&nbsp;třetí minuty běhu stroje:</p>
+</div>
+<div class="cleaner"></div>
+<img src="../../../icons/steampnk/movie.png" class="paragraph-icon">
+<div class="paragraph">
+<!-- div class="full-size-video-plate" --><!-- class="full-size-pict" -->
+<div class="full-size-video-container">
+
+<!-- VIDEO -->
+<video autobuffer controls onclick="this.play();" poster="../../../video/techn/steam/20180508/_.png" rotate="90"><!-- class="full-size-video" -->
+<source src="../../../video/techn/steam/20180508/15-53-13.mp4"><!-- type="video/mpeg" -->
+<source src="../../../video/actions/120726/manev_1.mp4"><!-- type="video/mpeg" -->
+<source src="../../../video/actions/120726/manev_1.m4v"><!-- iPhone, Android -->
+<source src="../../../video/actions/120726/manev_1.webm" type="video/webm" />
+<source src="../../../video/actions/120726/manev_1.ogv" type="video/ogv" />
+<!-- source src="../../../video/actions/120726/manev_1.mp4" type="video/mp4" / -->
+<source src="../../../video/actions/120726/manev_1.mpg" type="video/mpeg" />
+<source src="../../../video/actions/120726/manev_1.mov" type="video/mov" />
+<source src="../../../video/actions/120726/manev_1.wmv" type="video/x-ms-wmv" />
+
+<!-- OBJECT -->
+<object name="manevre_2012" type="video/mpeg">
+<!-- style="float:left;width:720px;height:568px;" -->
+<param name="src" value="../../../video/techn/steam/20180508/15-53-13.mp4" />
+<param name="controller" value="true" />
+<param name="autoplay" value="true" />
+<param name="standby" value="Společné kriosko-sheenlandské manévry v&nbsp;létě 2012" />
+<param name="wmode" value="transparent" />
+
+<!-- EMBED -->
+<embed src="../../../video/techn/steam/20180508/15-53-13.mp4" autostart="true" controls>
+<!-- style="width:720px;height:568px" -->
+<noembed><div align="center"><img src="../../../pictures/.jpg"></div>
+<div align="center">You have no codecs for this video.</div></noembed>
+
+</embed></object></video>
+</div><!-- END-OF "full-size-video-container" -->
+<!-- /div -->
+<div class="pict-comment"><!-- style="margin:0; text-align:center; text-indent:0px; color:#036; background-color: #ccc;padding:15px" -->Stroj se rozběhl v&nbsp;15:51, toto video je z&nbsp;padesáté třetí minuty, tedy po dvou minutách chodu.</div>
+
+<div class="bottom-video-comments">
+<div class="left-video-comment">
+<a href="../../about/troubles/index.html" target="_blank">
+Nepřehrává video <img src="../../../icons/questmrk.gif" alt="Otevřít v&nbsp;novém okně: Problémy s kodeky a&nbsp;jejich řešení..." title="Otevřít v&nbsp;novém okně: Problémy s kodeky a&nbsp;jejich řešení..." /></a></div>
+<div class="center-video-comment" align="center" onclick="alert('Autorská práva:\n\nFilm: Vlastní tvorba\nAutor: Dipl.Ing.Václav Bláha III\nNázev díla: Summer 2012\nAutorská práva: Copyleft (volná)\n\nFormát: mp3\n\nZvuková stopa:\nArchiv zvukaře Václava Bláhy II')">Info <img src="../../../icons/questmrk.gif" alt="Autorská práva..." title="Autorská práva..." /></div>
+<div class="right-video-comment">
+Stáhnout: [<a href="../../../video/actions/120726/manev_1.wmv" target="_blank" title="Stahněte ve formátu pro Windows WMV a&nbsp;pusťte přímo ve svém počitači!"><span class="abbr">wmv</span></a>] [<a href="../../../video/actions/120726/manev_1.mpg" target="_blank" title="Stahněte v&nbsp;univerzálním formátu MPEG a&nbsp;pusťte přímo ve svém počitači!"><span class="abbr">mpg</span></a>] [<a href="../../../video/actions/120726/manev_1.webm" target="_blank" title="Stahněte v&nbsp;internetovém formátu WEBM a&nbsp;pusťte přímo ve svém počitači!"><span class="abbr">webm</span></a>]</div>
+</div><!-- END-OF "bottom-video-comments" -->
+</div><!-- END-OF "paragraph" -->
+<div class="cleaner"></div>
+
+
+
+
+<img src="../../../icons/steam/governor.png" style="float:left; margin: 20px 0 0 0px; width:64px">
+<div class="paragraph">
+<h2>Tlakoměr</h2>
+<p>tlakoměr s rozsahem do 15 psi, což je 1.021 atm, resp. 100 kPa, což je 0.987 atm ????
+</p>
+<p>60-70 kPa = 0.59-0.69 atm</p>
+<p>9 psi    = 0.61 atm</p>
+<p>10 psi    = 0.68 atm</p>
+<p>http://www.prepocet.cz/tlak/ (lepší)</p>
+<p>https://www.jednotky.cz/tlak/</p>
+
+
+<p>Střednímu tlaku přibližně 0.65 atm odpovídá teplota vařící vody a&nbsp;tedy i&nbsp;páry na výstupu z&nbsp;kotle 114 stupňů celsia. Při tomto tlaku má 1kg vodní páry objem 1.06 m3.</p>
+<p>Na páru bylo během 29 minut přeměněno 550cm3 - cca 85 cm3 vody, což je 465g vody. Celkem bylo tedy vytvořeno 0.465 [kg] * 1.06 [m³/kg] = 0.4929 m3 = 492.9 litru = 492900 cm3 páry, během jedné minuty tedy v&nbsp;průměru 16430 cm3 a&nbsp;během jedné sekundy 273.8 cm3 páry. Použitý čtyřválcový jednočinný parní stroj má vnitřní průměr válce 8mm a&nbsp;rozkročení klik 15mm. Objem jednoho válce je tedy 4*4*3.1416 * 15 = 753.98 mm3. Při jedné otáčce stroje se tedy (nepočítámeli úniky páry) spotřebuje teoreticky 3016 mm3, tedy asi 3 cm3 páry o&nbsp;tlaku 0.65 atmosfér. Pro jednoduchost počítejme, že kdyby neexistovaly žádné ztráty ve vedení a&nbsp;žádné úniky páry kolem pístů měl by stroj teoreticky dosahovat během 28 minut chodu průměrně 273.8 [cm3/sec] / 3.016 = 90.79 otáček za sekundu. To jistě nedosahoval. Ztráty ve vedení budou pravděpodobně nepatrné, kondenzace vody za strojem byla malá, zachycené vody bylo celkem jen několik kubických centimetrů. Únik kolem pístů ale bude velký. Otáčky stroje jseme neměřili (nebylo jak), ale odhadem se podle dvaadvacetiletých zkušeností s tímto strojem stěží pohybovaly v&nbsp;polovině teoreticky vypočítaných 90 otáček za sekundu, odhadem to mohlo být tak 20 až 30 otáček za sekundu.</p>
+<p>Nás však zajímá něco jiného - totiž výkon a&nbsp;účinnost tohoto parního kotle.</p>
+Kotel má hmotnost přibližně 3900 g a&nbsp;náplň vody byla 550 g.</p>
+<p>Měrná tepelná kapacita (měrné teplo nebo specifické teplo) je množství tepla potřebného k&nbsp;ohřátí 1 kilogramu látky o&nbsp;1 teplotní stupeň (1 kelvin nebo 1 stupeň Celsia).</p>
+<p>Mnozstvi tepla <b>Q</b> potrebneho k&nbsp;ohrati 0.55 kg vody z&nbsp;teploty 23 stupnu Celsia na teplotu varu vody 116 stupnu Celsia pri tlaku 0.65 atmosfery je</p>
+<pre>
+Q = m * c * (t2 - t1)
+  = 0.55 * 4181,8 * (116 - 23) = 213899 J ~= 213.9 kJ
+                                             ========
+</pre>
+<p>Obdobně mnozstvi tepla <b>Q</b> potrebneho k&nbsp;ohrati medeneho kotle o&nbsp;hmotnosti 3.9 kg z&nbsp;teploty 23 stupnu Celsia na teplotu varu vody 116 stupnu Celsia je</p>
+<pre>                   -1   -1
+Q = 3.9 [kg] * 390 [J * kg  * K&nbsp; ] * 93 [K] = 141453 J ~= 141.5 kJ
+                                                          ========
+</pre>
+<p>Celkem k&nbsp;počátečnímu ohřátí byla tedy treba energie 213.9 + 141.5 = 355.4 kJ</p>
+<p>Pro změnu vody o&nbsp;teplotě 116 stupňů celsia na páru je třeba uvažovat měrné skupenské teplo vody 2257 kJ/kg.</p>
+<pre>
+L  =  m * l       [J]
+ v&nbsp;        v
+</pre>
+<p>Po dosazení</p>
+<pre>
+L  =  0.55 * 2257 = 1241.35 kJ
+ v
+</pre>
+Jak je vidět, pokud by nebyly úniky tepla do okolí měděným pláštěm kotle, a&nbsp;samozřejmě též komínem, měli bychom spotřebovat na roztopení kotle a&nbsp;následný půlhodinový vývin páry o&nbsp;tlaku 0.65 atmosfér 355.4 + 1241.35 kJ tepla. Realitu se pokusíme spočítat z&nbsp;výhřevnosti hnědého a&nbsp;černého uhlí. Budeme počítat střední výhřevnost. Hnědé uhlí se spotřebovalo všechno, spálilo se ho přesně 130 gramů, černého uhlí se spálila jen neparná část, totiž 30-27 = 3g. U&nbsp;hnědého uhlí bývá uváděna výhřevnost 10 000 - 17 000 kJ/kg. To je poměrně velký rozsah a&nbsp;my nevíme odkud hnědé uhlí bylo a&nbsp;jakou má přesně výhřevnost. Proto počítejme se střední hodnotou 13500 kJ/kg. Spálením 130g hnědého uhlí by v&nbsp;tom případě mělo vzniknout teplo 1755 kJ. Výhřevnost černého uhlí se uvádí v&nbsp;rozmezí 21 000 - 31 000 kJ/kg. Opět nevíme odkud dané černé uhlí bylo, takže zase vezmeme střední hodnotu. Ta činí 26000 kJ/kg. Malé množství spáleného černého uhlí nám tedy ještě přispělo energií 26000 * 0.003 = 78 kJ. Celkem vychází, že se spálením uhlí měla uvolnila energie 1833 kJ.</p>
+<p>Potřebovali jsme 1241.35 a&nbsp;spotřebovalo se 1833 kJ. Čísla možná nepřesná, zejména to druhé (prvému můžeme vcelku věřit, u&nbsp;druhého budeme raději opatrní) ale zjevně nikoli nesmyslná. Pokud by byla správná, účinnost našeho kotle by dosahovala téměř 68 procent, což vůbec není špatné!</p>
+<p>Výkon kotle po roztopení během třiceti minut vývinu páry byl 1241.35 kJ/30 minut, <!-- tedy 41.378 kJ/min = 0.6896 kJ/sec. Vzhledem k&nbsp;tomu že energii 1 kJ odpovídá práce 0.2778 W, byl průměrný výkon kotle 0.1916 W -->což by bylo 2482.7 kJ/h. Vzhledem k&nbsp;tomu že energii 1 kJ odpovídá práce 0.2778 W, byl průměrný výkon kotle 689.69 kW - což je zhruba jedna koňská síla.
+</p>
+
+
+
+
+</div>
+
+
+</div><!-- END-OF BACKGROUND COLOR FOR GOVERNORS -->
+<div class="cleaner"></div>
+
+
+<div class="division"><hr /></div>
+
+
+<div id="bottom-of-page" style="width:100%;padding:50px 0 50px 0;" align="center">
+<img src="../../../pictures/emblems/vynalezy.png" alt="Obrázek: Emblém krioského technicky zaměřeného časopisu 'Vynálezy a&nbsp;pokroky'" title="Emblém krioského technicky zaměřeného časopisu 'Vynálezy a&nbsp;pokroky'" style="width:320px" />
+</div>
+
+
+<div class="cleaner"></div>
+
+
+<!/div><!-- END OF id="news | monarch | imperial | steam-man" -->
+<!-- -^^^-[ TEXT CLANKU ]-^^^- -->
+<!-- -^^^-[ TEXT CLANKU ]-^^^- -->
+
+
+<!-- /div --><!-- of id="news" -->
+<div class="cleaner"></div>
+<!-- /div -->
+
+
+<!-- ODKAZY -->
+<div id="predecessor-page-of-article"><a href="16door.html"><button class="btn btn-warning">Předchozí</button><span class="no-in-smartphone">Předchozí&nbsp;článek</span></a></div>
+<div id="next-page-of-article"><a href="Pump.html"><button class="btn btn-next">Další&nbsp;...</button><span class="no-in-smartphone">Další&nbsp;článek</span></a></div>
+</div><!-- of id="article" -->
+<div id="predecessor-article"><a href="03bunker.html"><button class="btn btn-warning">Předch.&nbsp;č.</button><span class="no-in-smartphone">Předchozí&nbsp;časopis</span></a></div><div id="next-article"><a href="05vertic.html"><button class="btn btn-warning">Další&nbsp;čas.</button><span class="no-in-smartphone">Další&nbsp;časopis</span></a></div><!-- -^^^-[ ODKAZY ]-^^^- -->
+
+
+</div><!-- END-OF id="main-bar" -->
+<!-- END OF MAIN BAR -->
+
+<!-- /div --><!-- END-OF id="middle-space" -->
+<!-- END OF MIDDLE SPACE WITH ARTICLE -->
+
+
+<div class="cleaner"></div>
+
+
+<!-- div class="skyscraperad" style="position:absolute;left:1005px;top:155px;margin:30px 0 0 5px;border:solid 1px #fff;">
+<ul>
+<li><a href="http://robodoupe.cz/" target="_blank">robodoupe.cz</a></li>
+<li><a href="http://forum.robodoupe.cz/" target="_blank">forum.robodoupe.cz</a></li>
+<li><a href="http://www.snailshop.cz/" target="_blank">snailshop.cz</a></li>
+</ul>
+</div -->
+
+
+<div id="article-index"><!-- VLASTNI POSTRANNI MENU -->
+<a href="01index.html" title="Otevřít stránku: L'Automoteur">L'Automoteur</a><br class="only-pc" />
+<a href="02bullw1.html" title="Otevřít stránku: Dno kotle">Dno kotle</a><br class="only-pc" />
+<a href="03bullw2.html" title="Otevřít stránku: Strop ohniště">Strop ohniště</a><br class="only-pc" />
+<a href="04bunker.html" title="Otevřít stránku: Uhelný bunkr">Uhelný bunkr</a><br class="only-pc" />
+<a href="05top.html" title="Otevřít stránku: Strop kotle">Strop kotle</a><br class="only-pc" />
+<a href="06inner.html" title="Otevřít stránku: Plášť ohniště">Plášť ohniště</a><br class="only-pc" />
+<a href="08float.html" title="Otevřít stránku: Plovak">Plovak</a><br class="only-pc" />
+<a href="09hole.html" title="Otevřít stránku: Otvor pro dvere">Otvor pro dvere</a><br class="only-pc" />
+<a href="10pipes.html" title="Otevřít stránku: Trubky">Trubky</a><br class="only-pc" />
+<a href="11bolts.html" title="Otevřít stránku: Svorníky">Svorníky</a><br class="only-pc" />
+<a href="12rivets.html" title="Otevřít stránku: Nýtování">Nýtování</a><br class="only-pc" />
+<a href="13solder.html" title="Otevřít stránku: Zatesneni">Zatesneni</a><br class="only-pc" />
+<a href="14furnac.html" title="Otevřít stránku: Ohniště">Ohniště</a><br class="only-pc" />
+<a href="15vent.html" title="Otevřít stránku: Ventilator">Ventilator</a><br class="only-pc" />
+<a href="16door.html" title="Otevřít stránku: Dveře">Dveře</a><br class="only-pc" />
+<a href="17exper.html" title="Otevřít stránku: Testy">Testy</a><br class="only-pc" />
+<a href="Pump.html" title="Otevřít stránku: Plocha plungeru je 3.1416 * 0.3^2 = 0.283 cm2">Plocha plungeru je 3.1416 * 0.3^2 = 0.283 cm2</a><br class="only-pc" />
+</div><!-- END-OF id="article-index" -->
+
+
+<!-- BOTTOM LOGO -->
+<!--
+<table id="bottom-logo"><tr>
+<td align="center"><div id="copyright">
+Copyright &copy; 2000-2014 Vaclav Blaha<br />All rights reserved<br />
+<a href="mailto:vaclavblaha@yahoo.com" id="design-by"
+title="Send mail to Vaclav Blaha">Responsible Web Site<br />Design by Vaclav Blaha</a></div></td></tr></table>
+<div class="cleaner"></div>
+-->
+
+
+<!-- TOP LEFT TOP LOGO -->
+<!-- div id="logo"><img src="../../icons/krios.png" id="logo_image"></div -->
+<!-- TOP LEFT LOGO "KRIOS EMPIRE" -->
+<div id="logo-plate"><img src="../../../bkg/logo_plt.png" alt="Podklad loga" /></div>
+<div id="logo"><img src="../../../icons/logo.gif" alt="Logo Krios Empire" id="logo_image" /></div>
+
+
+<!-- VALIDATION -->
+<!--
+<a href="http://validator.w3.org/check/referer" target="_blank">
+<img src="../../icons/valxhtml.png" id="validation_xhtml" title="Valid XHTML 1.0 !"
+alt="[ Valid XHTML ]" /></a>
+<a href="http://jigsaw.w3.org/css-validator/check/referer/" target="_blank">
+<img src="../../icons/valcss.png" id="validation_css2" title="Valid CSS !"
+alt="[ Valid CSS ]" /></a></div>
+
+
+<div id="tests"><p>Programmed in HTLM5 and CSS3 under LINUX &reg; Fedora Core 14 Operating System<br />Tested under: LINUX &reg; and WINDOWS &reg; Operating Systems and Internet Viewer: Google Chrome, Mozilla, Opera, Konqueror and Microsoft Internet Explorer for Windows</p></div>
+-->
+
+
+<!-- BOTTOM LOGO -->
+<!-- =========== -->
+<!-- table id="bottom_logo"><tr>
+<td align="center" -->
+<!-- div id="bottom_logo" -->
+<div id="copyright">
+Copyright &copy; Václav&nbsp;Bláha<br />2000-2018<br />All rights reserved<br />
+Responsive Web&nbsp;Design: <br class="only-tablet-and-smartphone" /><a href="mailto:krios@volny.cz" class="design-by" title="Send mail to ...">Václav&nbsp;Bláha</a></div><!-- /div --><!-- /td></tr></table -->
+<div class="cleaner"></div>
+
+
+<!-- VALIDATION -->
+<!-- ========== -->
+<a href="http://validator.w3.org/check/referer" target="_blank">
+<img src="../../../icons/valxhtml.png" id="validation_xhtml" title="Valid XHTML 1.0 !"
+alt="[ Valid XHTML ]" /></a>
+<a href="http://jigsaw.w3.org/css-validator/check/referer/" target="_blank">
+<img src="../../../icons/valcss.png" id="validation_css2" title="Valid CSS !"
+alt="[ Valid CSS ]" /></a>
+<div class="cleaner"></div>
+
+
+<hr />
+
+
+<div id="tests">
+<p><span class="headline">Programmed in:</span><br />HTLM5 and CSS3 under LINUX &reg; Xubuntu Operating System as&nbsp;<a href="http://en.wikipedia.org/wiki/Responsive_web_design" style="external" target="_blank">Responsive&nbsp;Web&nbsp;Design</a> (RWD).</p>
+<p><span class="headline">Tested under:</span><br />LINUX &reg; and&nbsp;WINDOWS &reg; Operating Systems and&nbsp;Internet Viewers: Google Chrome, Mozilla, Opera, Konqueror and&nbsp;Microsoft Internet Explorer for&nbsp;Windows</p>
+</div>
+
+
+</body>
+</html>

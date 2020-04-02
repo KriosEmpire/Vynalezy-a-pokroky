@@ -1,0 +1,594 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="cs-CZ">
+
+<head>
+<title>
+L'Automoteur - Vynálezy&nbsp;a&nbsp;pokroky - Krios Empire</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Index - Krios Empire - robot.cholerik.cz</title>
+<meta name="author" content="Dipl. Ing. Václav Bláha (www.robotik.cholerik.cz)" />
+<meta name="copyright" content="Dipl. Ing. Václav Bláha (www.robotik.cholerik.cz)" />
+<meta content="Václav Bláha, vývoj sw, programování, počítačová věda, umělá inteligence, kybernetika, statistika, robot, robotika, robotik, elektronika, válečná loď, válečné lodě, loďstvo, dělový člun, kolumbiáda, občanská válka, modely lodí, válečná hra, Naumachia, Krios, pára, parní stroj, ekcentr, parní kotel, programming, computer science, artificial intelligence, cybernetics, statistics, robot, robotic, robotics, electronics, ship, warship, navy, gunboat, columbiad, civil war, ship model, warship model, war game, steam, steam machine, steam engine, eccenter, steam boiler" name="keywords" />
+<link rel="shortcut icon" href="../../../favicon.ico" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<!-- link rel="shortcut icon" href="icons/favicon/robot_face01.ico" / -->
+<link rel="shortcut icon" href="icons/lin.gif" />
+
+<!-- ALPHABET -->
+<style id="gunplay" type="text/css">@font-face{font-family:"gunplay";src:url('gunplay.ttf');}</style>
+<style id="gunplay3" type="text/css">@font-face{font-family:"gunplay3";src:url('gunplay3.ttf');}</style>
+<style id="KAMIKZOM" type="text/css">@font-face{font-family:"KAMIKZOM";src:url('KAMIKZOM.ttf');}</style>
+<!-- style id="rexlia-free" type="text/css">@font-face{font-family:"rexlia_free";src:url('rexlia_free.ttf');}</style -->
+<style id="Note_this" type="text/css">@font-face{font-family:"Note_this";src:url('Note_this.ttf');}</style>
+
+<!-- BASIC STYLES -->
+<link rel="stylesheet" href="../../../style/buttons.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../style/normalize.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../style/style.css" type="text/css" media="screen" />
+<link rel="StyleSheet" href="../../../style/logo.css" type="text/css" media="screen" />
+<link rel="StyleSheet" href="../../../style/video-control.css" type="text/css" media="screen" />
+
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+
+<!-- SCRIPTS -->
+<script src="../../../scripts/popup.js" type="text/javascript"></script>
+<!-- script src="scripts/say_it.js" type="text/javascript"></script>
+<script src="scripts/countdown.js" type="text/javascript"></script>
+<script src="scripts/canvas.js" type="text/javascript"></script>
+<script src="scripts/code.js" type="text/javascript" language="JavaScript"></script -->
+
+<!-- link rel="stylesheet" media="all" href="../../scripts/aux/jquery.lightbox-0.5.css" type="text/css" />
+<script type="text/javascript" src="../../scripts/aux/modernizr-2.6.1.full.js"></script>
+<script type="text/javascript" src="../../scripts/aux/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../../scripts/aux/jquery.easing.1.2.js"></script>
+<script type="text/javascript" src="../../scripts/aux/jquery.nivo.slider.js"></script>
+<script type="text/javascript" src="../../scripts/aux/kendo/kendo.web.min.js"></script>
+<script type="text/javascript" src="../../scripts/aux/jquery.lightbox-0.5.js"></script>
+<script type="text/javascript" src="../../scripts/aux/tools.js"></script -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+<script type="text/javascript">
+	$(function() {
+		var pull 		= $('#pull');
+			menu 		= $('nav ul');
+			submenu 	= $('nav ul li ul');	/* MAIN SUBMENU */
+			logo 		= $('#logo');			/* LOGO */
+			leftMenu	= $('#article-index');	/* LEFT MENU */
+			menuHeight	= menu.height();
+
+		$(pull).on('click', function(e) {
+			e.preventDefault();
+			menu.slideToggle();
+			submenu.hide();						/* HIDE MAIN SUBMENU !!! */
+			logo.hide();						/* HIDE LOGO !!! */
+			leftMenu.hide();					/* HIDE LEFT MENU !!! */
+		});
+
+		$(window).resize(function(){
+       		var w = $(window).width();
+       		if(w > 320 && menu.is(':hidden')) {
+       			menu.removeAttr('style');
+				logo.hide();					/* HIDE LOGO !!! */
+				leftMenu.hide();				/* HIDE LEFT MENU !!! */
+       		}
+   		});
+	});
+</script>
+
+
+<!-- VIDEO FOR ANDROID -->
+<!--
+<script type="text/javascript">
+	var video = document.getElementById('video');
+	video.addEventListener('click',function(){
+		video.play();
+	},false);
+</script>
+-->
+
+<!-- PLAYER -->
+<link href="skin/blue.monday/jplayer.blue.monday.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+
+	$("#jquery_jplayer_1").jPlayer({
+		ready: function (event) {
+			$(this).jPlayer("setMedia", {
+//				mp3:"../../../music/marches/krios/boudin.mp3",
+				mp3:"http://robot.cholerik.cz/krios/music/marches/krios/boudin.mp3",
+			});
+		},
+		swfPath: "js",
+//		supplied: "m4a, oga, mp3",
+		supplied: "mp3",
+		wmode: "window"
+	});
+});
+//]]>
+</script>
+
+
+<!-- TITULKY - VIDEOSUB -->
+<script src="../../../scripts/videosub.js" type="text/javascript"></script>
+
+
+<!-- TITULKY - LEANBACKPLAYER -->
+<link rel="stylesheet" media="screen" type="text/css" href="../../../scripts/css.player/leanbackPlayer.default.css" />
+<script type="text/javascript" src="../../../scripts/js.player/leanbackPlayer.pack.js?1409676633"></script>
+<script type="text/javascript" src="../../../scripts/js.player/leanbackPlayer.en.js"></script>
+<script type="text/javascript" src="../../../scripts/js.player/leanbackPlayer.de.js"></script>
+<script type="text/javascript" src="../../../scripts/js.player/leanbackPlayer.fr.js"></script>
+<script type="text/javascript" src="../../../scripts/js.player/leanbackPlayer.nl.js"></script>
+<script type="text/javascript" src="../../../scripts/js.player/leanbackPlayer.es.js"></script>
+<script type="text/javascript" src="../../../scripts/js.player/leanbackPlayer.ru.js"></script>
+		
+<script type="text/javascript">
+	/* do: set player options */
+	LBP.options = {
+		showSubtitles: true,		// if there are subtitles, show controls element to change
+		defaultTimerFormat: "PASSED_HOVER_REMAINING",	// default timer format, could be "PASSED_DURATION" (default), "PASSED_REMAINING", "PASSED_HOVER_REMAINING"
+	};
+</script>
+		
+<link rel="stylesheet" media="screen" type="text/css" href="../../../scripts/css.player/leanbackPlayer.default.ext.txtPromo.css" />
+<script type="text/javascript" src="../../../scripts/js.player/leanbackPlayer.ext.txtPromo.pack.js"></script>
+<!-- SYNTAX-HIGHLIGHT -->
+<script type="text/javascript" src="../../../syntax/scripts/shCore.js"></script>
+<script type="text/javascript" src="../../../syntax/scripts/shBrushJScript.js"></script>
+<script type="text/javascript" src="../../../syntax/scripts/shBrushPython.js"></script>
+<link type="text/css" rel="stylesheet" href="../../syntax/styles/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+</head>
+
+
+
+<body id="engineering" class="all">
+
+<!-- LANGUAGES -->
+<!--
+<div id="versions" style="float:left">
+<img src="../../../icons/czech.gif" style="margin-right:2px"><img src="../../../icons/ameng.gif" style="margin-left:2px">
+</div>
+-->
+
+<!-- div id="top-plate" -->
+<div id="name-of-site-with-social-nets">
+
+<!-- SOCIAL-NETS -->
+<div id="social-nets" style="display:none;"><!-- !!!!! -->
+
+<!-- a href="" class="black" title="Přihlásit se na odběr rss" target="_blank" --><img src="../../icons/social-nets/rss.png" alt="Rss Feed" title="Není aktivováno !" /><!-- /a -->
+
+<!-- a href="http://twitter.com/" class="black" title="Sledovat můj twitter" target="_blank" --><img src="../../icons/social-nets/twitter.png" alt="Twitter" title="Není aktivováno !" /><!-- /a -->
+
+<a href="https://www.facebook.com/vaclav.blaha.77" class="black" title="Sledovat můj facebook" target="_blank"><img src="../../icons/social-nets/facebook.png" alt="Facebook" /></a>
+
+<!-- a href="" class="black" title="Sledovat můj digg" target="_blank" --><img src="../../icons/social-nets/digg.png" alt="Digg" title="Není aktivováno !" /><!-- /a -->
+
+<!-- a href="" class="black" title="Sledovat můj reddit" target="_blank" --><img src="../../icons/social-nets/reddit.png" alt="Reddit" title="Není aktivováno !" /><!-- /a -->
+
+<!-- a href="" class="black" title="Sledovat můj youtube kanál" target="_blank" --><img src="../../icons/social-nets/youtube.png" alt="Youtube" title="Není aktivováno !" /><!-- /a -->
+
+</div>
+<!-- END-OF-SOCIAL-NETS -->
+
+
+<!-- NAME-OF-SITE -->
+<a href="../../../index.html" title="Úvodní strana sajtu robotik.cholerik.cz/krios (otevřít v novém okně)" target="_blank"><h1 id="name-of-site" style="font-family:'WoskBlurCE',sans-serif;">robotik.cholerik.cz</h1></a>
+<!-- END-OF NAME-OF-SITE -->
+</div><!-- end of id="name-of-site-with-social-nets" -->
+<div class="cleaner"></div>
+
+
+<!-- -vvv-[ MAIN MENU - HORIZONTAL ]-vvv- /-->
+
+<!-- MAIN MENU -->
+<nav class="clearfix">
+<ul class="clearfix">
+<!--
+<li><a href="../../index.html" title="Úvodní strana: Novinky">Novinky</a>
+<ul class='children'>
+<li><a href="../about/01_pmap.html" title="Mapa stránek">Mapa stránek</a></li>
+<li><a href="../about/02_act.html" title="Archiv akcí">Archiv akcí</a></li>
+</ul></a></li>	
+-->
+<li><a href="#" title="">PRAVIDLA</a>
+<ul class='children'>
+<li><a href="#" title="">Stavba jednotek</a></li>
+<li><a href="#" title="">Stavba pevností</a></li>
+<li><a href="#" title="">Hraní fiktivní</a></li>
+<li><a href="#" title="">Hraní "de facto"</a></li>
+<li><a href="#" title="">Dodatky</a></li>
+<li><a href="#" title="">Uvažované změny</a></li>
+<li><a href="#" title="">Stará Pravidla</a></li>
+</ul></li>
+
+<li><a href="#" title="Robotika">LOĎSTVA</a>
+<ul class='children'>
+<li class="#"><a href="" title="">Arundel</a></li>
+<li class="#"><a href="" title="">Durango</a></li>
+<li class="#"><a href="" title="">Kreuzland</a></li>
+<li class="#"><a href="" title="">Krios</a></li>
+<li class="#"><a href="" title="">Orion</a></li>
+<li class="#"><a href="" title="">Sheenland</a></li>
+<li class="#"><a href="" title="">Zaniklé mocnosti</a></li>
+</ul></li>
+
+<li><a  href="#" title="">HRÁČI</a>
+<ul class='children'>
+<li class=""><a href="" title="">Síň slávy</a></li>
+</ul></li>
+
+<li><a href="#" title="">O KRIOSU</a>
+<ul class='children'>
+<li class=""><a href="" title="">Státní zřízení</a></li>
+<li class=""><a href="" title="">Panovnická rodina</a></li>
+<li class=""><a href="" title="">Vláda</a></li>
+<li class=""><a href="" title="">Slavné osobnosti</a></li>
+<li class=""><a href="" title="">Loďstvo</a></li>
+<li class=""><a href="" title="">Historie</a></li>
+<li class=""><a href="" title="">Mapy</a></li>
+</ul></li>
+
+<li><a href="../_index/index.html" title=""><!-- INDEX -->NEWS</a>
+<ul class='children'>
+<li class=""><a href="../_index/09.html" title="">2009 - 2013</a></li>
+<li class=""><a href="../../../1_html/news/_index/08.html" title="">2008</a></li>
+<li class=""><a href="../../../1_html/news/_index/07.html" title="">2007</a></li>
+<li class=""><a href="../../../1_html/news/_index/06.html" title="">2006</a></li>
+<li class=""><a href="../../../1_html/news/_index/05.html" title="">2005</a></li>
+<li class=""><a href="../../../1_html/news/_index/04.html" title="">2004</a></li>
+<li class=""><a href="../../../1_html/news/_index/03.html" title="">2003</a></li>
+<li class=""><a href="../../../1_html/news/_index/02.html" title="">2002</a></li>
+<li class=""><a href="../../../1_html/news/_index/01.html" title="">2001</a></li>
+<li class=""><a href="../../../1_html/news/_index/00.html" title="">2000</a></li>
+<li class=""><a href="../../../1_html/news/_index/99.html" title="">1999</a></li>
+<li class=""><a href="../../../1_html/news/_index/98.html" title="">1998</a></li>
+<li class=""><a href="../../../1_html/news/_index/older.html" title="">Starší</a></li>
+</ul></a></li>
+
+<li><a href="" title="">LINKY</a>
+<ul class='children'>
+<li class=""><a href="http://german-navy.tripod.com/" target="_blank" title="http://german-navy.tripod.com/ [ Otevřít v novém okně ]">German Navy WWI</a></li>
+<li class=""><a href="http://steelnavy.com" target="_blank" title="steelnavy.com [ Otevřít v novém okně ]">steelnavy.com</a></li>
+<li class=""><a href="http://www.arbeitskreis-historischer-schiffbau.de" target="_blank" title="www.arbeitskreis-historischer-schiffbau.de [ Otevřít v novém okně ]">Stavba mod.hist.lodí</a></li>
+<!-- li class=""><a href="http://xoomer.virgilio.it" target="_blank" title="xoomer.virgilio.it [ Otevřít v novém okně ]">Italští modeláři</a></li>
+</ul></a></li -->
+
+</ul>
+<!-- div class="cleaner"></div -->
+<a href="#" id="pull">MENU</a>
+<!-- div class="cleaner"></div -->
+</nav>
+<!-- END OF MAIN MENU - HORIZONTAL -->
+<div class="cleaner"></div>
+<!-- LEFT BAR -->
+<!-- END OF LEFT BAR -->
+
+
+<!-- MIDDLE SPACE WITH ARTICLE -->
+<!-- div id="middle-space">
+<p style="color:white">ahoj troubo</p -->
+
+<!-- MAIN BAR -->
+<div id="main-bar">
+
+
+<!-- LOKACE CLANKU -->
+<div id="article-location">
+<a href="../../index.html" title="Hlavní strana sajtu">Hlavní strana</a>&nbsp;&gt;&nbsp;<a href="../news/180501vp//01index.html" title="Oddíl">Vynálezy&nbsp;a&nbsp;pokroky</a>&nbsp;&gt;&nbsp;<a href="../news/180501vp//01index.html" title="Tato strana">L'Automoteur</a>
+</div>
+
+
+<div id="article">
+
+
+<!-- HEADLINE SPACE -->
+<div id="headline-space">
+<h1 title=""><img src="../../../flags/krios_sm.gif" id="state" alt="Obrázek: Krioská vlajka" title="Krioská vlajka" style="margin-right:10px" /><span id="date">12. května 2018</span>Vynálezy&nbsp;a&nbsp;pokroky</h1></div>
+<img src="../../../pictures/technics/steam/boiler/vertical/complete/20180508/14.50.09.jpg" id="headline-pict" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/complete/20180508/14.50.09.jpg', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: "title="[ kliknutím zvětšíte ]"style="float:right" />
+<div id="headline" align="center"><h1 id="article-headline">L'Automoteur</h1>
+<h2>Nový stáložárný<br />kotel vytápěný uhlím</h2>
+</div>
+<!-- KONEC NADPISU CLANKU -->
+
+
+<!-- SUBMENU PRO TABLETY A SMARTPHONY -->
+<!-- Generated by getSubmenuForTabletAndSmartphone() in page.py -->
+<div class="cleaner only-tablet-and-smartphone"></div><nav class="clearfix only-tablet-and-smartphone submenu"><ul class="clearfix submenu"><li><a class="submenu" href="01index.html" title="Otevřít stránku: L'Automoteur">L'Automoteur</a></li>
+<li><a class="submenu" href="02bullw1.html" title="Otevřít stránku: Dno kotle">Dno kotle</a></li>
+<li><a class="submenu" href="03bullw2.html" title="Otevřít stránku: Strop ohniště">Strop ohniště</a></li>
+<li><a class="submenu" href="04bunker.html" title="Otevřít stránku: Uhelný bunkr">Uhelný bunkr</a></li>
+<li><a class="submenu" href="05top.html" title="Otevřít stránku: Strop kotle">Strop kotle</a></li>
+<li><a class="submenu" href="06inner.html" title="Otevřít stránku: Plášť ohniště">Plášť ohniště</a></li>
+<li><a class="submenu" href="07outer.html" title="Otevřít stránku: Plášť kotle">Plášť kotle</a></li>
+<li><a class="submenu" href="08float.html" title="Otevřít stránku: Plovak">Plovak</a></li>
+<li><a class="submenu" href="09hole.html" title="Otevřít stránku: Otvor pro dvere">Otvor pro dvere</a></li>
+<li><a class="submenu" href="10pipes.html" title="Otevřít stránku: Trubky">Trubky</a></li>
+<li><a class="submenu" href="11bolts.html" title="Otevřít stránku: Svorníky">Svorníky</a></li>
+<li><a class="submenu" href="12rivets.html" title="Otevřít stránku: Nýtování">Nýtování</a></li>
+<li><a class="submenu" href="13solder.html" title="Otevřít stránku: Zatesneni">Zatesneni</a></li>
+<li><a class="submenu" href="14furnac.html" title="Otevřít stránku: Ohniště">Ohniště</a></li>
+<li><a class="submenu" href="15vent.html" title="Otevřít stránku: Ventilator">Ventilator</a></li>
+<li><a class="submenu" href="16door.html" title="Otevřít stránku: Dveře">Dveře</a></li>
+<li><a class="submenu" href="17poker.html" title="Otevřít stránku: Pohrabáč">Pohrabáč</a></li>
+<li><a class="submenu" href="18wgauge.html" title="Otevřít stránku: Vodoznak">Vodoznak</a></li>
+<li><a class="submenu" href="19exper.html" title="Otevřít stránku: Testy">Testy</a></li>
+<li><a class="submenu" href="20exper.html" title="Otevřít stránku: Testy">Testy</a></li>
+<li><a class="submenu" href="21exper.html" title="Otevřít stránku: Testy">Testy</a></li>
+<li><a class="submenu" href="22end.html" title="Otevřít stránku: Využití">Využití</a></li>
+</ul><a href="#" id="pull">Submenu</a></nav><div class="cleaner only-tablet-and-smartphone"></div><!-- END-OF SUBMENU PRO TABLETY A SMARTPHONY -->
+
+
+<!-- PEREX -->
+<div id="perex"><p>
+Ačkoli lze konstatovat, že experimenty se šnekovým uhelným bunkrem dopadly nad očekávání dobře, je v&nbsp;jakékoli mechanice skryta potencionální nespolehlivost. Ostatně staré pořekadlo praví <i>"v&nbsp;jednoduchosti je krása"</i>. Ideální by bylo, kdyby se uhlí samo sypalo na rošt podle toho jak uhlí na roštu odhořívá. Vzpomeňme například na stáložárná kamna. Vzhledem k&nbsp;tomu, že se předpokládá, že nové projektované paroplachetní bitevní lodi budou vybaveny dvěma až čtyřmi kotli, bylo by vhodné aby kotle byly obklopeny uhelnými bunkry a&nbsp;z&nbsp;nich se uhlí samo sypalo. Z těchto a&nbsp;i&nbsp;řady dalších důvodů se již od června pracovalo na projektu stáložárného kotle vytápěného uhlím.</p></div><!-- of-perex -->
+<!-- -^^^-[ PEREX ]-^^^- -->
+
+
+
+<!-- -vvv-[ TEXT CLANKU ]-vvv- -->
+<div id="news">
+<!-- div id="-NECO-JINEHO-" -->
+
+<!-- START-OF BACKGROUND COLOR FOR GOVERNORS -->
+<div style="background-color:#f3eadb;">
+
+
+<img src="../../../icons/steam/governor.png" style="float:left; margin: 20px 0 0 0px; width:64px">
+<div class="paragraph">
+<h2>Obsah</h2>
+<ol>
+<li>Idea stáložárného kotle, první projekt</li>
+<li>Cylindrický "Automoteur" pana Abela Pifreho</li>
+<li>Výroba pláště kotle</li>
+<li>Výroba bunkru</li>
+<li>Spojovací mezikruží</li>
+<li>Výroba čel kotle</li>
+<li>Příruba čidla výšky hladiny</li>
+<li>Topeniště</li>
+<li>Kónický kruhový rošt</li>
+<li>Nýtování </li>
+<li>Zatěsnění kotle cínovou pastou</li>
+<li>Výroba příruby pro plovákový sensor výšky hladiny</li>
+<li>Výroba přírub pro vodoznak, teplotní čidla a&nbsp;doplňování vody</li>
+<li>Testy ohniště</li>
+<li>Dmychadla axiální a&nbsp;odstředivá</li>
+<li>Testy ohniště s ventilátorem pro Miami</li>
+<li>Výroba horního čela</li>
+<li>Vzduchotěsné dveře otvoru zapalování</li>
+<li>Elektromechanický rotační pohrabáč</li>
+<li>Testy kotle</li>
+<li>Shrnutí</li>
+</ol>
+</div>
+<div class="cleaner"></div>
+
+
+<img src="../../../icons/steam/governor.png" style="float:left; margin: 20px 0 0 0px; width:64px">
+<div class="paragraph">
+<h2>Původní projekt z&nbsp;června 2017</h2>
+</div>
+<div class="paragraph">
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/project/vertic_1/v-023.png" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/project/vertic_1/v-023.png', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px"></div></div>
+Původní projekt z&nbsp;červnaq 2017 vycházel víceméně ze stáložárných kamen které jsme měli v&nbsp;bytě vilky na Barrandově. Pamatuji, že maminka večer kamna pořádně roztopila a&nbsp;naložila a&nbsp;ještě ráno výborně topily. Kamna měla tvar plechové komody. Zásobník,lépe řečeno šachta na uhlí, rošt a&nbsp;ohniště byly vpravo, oheň hořel vodorovně směrem do labyrintu v&nbsp;levé půlce kamen kde předával energii vzduchu v&nbsp;místnosti.</p>
+<p>Uvedené obrázky počítačového 3D modelu navrženého panem Dampf Steambo(a)tem za pomoci <span title="Digital Universal Computer of Empire">DUCE</span>ho v&nbsp;programovacím jazyce POV Ray snad dostatečně demonstrují ideu projektu. Na obrázcích pro názornost chybí vnější plášť kotle.</p>
+<div class="left-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/project/vertic_1/v-029.png" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/project/vertic_1/v-029.png', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px"></div></div>
+<p>Náš projekt předpokládal oválný vertikální kotel, kde v&nbsp;přední půlkulaté části by byl souose umístěn zásobník na uhlí, kruhové ohniště a&nbsp;pod ním popelník. Na rošt se uhlí mělo sypat vloženým plechovým trychtýřem na dně zásobníku nad zapalovacím (tedy horním) otvorem. Jako u&nbsp;všech předchozích krioských kotlů měl i&nbsp;u tohoto kotle vodní prostor obepínat veškeré ohniště, zde pravda nikoli odspodu. Popelník měl obsahovat nádobu na popel která by se vyndavala spodním otvorem. tento otvor by též sloužil jako vstup vzduchu od ventilátoru. Oba otvory měly být opatřeny přírubami. Horní k&nbsp;vzduchotěsnému přišroubování rámu dvířek pro zapalování, spodní pro rám dvířek s otvorem pro rouru přívodu vzduchu od dmychadla. Vnitřní část kotle měla být, jak je to obvyklé i&nbsp;u starších krioských kotlů pájena tvrdou měděnou pájkou, vnější plášť buď taktéž, nebo podobně jako u&nbsp;starších krioských kotlů nýtován měděnými nýty o&nbsp;průměru 2mm a&nbsp;těsněn cínem Sn60Pb40. O&nbsp;tom nebylo rozhodnuto. Plovákový senzor výšky hladiny měl být umístěn v&nbsp;zadní části mezi žárovými trubkami - tedy na úkor jejich počtu.</p>
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/project/ericson/gun-room.jpg" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/project/ericson/gun-room.png', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px">Podhladinové pneumatické dělo</div></div>
+<p>Kotel byl proporcemi i&nbsp;rozměry koncipován tak, aby se vešel do trupu a&nbsp;nástavby předpokládané superrychlé útočné a&nbsp;velejednoduché lodi (a poznamenejme že zcela zapomenuté - ani Ludvík Souček se ve své knize <i>Rakve útočí</i> o&nbsp;ní nezmiňuje, přestože líčí další osudy pana Ericsona po skončení americké občanské války vcelku podrobně), ve své podstatě vlastně obří torpedovky s vysokou jednoduchou nástavbou, pana Ericsona <i>Destroyer</i> z&nbsp;roku 1881 vybavené podhladinovým pneumatickým dynamitovým dělem metajícím štíhlé projektily podobné torpédům - leč bez bez vrtule.</p>
+<div class="left-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/project/ericson/bow.jpg" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/project/ericson/bow.jpg', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px">Pneumatické dělo pod pancéřovou palubou. Šikmé obdélníky jsou pancéřování, kolečka jsou vzduchové vaky. Sice průstřelné, ale jej jich mnoho.</div></div>
+<p>Pro zajímavost uvádíme několik obrázků této typické pozdně ericsonovské lodi. <img src="../../../icons/questmrk.gif" title='Původně jsme chtěli napsat "potrhlosti" :-)'> Na fotografii je vidět pohled do příďové komory s pneumatickým dělem a&nbsp;nádrží stlačeného vzduchu nad ním. Vlevo nahoře je umístěn parní kompresor pro výrobu stlačeného vzduchu. Krioská admiralita zakázala uvolnit takticko-technická data, jakož i&nbsp;celkový pohled a&nbsp;podklady na tuto loď z&nbsp;toho důvodu, že vzhledem k&nbsp;tomu, že jedna nejmenovaná mocnost známá svou zjednodušenou konstrukcí superjednoduchých lodí by mohla toto plavidlo, které stále zůstává jako "emergency projekt" v&nbsp;užším výběru pro budoucí krioské lodní stavby postavit dříve než bychom se stačili rozkoukat.</p>
+</div>
+<div class="cleaner"></div>
+
+
+<img src="../../../icons/steam/governor.png" style="float:left; margin: 20px 0 0 0px; width:64px">
+<div class="paragraph">
+<h2>L'Automoteur pana Pifreho</h2>
+</div>
+<div class="paragraph">
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/project/pifre/boat.png" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/project/pifre/boat.png', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px">Parní člun s l'Automoteurem</div></div>
+<p>Počátkem června objevili krioští archiváři vpravdě gigantická elektronická úložiště (nejen) námořní a&nbsp;parostrojní odborné, vědecké, ale i&nbsp;populární francouzské literatury devatenáctéhpo století. Během několika měsíců jsem postahovali <b>několik set (!)</b> knih často včetně obrazových alb s plány francouzských parních strojů a&nbsp;jejich technologických detailů zhruba z&nbsp;let cca 1820 až 1900. Titulní stránky knih nesou často kulatá a&nbsp;oválná razítka archivů francouzských králů doby restaurace Ludvíka XVIII. a&nbsp;Karla X., archivů občanského krále Ludvíka Filipa (v jeho době psal Alexandre Dumas své slavné romány Tři mušketýry a&nbsp;Hraběte Monte Christa), archivů císaře Napoleona III., nadšence do techniky a&nbsp;vynálezů, za jehož panování dosáhla francouzská průmyslová produkce poloviny britské (tedy 1/4 průmyslové výroby celého světa a&nbsp;byla větší než průmyslová produkce Německa, USA, Ruska, Rakouska a&nbsp;řady dalších států dohromady) a&nbsp;též archivů z&nbsp;počátků třetí francouzské republiky. Pro zajímavost uvádím ukázku plánů normovaného <a href="../../../pictures/technics/steam/boiler/vertical/project/french/900_nhp.jpg" target="_blank">parního kotle pro stroje o&nbsp;900&nbsp;NHP</a> (nominálních koňských sil) francouzského císařského námořnictva. datováno 2.prosince 1857. Podepsáni admirál a&nbsp;ministr - státní sekretář námořnictva a&nbsp;kolonií Hamelin (známý z&nbsp;Krymské války) a&nbsp;šefkonstruktér válečného námořnictva Dupuy de L&ocirc;me (konstruktér první úspěšné plnomořské parní bitevní lodě na světě <a href="https://en.wikipedia.org/wiki/French_battleship_Napol%C3%A9on" target="_blank">Napoleon</a> a&nbsp;později v&nbsp;roce 1858 konstruktér první pancéřové bitevní lodi na světě <a href="https://en.wikipedia.org/wiki/French_ironclad_Gloire" target="_blank">Gloire.</a> a&nbsp;první celoželezné pancéřové bitevní lodi na světě La <a href="https://en.wikipedia.org/wiki/French_ironclad_Couronne" target="_blank">Courone</a>. To konečně vyprovokovalo Anglii ke stavbě své první panceřévé lodi <a href="https://en.wikipedia.org/wiki/HMS_Warrior_(1860)" target="_blank">Warrior</a>, ovšem, jak konstatovala britská admiralita, elegantní Warrior se nehodil do bitevní linie, jak pro svou přílišnou délku a&nbsp;z ní vyplývající velký poloměr zatáčky, tak i&nbsp;proto, že nebyla na rozdíl od francouzské konkurence pancéřována po celé délce čáry ponoru a&nbsp;i dělové baterie byly oproti lodím protivníka pancéřovány jen částečně [1] a&nbsp;[2]. Warrior byl tak svou koncepcí spíše předzvěstí budoucích bitevních křižníků první světové války.</p>
+<div class="left-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/project/pifre/detail.png" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/project/pifre/detail.png', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px">Detailní řez stáložárným kotlem</div></div>
+<p>Jestliže již léta máme k&nbsp;dispozici fotokopie originálních stavebních plánů či jejich derivátů řady britských, francouzských, ruských, amerických, německých i&nbsp;jiných válečných lodí z&nbsp;let cca 1820 až 1905, nyní v&nbsp;mnoha případech máme k&nbsp;dispozici i&nbsp;plány jejich strojů a&nbsp;kotlů.</p>
+<p>Uprostřed prací na projektu výše uvedeného oválného kotle objevili krioští archiváři v&nbsp;knize [... název ...] zajímavý obrázek parního člunu (francouzsky <i>canot a&nbsp;vapeur</i>, anglicky <i>steam launch</i>) s komínem umístěným atypicky nikoli uprostřed obvyklého stojatého kotle, ale po straně. Uprostřed je zásobník na uhlí. Kotel pana Abela Pifreho byl stáložárný, nebylo tedy třeba - jak bylo obvyklé - pravidelně lopatkou přikládat uhlí. Jinak poznamenejme že pan Pifre proslul zejména jako vynálezce a&nbsp;konstruktér prvních parabolických slunečních parních elektráren.</p>
+<p>
+<div class="cleaner"></div>
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/project/pifre/outside.png" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/project/pifre/outside.png', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px">Vnější pohled na stáložárný kotel pana Pifreho</div></div>
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/project/pifre/inside.png" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/pifre/inside.png', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px">Řez stáložárným kotlem a&nbsp;parním strojem pana Pifreho</div></div>
+
+
+</div>
+<div class="cleaner"></div>
+
+
+<img src="../../../icons/steam/governor.png" style="float:left; margin: 20px 0 0 0px; width:64px">
+<div class="paragraph">
+<h2>Projekt ze srpna 2017</h2>
+</div>
+<div class="paragraph">
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/project/vertic_2/v-031.png" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/project/vertic_2/v-031.png', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px"></div></div>
+<p>
+
+
+</p>
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/project/vertic_2/v-032.png" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/project/vertic_2/v-032.png', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px"></div></div>
+
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/project/vertic_2/v-033.png" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/project/vertic_2/v-033.png', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px"></div></div>
+
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/project/vertic_2/v-034.png" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/project/vertic_2/v-034.png', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px"></div></div>
+
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/project/vertic_2/v-035.png" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/project/vertic_2/v-035.png', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px"></div></div>
+
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/project/vertic_2/v-036.png" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/project/vertic_2/v-036.png', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px"></div></div>
+
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/project/vertic_2/v-037.png" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/project/vertic_2/v-037.png', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px"></div></div>
+
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/project/vertic_2/v-038.png" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/project/vertic_2/v-038.png', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px"></div></div>
+
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/project/vertic_2/v-039.png" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/project/vertic_2/v-039.png', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px"></div></div>
+
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/project/vertic_2/v-046.png" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/project/vertic_2/v-046.png', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px"></div></div>
+
+</div>
+<div class="cleaner"></div>
+
+
+<!-- img src="../../../icons/steam/governor.png" style="float:left; margin: 20px 0 0 0px; width:64px">
+<div class="paragraph">
+<h2>Články o&nbsp;vývoji a&nbsp;výrobě kotle "Miami Mk.3"</h2>
+<ol>
+<li>Projekt kotle "Miami Mk.3"</li>
+<li>Výroba kotle"</li>
+<li>Zkoušky kotle"</li>
+<li>Shrnutí</li>
+</ol>
+</div -->
+
+
+</div><!-- END-OF BACKGROUND COLOR FOR GOVERNORS -->
+<div class="cleaner"></div>
+
+
+<div class="division"><hr /></div>
+
+
+<div id="bottom-of-page" style="width:100%;padding:50px 0 50px 0;" align="center">
+<img src="../../../pictures/emblems/vynalezy.png" alt="Obrázek: Emblém krioského technicky zaměřeného časopisu 'Vynálezy a&nbsp;pokroky'" title="Emblém krioského technicky zaměřeného časopisu 'Vynálezy a&nbsp;pokroky'" style="width:320px" />
+</div>
+
+
+<div class="cleaner"></div>
+
+
+<!/div><!-- END OF id="news | monarch | imperial | steam-man" -->
+<!-- -^^^-[ TEXT CLANKU ]-^^^- -->
+<!-- -^^^-[ TEXT CLANKU ]-^^^- -->
+
+
+<!-- /div --><!-- of id="news" -->
+<div class="cleaner"></div>
+<!-- /div -->
+
+
+<!-- ODKAZY -->
+<div id="next-page-of-article"><a href="02bullw1.html"><button class="btn btn-next">Další&nbsp;...</button><span class="no-in-smartphone">Další&nbsp;článek</span></a></div>
+</div><!-- of id="article" -->
+<div id="predecessor-article"><a href="../171231un/index.html"><button class="btn btn-warning">Předch.&nbsp;č.</button><span class="no-in-smartphone">Předchozí&nbsp;časopis</span></a></div><!-- -^^^-[ ODKAZY ]-^^^- -->
+
+
+</div><!-- END-OF id="main-bar" -->
+<!-- END OF MAIN BAR -->
+
+<!-- /div --><!-- END-OF id="middle-space" -->
+<!-- END OF MIDDLE SPACE WITH ARTICLE -->
+
+
+<div class="cleaner"></div>
+
+
+<!-- div class="skyscraperad" style="position:absolute;left:1005px;top:155px;margin:30px 0 0 5px;border:solid 1px #fff;">
+<ul>
+<li><a href="http://robodoupe.cz/" target="_blank">robodoupe.cz</a></li>
+<li><a href="http://forum.robodoupe.cz/" target="_blank">forum.robodoupe.cz</a></li>
+<li><a href="http://www.snailshop.cz/" target="_blank">snailshop.cz</a></li>
+</ul>
+</div -->
+
+
+<div id="article-index"><!-- VLASTNI POSTRANNI MENU -->
+<a href="01index.html" title="Otevřít stránku: L'Automoteur">L'Automoteur</a><br class="only-pc" />
+<a href="02bullw1.html" title="Otevřít stránku: Dno kotle">Dno kotle</a><br class="only-pc" />
+<a href="03bullw2.html" title="Otevřít stránku: Strop ohniště">Strop ohniště</a><br class="only-pc" />
+<a href="04bunker.html" title="Otevřít stránku: Uhelný bunkr">Uhelný bunkr</a><br class="only-pc" />
+<a href="05top.html" title="Otevřít stránku: Strop kotle">Strop kotle</a><br class="only-pc" />
+<a href="06inner.html" title="Otevřít stránku: Plášť ohniště">Plášť ohniště</a><br class="only-pc" />
+<a href="07outer.html" title="Otevřít stránku: Plášť kotle">Plášť kotle</a><br class="only-pc" />
+<a href="08float.html" title="Otevřít stránku: Plovak">Plovak</a><br class="only-pc" />
+<a href="09hole.html" title="Otevřít stránku: Otvor pro dvere">Otvor pro dvere</a><br class="only-pc" />
+<a href="10pipes.html" title="Otevřít stránku: Trubky">Trubky</a><br class="only-pc" />
+<a href="11bolts.html" title="Otevřít stránku: Svorníky">Svorníky</a><br class="only-pc" />
+<a href="12rivets.html" title="Otevřít stránku: Nýtování">Nýtování</a><br class="only-pc" />
+<a href="13solder.html" title="Otevřít stránku: Zatesneni">Zatesneni</a><br class="only-pc" />
+<a href="14furnac.html" title="Otevřít stránku: Ohniště">Ohniště</a><br class="only-pc" />
+<a href="15vent.html" title="Otevřít stránku: Ventilator">Ventilator</a><br class="only-pc" />
+<a href="16door.html" title="Otevřít stránku: Dveře">Dveře</a><br class="only-pc" />
+<a href="17poker.html" title="Otevřít stránku: Pohrabáč">Pohrabáč</a><br class="only-pc" />
+<a href="18wgauge.html" title="Otevřít stránku: Vodoznak">Vodoznak</a><br class="only-pc" />
+<a href="19exper.html" title="Otevřít stránku: Testy">Testy</a><br class="only-pc" />
+<a href="20exper.html" title="Otevřít stránku: Testy">Testy</a><br class="only-pc" />
+<a href="21exper.html" title="Otevřít stránku: Testy">Testy</a><br class="only-pc" />
+<a href="22end.html" title="Otevřít stránku: Využití">Využití</a><br class="only-pc" />
+</div><!-- END-OF id="article-index" -->
+
+
+<!-- BOTTOM LOGO -->
+<!--
+<table id="bottom-logo"><tr>
+<td align="center"><div id="copyright">
+Copyright &copy; 2000-2014 Vaclav Blaha<br />All rights reserved<br />
+<a href="mailto:vaclavblaha@yahoo.com" id="design-by"
+title="Send mail to Vaclav Blaha">Responsible Web Site<br />Design by Vaclav Blaha</a></div></td></tr></table>
+<div class="cleaner"></div>
+-->
+
+
+<!-- TOP LEFT TOP LOGO -->
+<!-- div id="logo"><img src="../../icons/krios.png" id="logo_image"></div -->
+<!-- TOP LEFT LOGO "KRIOS EMPIRE" -->
+<div id="logo-plate"><img src="../../../bkg/logo_plt.png" alt="Podklad loga" /></div>
+<div id="logo"><img src="../../../icons/logo.gif" alt="Logo Krios Empire" id="logo_image" /></div>
+
+
+<!-- VALIDATION -->
+<!--
+<a href="http://validator.w3.org/check/referer" target="_blank">
+<img src="../../icons/valxhtml.png" id="validation_xhtml" title="Valid XHTML 1.0 !"
+alt="[ Valid XHTML ]" /></a>
+<a href="http://jigsaw.w3.org/css-validator/check/referer/" target="_blank">
+<img src="../../icons/valcss.png" id="validation_css2" title="Valid CSS !"
+alt="[ Valid CSS ]" /></a></div>
+
+
+<div id="tests"><p>Programmed in HTLM5 and CSS3 under LINUX &reg; Fedora Core 14 Operating System<br />Tested under: LINUX &reg; and WINDOWS &reg; Operating Systems and Internet Viewer: Google Chrome, Mozilla, Opera, Konqueror and Microsoft Internet Explorer for Windows</p></div>
+-->
+
+
+<!-- BOTTOM LOGO -->
+<!-- =========== -->
+<!-- table id="bottom_logo"><tr>
+<td align="center" -->
+<!-- div id="bottom_logo" -->
+<div id="copyright">
+Copyright &copy; Václav&nbsp;Bláha<br />2000-2018<br />All rights reserved<br />
+Responsive Web&nbsp;Design: <br class="only-tablet-and-smartphone" /><a href="mailto:krios@volny.cz" class="design-by" title="Send mail to ...">Václav&nbsp;Bláha</a></div><!-- /div --><!-- /td></tr></table -->
+<div class="cleaner"></div>
+
+
+<!-- VALIDATION -->
+<!-- ========== -->
+<a href="http://validator.w3.org/check/referer" target="_blank">
+<img src="../../../icons/valxhtml.png" id="validation_xhtml" title="Valid XHTML 1.0 !"
+alt="[ Valid XHTML ]" /></a>
+<a href="http://jigsaw.w3.org/css-validator/check/referer/" target="_blank">
+<img src="../../../icons/valcss.png" id="validation_css2" title="Valid CSS !"
+alt="[ Valid CSS ]" /></a>
+<div class="cleaner"></div>
+
+
+<hr />
+
+
+<div id="tests">
+<p><span class="headline">Programmed in:</span><br />HTLM5 and CSS3 under LINUX &reg; Xubuntu Operating System as&nbsp;<a href="http://en.wikipedia.org/wiki/Responsive_web_design" style="external" target="_blank">Responsive&nbsp;Web&nbsp;Design</a> (RWD).</p>
+<p><span class="headline">Tested under:</span><br />LINUX &reg; and&nbsp;WINDOWS &reg; Operating Systems and&nbsp;Internet Viewers: Google Chrome, Mozilla, Opera, Konqueror and&nbsp;Microsoft Internet Explorer for&nbsp;Windows</p>
+</div>
+
+
+</body>
+</html>
