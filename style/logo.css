@@ -1,0 +1,96 @@
+/* +======================================================================+
+   |                                  CSS FOR RESPONSIVE WEB DESIGN PAGES |
+   |                                                                      |
+   | ROBOTIK.CHOLERIK.CZ - FOOTER AND BOTTOM LOG                          |
+   |                                                                      |
+   +======================================================================+
+   | Copyright: Dipl. Ing. Vaclav Blaha                                   |
+   +----------------------------------------------------------------------+ */
+
+
+/*************/
+/* AUXILIARY */
+/*************/
+.cleaner {
+	clear:both;
+	height:1px;
+	font-size:1px;
+	border:none;
+	margin:0;
+	padding:0;
+	background:transparent;
+}
+#footer {padding:0px;}
+.column-in {margin:0; padding:0.5em 1em;}
+.header_column-in {margin:0; padding:0; /*0.5em 1em;*/}
+
+
+/***************/
+/* BOTTOM LOGO */
+/***************/
+#bottom_of_page {width:100%; margin: 130px 0 50px 0; padding:0;}
+/*#bottom_logo {width:100%; margin:230px 0 20px 0; text-align:center;}*/
+#copyright {
+	width:30%;
+/*	min-width:300px;*//*max*/
+	margin:200px 35% 50px 35%;
+	border-style: 	solid;
+	border-width: 	2px;
+	border-color: 	#ccaabb #eeddbb #ccd7c7 #bb99aa;
+/*	border-color:	#079 #06a #36a #088; */ 
+	background-color:#999;
+	padding:5px;
+	text-align:center;
+	color:#000;/*#fff;*/
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	font-size:11pt;
+	line-height:16pt;
+}
+
+a.design-by {
+/*	color:#666;*/
+	font-family:Arial, Helvetica, sans-serif;
+	font-weight:bold;
+	font-size:inherit;/*15px;*/
+	line-height:16px;
+}
+
+
+/****************************************/
+/* VALIDATION XHTML AND VALIDATION CSS2 */
+/****************************************/
+#validation_xhtml {float:left; margin-left:10px;}
+#validation_css2 {float:right; margin-right:10px;}
+#validation_xhtml, #validation_css2 {
+	width:88px;
+	height:31px;
+	border-style:solid;
+	border-width:0px;
+	padding-bottom:10px;
+}
+
+
+/*********/
+/* TESTS */
+/*********/
+#tests {text-align:left; padding:2%; color:#ccc; font-family:Arial, Helvetica, sans-serif;}
+#tests p .headline {color:#ff0;}
+#tests a {color:#0f0;}
+
+
+
+/* +======================================================================+
+   | TABLET AND SMARTPHONE                                                |
+   +======================================================================+ */
+@media screen and (max-width: 950px) {
+	#copyright {
+		width:80%;
+		margin:200px 10% 50px 10%;
+		font-size:120%;
+		line-height:120%;
+	}
+	a.design-by {font-size:150%; line-height:150%;}
+	#validation_xhtml, #validation_css2 {width:30%; height:20%;}
+	#tests {font-size:120%;}
+}

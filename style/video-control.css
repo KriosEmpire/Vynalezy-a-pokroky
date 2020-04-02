@@ -1,0 +1,9 @@
+div.container {background-color: #ddd; margin: 0 auto 20px; padding: 1px 1px 0; width: 100%;}
+video {width:100%;}
+div.container ul, .controls li { margin: 0; padding: 0; }
+div.container ul { list-style: none; overflow: hidden; padding: 10px 0; width: 100%; }
+.controls li { float: left; }
+.controls li.play_pause { padding-left: 10px; width: 40px; }
+.controls li.time { text-align: center; width: 160px; }
+.controls li.volume { padding-right: 10px; width: 100px; }
+.control { color: red; cursor: pointer; }
