@@ -1,0 +1,468 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="cs-CZ">
+
+<head>
+<title>
+Index - Archive News - Krios Empire</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Index - Krios Empire - robot.cholerik.cz</title>
+<meta name="author" content="Dipl. Ing. Václav Bláha (www.robotik.cholerik.cz)" />
+<meta name="copyright" content="Dipl. Ing. Václav Bláha (www.robotik.cholerik.cz)" />
+<meta content="Václav Bláha, vývoj sw, programování, počítačová věda, umělá inteligence, kybernetika, statistika, robot, robotika, robotik, elektronika, válečná loď, válečné lodě, loďstvo, dělový člun, kolumbiáda, občanská válka, modely lodí, válečná hra, Naumachia, Krios, pára, parní stroj, ekcentr, parní kotel, programming, computer science, artificial intelligence, cybernetics, statistics, robot, robotic, robotics, electronics, ship, warship, navy, gunboat, columbiad, civil war, ship model, warship model, war game, steam, steam machine, steam engine, eccenter, steam boiler" name="keywords" />
+<link rel="shortcut icon" href="../../../favicon.ico" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<!-- link rel="shortcut icon" href="icons/favicon/robot_face01.ico" / -->
+<link rel="shortcut icon" href="icons/lin.gif" />
+
+<!-- ALPHABET -->
+<style id="gunplay" type="text/css">@font-face{font-family:"gunplay";src:url('gunplay.ttf');}</style>
+<style id="gunplay3" type="text/css">@font-face{font-family:"gunplay3";src:url('gunplay3.ttf');}</style>
+<style id="KAMIKZOM" type="text/css">@font-face{font-family:"KAMIKZOM";src:url('KAMIKZOM.ttf');}</style>
+<!-- style id="rexlia-free" type="text/css">@font-face{font-family:"rexlia_free";src:url('rexlia_free.ttf');}</style -->
+<style id="Note_this" type="text/css">@font-face{font-family:"Note_this";src:url('Note_this.ttf');}</style>
+
+<!-- BASIC STYLES -->
+<link rel="stylesheet" href="../../../style/buttons.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../style/normalize.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../style/style.css" type="text/css" media="screen" />
+<link rel="StyleSheet" href="../../../style/logo.css" type="text/css" media="screen" />
+<link rel="StyleSheet" href="../../../style/video-control.css" type="text/css" media="screen" />
+
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+
+<!-- SCRIPTS -->
+<script src="../../../scripts/popup.js" type="text/javascript"></script>
+<!-- script src="scripts/say_it.js" type="text/javascript"></script>
+<script src="scripts/countdown.js" type="text/javascript"></script>
+<script src="scripts/canvas.js" type="text/javascript"></script>
+<script src="scripts/code.js" type="text/javascript" language="JavaScript"></script -->
+
+<!-- link rel="stylesheet" media="all" href="../../scripts/aux/jquery.lightbox-0.5.css" type="text/css" />
+<script type="text/javascript" src="../../scripts/aux/modernizr-2.6.1.full.js"></script>
+<script type="text/javascript" src="../../scripts/aux/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../../scripts/aux/jquery.easing.1.2.js"></script>
+<script type="text/javascript" src="../../scripts/aux/jquery.nivo.slider.js"></script>
+<script type="text/javascript" src="../../scripts/aux/kendo/kendo.web.min.js"></script>
+<script type="text/javascript" src="../../scripts/aux/jquery.lightbox-0.5.js"></script>
+<script type="text/javascript" src="../../scripts/aux/tools.js"></script -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+<script type="text/javascript">
+	$(function() {
+		var pull 		= $('#pull');
+			menu 		= $('nav ul');
+			submenu 	= $('nav ul li ul');	/* MAIN SUBMENU */
+			logo 		= $('#logo');			/* LOGO */
+			leftMenu	= $('#article-index');	/* LEFT MENU */
+			menuHeight	= menu.height();
+
+		$(pull).on('click', function(e) {
+			e.preventDefault();
+			menu.slideToggle();
+			submenu.hide();						/* HIDE MAIN SUBMENU !!! */
+			logo.hide();						/* HIDE LOGO !!! */
+			leftMenu.hide();					/* HIDE LEFT MENU !!! */
+		});
+
+		$(window).resize(function(){
+       		var w = $(window).width();
+       		if(w > 320 && menu.is(':hidden')) {
+       			menu.removeAttr('style');
+				logo.hide();					/* HIDE LOGO !!! */
+				leftMenu.hide();				/* HIDE LEFT MENU !!! */
+       		}
+   		});
+	});
+</script>
+
+
+<!-- VIDEO FOR ANDROID -->
+<!--
+<script type="text/javascript">
+	var video = document.getElementById('video');
+	video.addEventListener('click',function(){
+		video.play();
+	},false);
+</script>
+-->
+
+<!-- PLAYER -->
+<link href="skin/blue.monday/jplayer.blue.monday.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+
+	$("#jquery_jplayer_1").jPlayer({
+		ready: function (event) {
+			$(this).jPlayer("setMedia", {
+//				mp3:"../../../music/marches/krios/boudin.mp3",
+				mp3:"http://robot.cholerik.cz/krios/music/marches/krios/boudin.mp3",
+			});
+		},
+		swfPath: "js",
+//		supplied: "m4a, oga, mp3",
+		supplied: "mp3",
+		wmode: "window"
+	});
+});
+//]]>
+</script>
+<!-- SYNTAX-HIGHLIGHT -->
+<script type="text/javascript" src="../../syntax/scripts/shCore.js"></script>
+<script type="text/javascript" src="../../syntax/scripts/shBrushJScript.js"></script>
+<script type="text/javascript" src="../../syntax/scripts/shBrushPython.js"></script>
+<link type="text/css" rel="stylesheet" href="../../syntax/styles/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+</head>
+
+
+
+<body id="nil">
+
+<!-- LANGUAGES -->
+<!--
+<div id="versions" style="float:left">
+<img src="../../../icons/czech.gif" style="margin-right:2px"><img src="../../../icons/ameng.gif" style="margin-left:2px">
+</div>
+-->
+
+<!-- div id="top-plate" -->
+<div id="name-of-site-with-social-nets">
+
+<!-- SOCIAL-NETS -->
+<div id="social-nets" style="display:none;"><!-- !!!!! -->
+
+<!-- a href="" class="black" title="Přihlásit se na odběr rss" target="_blank" --><img src="../../icons/social-nets/rss.png" alt="Rss Feed" title="Není aktivováno !" /><!-- /a -->
+
+<!-- a href="http://twitter.com/" class="black" title="Sledovat můj twitter" target="_blank" --><img src="../../icons/social-nets/twitter.png" alt="Twitter" title="Není aktivováno !" /><!-- /a -->
+
+<a href="https://www.facebook.com/vaclav.blaha.77" class="black" title="Sledovat můj facebook" target="_blank"><img src="../../icons/social-nets/facebook.png" alt="Facebook" /></a>
+
+<!-- a href="" class="black" title="Sledovat můj digg" target="_blank" --><img src="../../icons/social-nets/digg.png" alt="Digg" title="Není aktivováno !" /><!-- /a -->
+
+<!-- a href="" class="black" title="Sledovat můj reddit" target="_blank" --><img src="../../icons/social-nets/reddit.png" alt="Reddit" title="Není aktivováno !" /><!-- /a -->
+
+<!-- a href="" class="black" title="Sledovat můj youtube kanál" target="_blank" --><img src="../../icons/social-nets/youtube.png" alt="Youtube" title="Není aktivováno !" /><!-- /a -->
+
+</div>
+<!-- END-OF-SOCIAL-NETS -->
+
+
+<!-- NAME-OF-SITE -->
+<a href="../../../index.html" title="Úvodní strana sajtu robot.cholerik.cz/krios (otevřít v novém okně)" target="_blank"><h1 id="name-of-site" style="font-family:'WoskBlurCE',sans-serif;">robot.cholerik.cz</h1></a>
+<!-- END-OF NAME-OF-SITE -->
+</div><!-- end of id="name-of-site-with-social-nets" -->
+<div class="cleaner"></div>
+
+
+<!-- -vvv-[ MAIN MENU - HORIZONTAL ]-vvv- /-->
+
+<!-- MAIN MENU -->
+<nav class="clearfix">
+<ul class="clearfix">
+<!--
+<li><a href="../../index.html" title="Úvodní strana: Novinky">Novinky</a>
+<ul class='children'>
+<li><a href="../about/01_pmap.html" title="Mapa stránek">Mapa stránek</a></li>
+<li><a href="../about/02_act.html" title="Archiv akcí">Archiv akcí</a></li>
+</ul></a></li>	
+-->
+<li><a href="#" title="">PRAVIDLA</a>
+<ul class='children'>
+<li><a href="#" title="">Stavba jednotek</a></li>
+<li><a href="#" title="">Stavba pevností</a></li>
+<li><a href="#" title="">Hraní fiktivní</a></li>
+<li><a href="#" title="">Hraní "de facto"</a></li>
+<li><a href="#" title="">Dodatky</a></li>
+<li><a href="#" title="">Uvažované změny</a></li>
+<li><a href="#" title="">Stará Pravidla</a></li>
+</ul></li>
+
+<li><a href="#" title="Robotika">LOĎSTVA</a>
+<ul class='children'>
+<li class="#"><a href="" title="">Arundel</a></li>
+<li class="#"><a href="" title="">Durango</a></li>
+<li class="#"><a href="" title="">Kreuzland</a></li>
+<li class="#"><a href="" title="">Krioské Impérium</a></li>
+<li class="#"><a href="" title="">Sheenland</a></li>
+<li class="#"><a href="" title="">Zaniklé mocnosti</a></li>
+</ul></li>
+
+<li><a  href="#" title="">HRÁČI</a>
+<ul class='children'>
+<li class=""><a href="" title="">Síň slávy</a></li>
+</ul></li>
+
+<li><a href="#" title="">O KRIOSU</a>
+<ul class='children'>
+<li class=""><a href="" title="">Státní zřízení</a></li>
+<li class=""><a href="" title="">Panovnická rodina</a></li>
+<li class=""><a href="" title="">Vláda</a></li>
+<li class=""><a href="" title="">Slavné osobnosti</a></li>
+<li class=""><a href="" title="">Loďstvo</a></li>
+<li class=""><a href="" title="">Historie</a></li>
+<li class=""><a href="" title="">Mapy</a></li>
+</ul></li>
+
+<li><a href="../_index/index.html" title=""><!-- INDEX -->NEWS</a>
+<ul class='children'>
+<li class=""><a href="../_index/09.html" title="">2009 - 2013</a></li>
+<li class=""><a href="../../../1_html/news/_index/08.html" title="">2008</a></li>
+<li class=""><a href="../../../1_html/news/_index/07.html" title="">2007</a></li>
+<li class=""><a href="../../../1_html/news/_index/06.html" title="">2006</a></li>
+<li class=""><a href="../../../1_html/news/_index/05.html" title="">2005</a></li>
+<li class=""><a href="../../../1_html/news/_index/04.html" title="">2004</a></li>
+<li class=""><a href="../../../1_html/news/_index/03.html" title="">2003</a></li>
+<li class=""><a href="../../../1_html/news/_index/02.html" title="">2002</a></li>
+<li class=""><a href="../../../1_html/news/_index/01.html" title="">2001</a></li>
+<li class=""><a href="../../../1_html/news/_index/00.html" title="">2000</a></li>
+<li class=""><a href="../../../1_html/news/_index/99.html" title="">1999</a></li>
+<li class=""><a href="../../../1_html/news/_index/98.html" title="">1998</a></li>
+<li class=""><a href="../../../1_html/news/_index/older.html" title="">Starší</a></li>
+</ul></a></li>
+
+<li><a href="" title="">LINKY</a>
+<ul class='children'>
+<li class=""><a href="http://german-navy.tripod.com/" target="_blank" title="http://german-navy.tripod.com/ [ Otevřít v novém okně ]">German Navy WWI</a></li>
+<li class=""><a href="http://steelnavy.com" target="_blank" title="steelnavy.com [ Otevřít v novém okně ]">steelnavy.com</a></li>
+<li class=""><a href="http://www.arbeitskreis-historischer-schiffbau.de" target="_blank" title="www.arbeitskreis-historischer-schiffbau.de [ Otevřít v novém okně ]">Stavba mod.hist.lodí</a></li>
+<!-- li class=""><a href="http://xoomer.virgilio.it" target="_blank" title="xoomer.virgilio.it [ Otevřít v novém okně ]">Italští modeláři</a></li>
+</ul></a></li -->
+
+</ul>
+<!-- div class="cleaner"></div -->
+<a href="#" id="pull">MENU</a>
+<!-- div class="cleaner"></div -->
+</nav>
+<!-- END OF MAIN MENU - HORIZONTAL -->
+<div class="cleaner"></div>
+<!-- LEFT BAR -->
+<!-- END OF LEFT BAR -->
+
+
+<!-- MIDDLE SPACE WITH ARTICLE -->
+<!-- div id="middle-space">
+<p style="color:white">ahoj troubo</p -->
+
+<!-- MAIN BAR -->
+<div id="main-bar">
+
+
+<!-- LOKACE CLANKU -->
+<div id="article-location">
+<a href="../../index.html" title="Hlavní strana sajtu">Hlavní strana</a>&nbsp;&gt;&nbsp;<a href="../news/_index/09.html" title="Oddíl">Archive News</a>&nbsp;&gt;&nbsp;<a href="../news/_index/index.html" title="Tato strana">Index</a>
+</div>
+
+
+<div id="article">
+
+
+<!-- HEADLINE SPACE -->
+<div id="headline-space">
+<h1 title=""><span id="date">Poslední aktualizace: Srpen 2014</span>Archive News</h1></div>
+
+<div id="headline" align="center"><h1 id="article-headline">Index novin a zpráv</h1>
+<h2></h2>
+</div>
+<!-- KONEC NADPISU CLANKU -->
+
+
+<!-- SUBMENU PRO TABLETY A SMARTPHONY -->
+<!-- Generated by getSubmenuForTabletAndSmartphone() in page.py -->
+<div class="cleaner only-tablet-and-smartphone"></div><nav class="clearfix only-tablet-and-smartphone submenu"><ul class="clearfix submenu"><li><a class="submenu" href="09.html" title="Otevřít stránku: 2009&nbsp;-&nbsp;2013">2009&nbsp;-&nbsp;2013</a></li>
+<li><a class="submenu" href="index.html" title="Otevřít stránku: Index">Index</a></li>
+</ul><a href="#" id="pull">Submenu</a></nav><div class="cleaner only-tablet-and-smartphone"></div><!-- END-OF SUBMENU PRO TABLETY A SMARTPHONY -->
+
+
+<!-- PEREX -->
+<div id="perex"><p>
+</p></div><!-- of-perex -->
+<!-- -^^^-[ PEREX ]-^^^- -->
+
+
+
+<!-- -vvv-[ TEXT CLANKU ]-vvv- -->
+<div id="news">
+<!-- div id="-NECO-JINEHO-" -->
+
+<div class="paragraph">
+<h2>Dle data:</h2>
+</div>
+<div class="paragraph-index">
+<a href="../../../pages/news/_index/09.html">[&nbsp;2009-2013&nbsp;]</a>
+<a href="../../../1_html/news/_index/08.html">[&nbsp;2008&nbsp;]</a>
+<a href="../../../1_html/news/_index/07.html">[&nbsp;2007&nbsp;]</a>
+<a href="../../../1_html/news/_index/06.html">[&nbsp;2006&nbsp;]</a>
+<a href="../../../1_html/news/_index/05.html">[&nbsp;2005&nbsp;]</a>
+<a href="../../../1_html/news/_index/04.html">[&nbsp;2004&nbsp;]</a>
+<a href="../../../1_html/news/_index/03.html">[&nbsp;2003&nbsp;]</a><br />
+<a href="../../../1_html/news/_index/02.html">[&nbsp;2002&nbsp;]</a>
+<a href="../../../1_html/news/_index/01.html">[&nbsp;2001&nbsp;]</a>
+<a href="../../../1_html/news/_index/00.html">[&nbsp;2000&nbsp;]</a>
+<a href="../../../1_html/news/_index/99.html">[&nbsp;1999&nbsp;]</a>
+<a href="../../../1_html/news/_index/98.html">[&nbsp;1998&nbsp;]</a>
+<a href="../../../1_html/news/_index/older.html">[&nbsp;Starší&nbsp;]</a>
+</div>
+
+
+<div class="paragraph">
+<h2>Dle převažujícího obsahu:</h2>
+</div>
+<div class="paragraph-index">
+<a href="#">[&nbsp;Politika&nbsp;a&nbsp;diplomacie&nbsp;]</a>
+<a href="#">[&nbsp;Válečné&nbsp;lodě&nbsp;]</a>
+<a href="#">[&nbsp;Parní&nbsp;lodě&nbsp;]</a>
+<a href="#">[&nbsp;Technika&nbsp;]</a>
+</div>
+<!-- div class="paragraph-index">
+<a href="politics.html">[&nbsp;Politika&nbsp;a&nbsp;diplomacie&nbsp;]</a>
+<a href="warships.html">[&nbsp;Válečné&nbsp;lodě&nbsp;]</a>
+<a href="steamshp.html">[&nbsp;Parní&nbsp;lodě&nbsp;]</a>
+<a href="technics.html">[&nbsp;Technika&nbsp;]</a>
+</div -->
+
+
+<div class="paragraph">
+<h2>Dle země původu:</h2>
+</div>
+<div class="paragraph-index">
+<a href="#">[&nbsp;Arundel&nbsp;]</a>
+<a href="#">[&nbsp;Alajsko&nbsp;]</a>
+<a href="#">[&nbsp;Cargie&nbsp;]</a>
+<a href="#">[&nbsp;Durango&nbsp;]</a>
+<a href="#">[&nbsp;Krautánie&nbsp;]</a>
+<a href="#">[&nbsp;Kreuzland&nbsp;]</a><br />
+<a href="#">[&nbsp;Krios&nbsp;]</a>
+<a href="#">[&nbsp;Merkurie&nbsp;]</a>
+<a href="#">[&nbsp;Naumachie&nbsp;]</a>
+<a href="#">[&nbsp;Sheenland&nbsp;]</a>
+<a href="#">[&nbsp;Temperland&nbsp;]</a>
+<a href="#">[&nbsp;Unie&nbsp;]</a>
+</div>
+<!-- div class="paragraph-index">
+<a href="arundel.html">[&nbsp;Arundel&nbsp;]</a>
+<a href="alajsko.html">[&nbsp;Alajsko&nbsp;]</a>
+<a href="cargie.html">[&nbsp;Cargie&nbsp;]</a>
+<a href="durango.html">[&nbsp;Durango&nbsp;]</a>
+<a href="krautan.html">[&nbsp;Krautánie&nbsp;]</a>
+<a href="kreuzlnd.html">[&nbsp;Kreuzland&nbsp;]</a><br />
+<a href="krios.html">[&nbsp;Krios&nbsp;]</a>
+<a href="merkur.html">[&nbsp;Merkurie&nbsp;]</a>
+<a href="naumach.html">[&nbsp;Naumachie&nbsp;]</a>
+<a href="sheenlnd.html">[&nbsp;Sheenland&nbsp;]</a>
+<a href="temper.html">[&nbsp;Temperland&nbsp;]</a>
+<a href="unie.html">[&nbsp;Unie&nbsp;]</a>
+</div -->
+
+
+<div class="division">
+<hr />
+</div>
+<!-- -^^^-[ TEXT CLANKU ]-^^^- -->
+
+
+<!-- /div --><!-- of id="news" -->
+<div class="cleaner"></div>
+<!-- /div -->
+
+
+<!-- ODKAZY -->
+<div id="predecessor-page-of-article"><a href="09.html"><button class="btn btn-warning">Předchozí</button><span class="no-in-smartphone">Předchozí&nbsp;článek</span></a></div>
+</div><!-- of id="article" -->
+<!-- -^^^-[ ODKAZY ]-^^^- -->
+
+
+</div><!-- END-OF id="main-bar" -->
+<!-- END OF MAIN BAR -->
+
+<!-- /div --><!-- END-OF id="middle-space" -->
+<!-- END OF MIDDLE SPACE WITH ARTICLE -->
+
+
+<div class="cleaner"></div>
+
+
+<!-- div class="skyscraperad" style="position:absolute;left:1005px;top:155px;margin:30px 0 0 5px;border:solid 1px #fff;">
+<ul>
+<li><a href="http://robodoupe.cz/" target="_blank">robodoupe.cz</a></li>
+<li><a href="http://forum.robodoupe.cz/" target="_blank">forum.robodoupe.cz</a></li>
+<li><a href="http://www.snailshop.cz/" target="_blank">snailshop.cz</a></li>
+</ul>
+</div -->
+
+
+<div id="article-index"><!-- VLASTNI POSTRANNI MENU -->
+<a href="09.html" title="Otevřít stránku: 2009&nbsp;-&nbsp;2013">2009&nbsp;-&nbsp;2013</a><br class="only-pc" />
+<a href="index.html" title="Otevřít stránku: Index">Index</a><br class="only-pc" />
+</div><!-- END-OF id="article-index" -->
+
+
+<!-- BOTTOM LOGO -->
+<!--
+<table id="bottom-logo"><tr>
+<td align="center"><div id="copyright">
+Copyright &copy; 2000-2014 Vaclav Blaha<br />All rights reserved<br />
+<a href="mailto:vaclavblaha@yahoo.com" id="design-by"
+title="Send mail to Vaclav Blaha">Responsible Web Site<br />Design by Vaclav Blaha</a></div></td></tr></table>
+<div class="cleaner"></div>
+-->
+
+
+<!-- TOP LEFT TOP LOGO -->
+<!-- div id="logo"><img src="../../icons/krios.png" id="logo_image"></div -->
+<!-- TOP LEFT LOGO "KRIOS EMPIRE" -->
+<div id="logo-plate"><img src="../../../bkg/logo_plt.png" alt="Podklad loga" /></div>
+<div id="logo"><img src="../../../icons/logo.gif" alt="Logo Krios Empire" id="logo_image" /></div>
+
+
+<!-- VALIDATION -->
+<!--
+<a href="http://validator.w3.org/check/referer" target="_blank">
+<img src="../../icons/valxhtml.png" id="validation_xhtml" title="Valid XHTML 1.0 !"
+alt="[ Valid XHTML ]" /></a>
+<a href="http://jigsaw.w3.org/css-validator/check/referer/" target="_blank">
+<img src="../../icons/valcss.png" id="validation_css2" title="Valid CSS !"
+alt="[ Valid CSS ]" /></a></div>
+
+
+<div id="tests"><p>Programmed in HTLM5 and CSS3 under LINUX &reg; Fedora Core 14 Operating System<br />Tested under: LINUX &reg; and WINDOWS &reg; Operating Systems and Internet Viewer: Google Chrome, Mozilla, Opera, Konqueror and Microsoft Internet Explorer for Windows</p></div>
+-->
+
+
+<!-- BOTTOM LOGO -->
+<!-- =========== -->
+<!-- table id="bottom_logo"><tr>
+<td align="center" -->
+<!-- div id="bottom_logo" -->
+<div id="copyright">
+Copyright &copy; Václav&nbsp;Bláha<br />2000-2014<br />All rights reserved<br />
+Responsive Web&nbsp;Design: <br class="only-tablet-and-smartphone" /><a href="mailto:krios@volny.cz" class="design-by" title="Send mail to ...">Václav&nbsp;Bláha</a></div><!-- /div --><!-- /td></tr></table -->
+<div class="cleaner"></div>
+
+
+<!-- VALIDATION -->
+<!-- ========== -->
+<a href="http://validator.w3.org/check/referer" target="_blank">
+<img src="../../../icons/valxhtml.png" id="validation_xhtml" title="Valid XHTML 1.0 !"
+alt="[ Valid XHTML ]" /></a>
+<a href="http://jigsaw.w3.org/css-validator/check/referer/" target="_blank">
+<img src="../../../icons/valcss.png" id="validation_css2" title="Valid CSS !"
+alt="[ Valid CSS ]" /></a>
+<div class="cleaner"></div>
+
+
+<hr />
+
+
+<div id="tests">
+<p><span class="headline">Programmed in:</span><br />HTLM5 and CSS3 under LINUX &reg; Fedora Core&nbsp;14 Operating System as&nbsp;<a href="http://en.wikipedia.org/wiki/Responsive_web_design" style="external" target="_blank">Responsive&nbsp;Web&nbsp;Design</a> (RWD).</p>
+<p><span class="headline">Tested under:</span><br />LINUX &reg; and&nbsp;WINDOWS &reg; Operating Systems and&nbsp;Internet Viewers: Google Chrome, Mozilla, Opera, Konqueror and&nbsp;Microsoft Internet Explorer for&nbsp;Windows</p>
+</div>
+
+
+</body>
+</html>
