@@ -1,0 +1,706 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" lang="cs-CZ">
+
+<head>
+<title>
+Testy - Vynálezy&nbsp;a&nbsp;pokroky - Krios Empire</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Index - Krios Empire - robot.cholerik.cz</title>
+<meta name="author" content="Dipl. Ing. Václav Bláha (www.robotik.cholerik.cz)" />
+<meta name="copyright" content="Dipl. Ing. Václav Bláha (www.robotik.cholerik.cz)" />
+<meta content="Václav Bláha, vývoj sw, programování, počítačová věda, umělá inteligence, kybernetika, statistika, robot, robotika, robotik, elektronika, válečná loď, válečné lodě, loďstvo, dělový člun, kolumbiáda, občanská válka, modely lodí, válečná hra, Naumachia, Krios, pára, parní stroj, ekcentr, parní kotel, programming, computer science, artificial intelligence, cybernetics, statistics, robot, robotic, robotics, electronics, ship, warship, navy, gunboat, columbiad, civil war, ship model, warship model, war game, steam, steam machine, steam engine, eccenter, steam boiler" name="keywords" />
+<link rel="shortcut icon" href="../../../favicon.ico" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+<!-- link rel="shortcut icon" href="icons/favicon/robot_face01.ico" / -->
+<link rel="shortcut icon" href="icons/lin.gif" />
+
+<!-- ALPHABET -->
+<style id="gunplay" type="text/css">@font-face{font-family:"gunplay";src:url('gunplay.ttf');}</style>
+<style id="gunplay3" type="text/css">@font-face{font-family:"gunplay3";src:url('gunplay3.ttf');}</style>
+<style id="KAMIKZOM" type="text/css">@font-face{font-family:"KAMIKZOM";src:url('KAMIKZOM.ttf');}</style>
+<!-- style id="rexlia-free" type="text/css">@font-face{font-family:"rexlia_free";src:url('rexlia_free.ttf');}</style -->
+<style id="Note_this" type="text/css">@font-face{font-family:"Note_this";src:url('Note_this.ttf');}</style>
+
+<!-- BASIC STYLES -->
+<link rel="stylesheet" href="../../../style/buttons.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../style/normalize.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="../../../style/style.css" type="text/css" media="screen" />
+<link rel="StyleSheet" href="../../../style/logo.css" type="text/css" media="screen" />
+<link rel="StyleSheet" href="../../../style/video-control.css" type="text/css" media="screen" />
+
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+
+<!-- SCRIPTS -->
+<script src="../../../scripts/popup.js" type="text/javascript"></script>
+<!-- script src="scripts/say_it.js" type="text/javascript"></script>
+<script src="scripts/countdown.js" type="text/javascript"></script>
+<script src="scripts/canvas.js" type="text/javascript"></script>
+<script src="scripts/code.js" type="text/javascript" language="JavaScript"></script -->
+
+<!-- link rel="stylesheet" media="all" href="../../scripts/aux/jquery.lightbox-0.5.css" type="text/css" />
+<script type="text/javascript" src="../../scripts/aux/modernizr-2.6.1.full.js"></script>
+<script type="text/javascript" src="../../scripts/aux/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../../scripts/aux/jquery.easing.1.2.js"></script>
+<script type="text/javascript" src="../../scripts/aux/jquery.nivo.slider.js"></script>
+<script type="text/javascript" src="../../scripts/aux/kendo/kendo.web.min.js"></script>
+<script type="text/javascript" src="../../scripts/aux/jquery.lightbox-0.5.js"></script>
+<script type="text/javascript" src="../../scripts/aux/tools.js"></script -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+<script type="text/javascript">
+	$(function() {
+		var pull 		= $('#pull');
+			menu 		= $('nav ul');
+			submenu 	= $('nav ul li ul');	/* MAIN SUBMENU */
+			logo 		= $('#logo');			/* LOGO */
+			leftMenu	= $('#article-index');	/* LEFT MENU */
+			menuHeight	= menu.height();
+
+		$(pull).on('click', function(e) {
+			e.preventDefault();
+			menu.slideToggle();
+			submenu.hide();						/* HIDE MAIN SUBMENU !!! */
+			logo.hide();						/* HIDE LOGO !!! */
+			leftMenu.hide();					/* HIDE LEFT MENU !!! */
+		});
+
+		$(window).resize(function(){
+       		var w = $(window).width();
+       		if(w > 320 && menu.is(':hidden')) {
+       			menu.removeAttr('style');
+				logo.hide();					/* HIDE LOGO !!! */
+				leftMenu.hide();				/* HIDE LEFT MENU !!! */
+       		}
+   		});
+	});
+</script>
+
+
+<!-- VIDEO FOR ANDROID -->
+<!--
+<script type="text/javascript">
+	var video = document.getElementById('video');
+	video.addEventListener('click',function(){
+		video.play();
+	},false);
+</script>
+-->
+
+<!-- PLAYER -->
+<link href="skin/blue.monday/jplayer.blue.monday.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.jplayer.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+
+	$("#jquery_jplayer_1").jPlayer({
+		ready: function (event) {
+			$(this).jPlayer("setMedia", {
+//				mp3:"../../../music/marches/krios/boudin.mp3",
+				mp3:"http://robot.cholerik.cz/krios/music/marches/krios/boudin.mp3",
+			});
+		},
+		swfPath: "js",
+//		supplied: "m4a, oga, mp3",
+		supplied: "mp3",
+		wmode: "window"
+	});
+});
+//]]>
+</script>
+
+
+<!-- TITULKY - VIDEOSUB -->
+<script src="../../../scripts/videosub.js" type="text/javascript"></script>
+
+
+<!-- TITULKY - LEANBACKPLAYER -->
+<link rel="stylesheet" media="screen" type="text/css" href="../../../scripts/css.player/leanbackPlayer.default.css" />
+<script type="text/javascript" src="../../../scripts/js.player/leanbackPlayer.pack.js?1409676633"></script>
+<script type="text/javascript" src="../../../scripts/js.player/leanbackPlayer.en.js"></script>
+<script type="text/javascript" src="../../../scripts/js.player/leanbackPlayer.de.js"></script>
+<script type="text/javascript" src="../../../scripts/js.player/leanbackPlayer.fr.js"></script>
+<script type="text/javascript" src="../../../scripts/js.player/leanbackPlayer.nl.js"></script>
+<script type="text/javascript" src="../../../scripts/js.player/leanbackPlayer.es.js"></script>
+<script type="text/javascript" src="../../../scripts/js.player/leanbackPlayer.ru.js"></script>
+		
+<script type="text/javascript">
+	/* do: set player options */
+	LBP.options = {
+		showSubtitles: true,		// if there are subtitles, show controls element to change
+		defaultTimerFormat: "PASSED_HOVER_REMAINING",	// default timer format, could be "PASSED_DURATION" (default), "PASSED_REMAINING", "PASSED_HOVER_REMAINING"
+	};
+</script>
+		
+<link rel="stylesheet" media="screen" type="text/css" href="../../../scripts/css.player/leanbackPlayer.default.ext.txtPromo.css" />
+<script type="text/javascript" src="../../../scripts/js.player/leanbackPlayer.ext.txtPromo.pack.js"></script>
+<!-- SYNTAX-HIGHLIGHT -->
+<script type="text/javascript" src="../../../syntax/scripts/shCore.js"></script>
+<script type="text/javascript" src="../../../syntax/scripts/shBrushJScript.js"></script>
+<script type="text/javascript" src="../../../syntax/scripts/shBrushPython.js"></script>
+<link type="text/css" rel="stylesheet" href="../../syntax/styles/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+</head>
+
+
+
+<body id="engineering" class="all">
+
+<!-- LANGUAGES -->
+<!--
+<div id="versions" style="float:left">
+<img src="../../../icons/czech.gif" style="margin-right:2px"><img src="../../../icons/ameng.gif" style="margin-left:2px">
+</div>
+-->
+
+<!-- div id="top-plate" -->
+<div id="name-of-site-with-social-nets">
+
+<!-- SOCIAL-NETS -->
+<div id="social-nets" style="display:none;"><!-- !!!!! -->
+
+<!-- a href="" class="black" title="Přihlásit se na odběr rss" target="_blank" --><img src="../../icons/social-nets/rss.png" alt="Rss Feed" title="Není aktivováno !" /><!-- /a -->
+
+<!-- a href="http://twitter.com/" class="black" title="Sledovat můj twitter" target="_blank" --><img src="../../icons/social-nets/twitter.png" alt="Twitter" title="Není aktivováno !" /><!-- /a -->
+
+<a href="https://www.facebook.com/vaclav.blaha.77" class="black" title="Sledovat můj facebook" target="_blank"><img src="../../icons/social-nets/facebook.png" alt="Facebook" /></a>
+
+<!-- a href="" class="black" title="Sledovat můj digg" target="_blank" --><img src="../../icons/social-nets/digg.png" alt="Digg" title="Není aktivováno !" /><!-- /a -->
+
+<!-- a href="" class="black" title="Sledovat můj reddit" target="_blank" --><img src="../../icons/social-nets/reddit.png" alt="Reddit" title="Není aktivováno !" /><!-- /a -->
+
+<!-- a href="" class="black" title="Sledovat můj youtube kanál" target="_blank" --><img src="../../icons/social-nets/youtube.png" alt="Youtube" title="Není aktivováno !" /><!-- /a -->
+
+</div>
+<!-- END-OF-SOCIAL-NETS -->
+
+
+<!-- NAME-OF-SITE -->
+<a href="../../../index.html" title="Úvodní strana sajtu robotik.cholerik.cz/krios (otevřít v novém okně)" target="_blank"><h1 id="name-of-site" style="font-family:'WoskBlurCE',sans-serif;">robotik.cholerik.cz</h1></a>
+<!-- END-OF NAME-OF-SITE -->
+</div><!-- end of id="name-of-site-with-social-nets" -->
+<div class="cleaner"></div>
+
+
+<!-- -vvv-[ MAIN MENU - HORIZONTAL ]-vvv- /-->
+
+<!-- MAIN MENU -->
+<nav class="clearfix">
+<ul class="clearfix">
+<!--
+<li><a href="../../index.html" title="Úvodní strana: Novinky">Novinky</a>
+<ul class='children'>
+<li><a href="../about/01_pmap.html" title="Mapa stránek">Mapa stránek</a></li>
+<li><a href="../about/02_act.html" title="Archiv akcí">Archiv akcí</a></li>
+</ul></a></li>	
+-->
+<li><a href="#" title="">PRAVIDLA</a>
+<ul class='children'>
+<li><a href="#" title="">Stavba jednotek</a></li>
+<li><a href="#" title="">Stavba pevností</a></li>
+<li><a href="#" title="">Hraní fiktivní</a></li>
+<li><a href="#" title="">Hraní "de facto"</a></li>
+<li><a href="#" title="">Dodatky</a></li>
+<li><a href="#" title="">Uvažované změny</a></li>
+<li><a href="#" title="">Stará Pravidla</a></li>
+</ul></li>
+
+<li><a href="#" title="Robotika">LOĎSTVA</a>
+<ul class='children'>
+<li class="#"><a href="" title="">Arundel</a></li>
+<li class="#"><a href="" title="">Durango</a></li>
+<li class="#"><a href="" title="">Kreuzland</a></li>
+<li class="#"><a href="" title="">Krios</a></li>
+<li class="#"><a href="" title="">Orion</a></li>
+<li class="#"><a href="" title="">Sheenland</a></li>
+<li class="#"><a href="" title="">Zaniklé mocnosti</a></li>
+</ul></li>
+
+<li><a  href="#" title="">HRÁČI</a>
+<ul class='children'>
+<li class=""><a href="" title="">Síň slávy</a></li>
+</ul></li>
+
+<li><a href="#" title="">O KRIOSU</a>
+<ul class='children'>
+<li class=""><a href="" title="">Státní zřízení</a></li>
+<li class=""><a href="" title="">Panovnická rodina</a></li>
+<li class=""><a href="" title="">Vláda</a></li>
+<li class=""><a href="" title="">Slavné osobnosti</a></li>
+<li class=""><a href="" title="">Loďstvo</a></li>
+<li class=""><a href="" title="">Historie</a></li>
+<li class=""><a href="" title="">Mapy</a></li>
+</ul></li>
+
+<li><a href="../_index/index.html" title=""><!-- INDEX -->NEWS</a>
+<ul class='children'>
+<li class=""><a href="../_index/09.html" title="">2009 - 2013</a></li>
+<li class=""><a href="../../../1_html/news/_index/08.html" title="">2008</a></li>
+<li class=""><a href="../../../1_html/news/_index/07.html" title="">2007</a></li>
+<li class=""><a href="../../../1_html/news/_index/06.html" title="">2006</a></li>
+<li class=""><a href="../../../1_html/news/_index/05.html" title="">2005</a></li>
+<li class=""><a href="../../../1_html/news/_index/04.html" title="">2004</a></li>
+<li class=""><a href="../../../1_html/news/_index/03.html" title="">2003</a></li>
+<li class=""><a href="../../../1_html/news/_index/02.html" title="">2002</a></li>
+<li class=""><a href="../../../1_html/news/_index/01.html" title="">2001</a></li>
+<li class=""><a href="../../../1_html/news/_index/00.html" title="">2000</a></li>
+<li class=""><a href="../../../1_html/news/_index/99.html" title="">1999</a></li>
+<li class=""><a href="../../../1_html/news/_index/98.html" title="">1998</a></li>
+<li class=""><a href="../../../1_html/news/_index/older.html" title="">Starší</a></li>
+</ul></a></li>
+
+<li><a href="" title="">LINKY</a>
+<ul class='children'>
+<li class=""><a href="http://german-navy.tripod.com/" target="_blank" title="http://german-navy.tripod.com/ [ Otevřít v novém okně ]">German Navy WWI</a></li>
+<li class=""><a href="http://steelnavy.com" target="_blank" title="steelnavy.com [ Otevřít v novém okně ]">steelnavy.com</a></li>
+<li class=""><a href="http://www.arbeitskreis-historischer-schiffbau.de" target="_blank" title="www.arbeitskreis-historischer-schiffbau.de [ Otevřít v novém okně ]">Stavba mod.hist.lodí</a></li>
+<!-- li class=""><a href="http://xoomer.virgilio.it" target="_blank" title="xoomer.virgilio.it [ Otevřít v novém okně ]">Italští modeláři</a></li>
+</ul></a></li -->
+
+</ul>
+<!-- div class="cleaner"></div -->
+<a href="#" id="pull">MENU</a>
+<!-- div class="cleaner"></div -->
+</nav>
+<!-- END OF MAIN MENU - HORIZONTAL -->
+<div class="cleaner"></div>
+<!-- LEFT BAR -->
+<!-- END OF LEFT BAR -->
+
+
+<!-- MIDDLE SPACE WITH ARTICLE -->
+<!-- div id="middle-space">
+<p style="color:white">ahoj troubo</p -->
+
+<!-- MAIN BAR -->
+<div id="main-bar">
+
+
+<!-- LOKACE CLANKU -->
+<div id="article-location">
+<a href="../../index.html" title="Hlavní strana sajtu">Hlavní strana</a>&nbsp;&gt;&nbsp;<a href="../news/180501vp//01index.html" title="Oddíl">Vynálezy&nbsp;a&nbsp;pokroky</a>&nbsp;&gt;&nbsp;<a href="../news/180501vp//21exper.html" title="Tato strana">Testy</a>
+</div>
+
+
+<div id="article">
+
+
+<!-- HEADLINE SPACE -->
+<div id="headline-space">
+<h1 title=""><img src="../../../flags/krios_sm.gif" id="state" alt="Obrázek: Krioská vlajka" title="Krioská vlajka" style="margin-right:10px" /><span id="date">19. května 2018</span>Vynálezy&nbsp;a&nbsp;pokroky</h1></div>
+<img src="../../../pictures/technics/steam/boiler/vertical/tests/20180519/184852.jpg" id="headline-pict" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/tests/20180519/184852.jpg', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: "title="[ kliknutím zvětšíte ]"style="float:right" />
+<div id="headline" align="center"><h1 id="article-headline">L'Automoteur</h1>
+<h2>Test kotle s čerpadlem<br />a&nbsp;vodoznakem</h2>
+</div>
+<!-- KONEC NADPISU CLANKU -->
+
+
+<!-- SUBMENU PRO TABLETY A SMARTPHONY -->
+<!-- Generated by getSubmenuForTabletAndSmartphone() in page.py -->
+<div class="cleaner only-tablet-and-smartphone"></div><nav class="clearfix only-tablet-and-smartphone submenu"><ul class="clearfix submenu"><li><a class="submenu" href="01index.html" title="Otevřít stránku: L'Automoteur">L'Automoteur</a></li>
+<li><a class="submenu" href="02bullw1.html" title="Otevřít stránku: Dno kotle">Dno kotle</a></li>
+<li><a class="submenu" href="03bullw2.html" title="Otevřít stránku: Strop ohniště">Strop ohniště</a></li>
+<li><a class="submenu" href="04bunker.html" title="Otevřít stránku: Uhelný bunkr">Uhelný bunkr</a></li>
+<li><a class="submenu" href="05top.html" title="Otevřít stránku: Strop kotle">Strop kotle</a></li>
+<li><a class="submenu" href="06inner.html" title="Otevřít stránku: Plášť ohniště">Plášť ohniště</a></li>
+<li><a class="submenu" href="07outer.html" title="Otevřít stránku: Plášť kotle">Plášť kotle</a></li>
+<li><a class="submenu" href="08float.html" title="Otevřít stránku: Plovak">Plovak</a></li>
+<li><a class="submenu" href="09hole.html" title="Otevřít stránku: Otvor pro dvere">Otvor pro dvere</a></li>
+<li><a class="submenu" href="10pipes.html" title="Otevřít stránku: Trubky">Trubky</a></li>
+<li><a class="submenu" href="11bolts.html" title="Otevřít stránku: Svorníky">Svorníky</a></li>
+<li><a class="submenu" href="12rivets.html" title="Otevřít stránku: Nýtování">Nýtování</a></li>
+<li><a class="submenu" href="13solder.html" title="Otevřít stránku: Zatesneni">Zatesneni</a></li>
+<li><a class="submenu" href="14furnac.html" title="Otevřít stránku: Ohniště">Ohniště</a></li>
+<li><a class="submenu" href="15vent.html" title="Otevřít stránku: Ventilator">Ventilator</a></li>
+<li><a class="submenu" href="16door.html" title="Otevřít stránku: Dveře">Dveře</a></li>
+<li><a class="submenu" href="17poker.html" title="Otevřít stránku: Pohrabáč">Pohrabáč</a></li>
+<li><a class="submenu" href="18wgauge.html" title="Otevřít stránku: Vodoznak">Vodoznak</a></li>
+<li><a class="submenu" href="19exper.html" title="Otevřít stránku: Testy">Testy</a></li>
+<li><a class="submenu" href="20exper.html" title="Otevřít stránku: Testy">Testy</a></li>
+<li><a class="submenu" href="21exper.html" title="Otevřít stránku: Testy">Testy</a></li>
+<li><a class="submenu" href="22end.html" title="Otevřít stránku: Využití">Využití</a></li>
+</ul><a href="#" id="pull">Submenu</a></nav><div class="cleaner only-tablet-and-smartphone"></div><!-- END-OF SUBMENU PRO TABLETY A SMARTPHONY -->
+
+
+<!-- PEREX -->
+<div id="perex"><p>
+Po mnoha experimentech s kotlem otevřeným volně do atmosféry, při kterých bylo testování hoření hnědého a černého uhlí, jakož i antracitu různé hrubosti na různých kruhových roštech, testována účinnost několika typů interních axiálních ventilátorů a naposledy i radiální odstředivý ventilátor pro Miami a též spotřeba paliva nutného k odpaření daného množství vody, bylo konečně po zatěsnění kotle přistoupeno k testu naostro. Ačkoli kotli dosud chybí motor pohánějící rotační pohrabáč a vodní pumpa s odpovídajícím výkonem, nutno konstatovat že test dopadl na jedničku.</p></div><!-- of-perex -->
+<!-- -^^^-[ PEREX ]-^^^- -->
+
+
+
+<!-- -vvv-[ TEXT CLANKU ]-vvv- -->
+<div id="news">
+<!-- div id="-NECO-JINEHO-" -->
+
+<!-- START-OF BACKGROUND COLOR FOR GOVERNORS -->
+<div style="background-color:#f3eadb;">
+
+
+<img src="../../../icons/steam/governor.png" style="float:left; margin: 20px 0 0 0px; width:64px">
+<div class="paragraph">
+<h2>Příprava testu</h2>
+</div>
+<div class="paragraph">
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/tests/20180519/184820.jpg" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/tests/20180519/184820.jpg', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px">Celkový pohled na testovací polygon,<br />vlevo dole připravené černé uhlí</div></div>
+<p>
+Po návratu delegace krioských pozorovatelů z&nbsp;prostoru polygonu zálivu "Vyžlovka" jež je součástí Jižního (paroplachetního) oceánu, ve kterém se dne 18.5 konala mezinárodní konference o&nbsp;parních strojích a&nbsp;dne 19.5.2018 mezinárodní závody bylo večer přistoupeno k&nbsp;testu kotle s průběžným doplňováním vody.</p>
+
+
+
+</div>
+<div class="cleaner"></div>
+
+
+<img src="../../../icons/steam/governor.png" style="float:left; margin: 20px 0 0 0px; width:64px">
+<div class="paragraph">
+<h2>Průběh testu</h2>
+</div>
+<div class="paragraph">
+<div class="left-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/tests/20180519/184832.jpg" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/tests/20180519/184832.jpg', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px">Spodek vodoznaku s podsvícením, vpravo čerpadlo,<br />vlevo ventilátor a&nbsp;pohon roštu</div></div>
+<p>Na počátku testu byl odstředivý ventilátor vypnutý.</p>
+<pre class="paragraph-code">
+18:58 zážeh hořáku Proxxon
+19:01 ukončení zážehu hořáku Proxxon, uhlí vpředu žhne do tmavoruda
+      spuštěním dolů zavřeny dveře zapalování
+      ventilátor spuštěn na 1/3 maximálního výkonu
+19:10 kouř začíná vycházet z&nbsp;komína
+19:11 voda začíná vařit
+19:12 parní stroj se rozběhl, tlak přes 0.7 atm, později na dorazu manometru 1 atm
+19:40 tlak klesnul na 0.5 atm, spuštěn otočný rošt
+19:42 stroj se zastavuje
+
+</pre>
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/tests/20180519/184843.jpg" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/tests/20180519/1848343jpg', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px">Celkový pohled na testovací polygon</div></div>
+<p>Celková délka tohoto testu od počátku zážehu uhlí až po ukončení hoření byla 47 minut. Voda se začala vařit 11 minut po ukončení zážehu, stroj se rozběhl 12 minut po ukončení zážehu, resp. 13 minut po započetí zážehu.</p>
+<p>Čistá doba chodu stroje byla 30 minut.</p>
+
+
+<pre class="paragraph-simple-table">
+========================================================================================================================
+                                                              od počátku zážehu
+                                     nastavení               voda začíná vařit po    doba varu    doba chodu stroje
+typ ventilátoru                     ventilátoru      palivo       [ minuty ]         [ minuty ]      [ minuty ]
+========================================================================================================================
+                                   1/4 až naplno    HU+ČU+AN          13                 30              -
+------------------------------------------------------------------------------------------------------------------------
+externí vent z&nbsp;počítače
+    dole pod popelníkem                naplno       HU+ČU             15         ventilátor se sáláním pod rošt roztavil
+------------------------------------------------------------------------------------------------------------------------
+interní axiální kovový ventilátor
+             se šikmými lopatkami         1/4       HU+ČU ?           37                 48              -
+------------------------------------------------------------------------------------------------------------------------
+      dtto s prohnutými lopatkami  2/5 až 1/2       HU+ČU             16                 50-55           -
+------------------------------------------------------------------------------------------------------------------------
+Externí odstředivý                        1/4          ČU             14                122              -
+ ventilátor                        1/3 až 1/2          HU              9                 50              -
+ pro Miami zespodu                                     ČU             11                 46              -
+========================================================================================================================
+ 8.5.                                     1/3          HU             13                 30             29
+------------------------------------------------------------------------------------------------------------------------
+19.5.                              1/3 až 2/5          ČU             13                 31             30
+========================================================================================================================
+</pre>
+
+</div>
+<div class="cleaner"></div>
+
+
+<img src="../../../icons/steam/governor.png" style="float:left; margin: 20px 0 0 0px; width:64px">
+<div class="paragraph">
+<h2>Běh stroje při tlaku nad 1 atmosféru</h2>
+</div>
+<div class="paragraph">
+</div>
+<div class="cleaner"></div>
+<img src="../../../icons/steampnk/movie.png" class="paragraph-icon">
+<div class="paragraph">
+<!-- div class="full-size-video-plate" --><!-- class="full-size-pict" -->
+<div class="full-size-video-container">
+
+<!-- VIDEO -->
+<video autobuffer controls onclick="this.play();" poster="../../../video/techn/steam/20180508/_.png" rotate="90"><!-- class="full-size-video" -->
+<source src="../../../video/techn/steam/20180519/191956_640x.mp4"><!-- type="video/mpeg" -->
+<source src="../../../video/techn/steam/20180519/191956.m4v"><!-- iPhone, Android -->
+<source src="../../../video/techn/steam/20180519/191956.webm" type="video/webm" />
+<source src="../../../video/techn/steam/20180519/191956.ogv" type="video/ogv" />
+<!-- source src="../../../video/actions/120726/manev_1.mp4" type="video/mp4" / -->
+<source src="../../../video/techn/steam/20180519/191956.mpg" type="video/mpeg" />
+<source src="../../../video/techn/steam/20180519/191956.mov" type="video/mov" />
+<source src="../../../video/techn/steam/20180519/191956.wmv" type="video/x-ms-wmv" />
+
+<!-- OBJECT -->
+<object name="manevre_2012" type="video/mpeg">
+<!-- style="float:left;width:720px;height:568px;" -->
+<param name="src" value="../../../video/techn/steam/20180519/191956.mp4" />
+<param name="controller" value="true" />
+<param name="autoplay" value="true" />
+<param name="standby" value="Společné kriosko-sheenlandské manévry v&nbsp;létě 2012" />
+<param name="wmode" value="transparent" />
+
+<!-- EMBED -->
+<embed src="../../../video/techn/steam/20180519/191956.mp4" autostart="true" controls>
+<!-- style="width:720px;height:568px" -->
+<noembed><div align="center"><img src="../../../pictures/.jpg"></div>
+<div align="center">You have no codecs for this video.</div></noembed>
+
+</embed></object></video>
+</div><!-- END-OF "full-size-video-container" -->
+<!-- /div -->
+<div class="pict-comment"><!-- style="margin:0; text-align:center; text-indent:0px; color:#036; background-color: #ccc;padding:15px" -->Stařičký krioský čtyřválec z&nbsp;roku 1996 má při tlaku nad 1 atmosféru<br >typický zvuk spalovacího motoru automobilového veterána ve středních otáčkách</div>
+
+<div class="bottom-video-comments">
+<div class="left-video-comment">
+<a href="../../about/troubles/index.html" target="_blank">
+Nepřehrává video <img src="../../../icons/questmrk.gif" alt="Otevřít v&nbsp;novém okně: Problémy s kodeky a&nbsp;jejich řešení..." title="Otevřít v&nbsp;novém okně: Problémy s kodeky a&nbsp;jejich řešení..." /></a></div>
+<div class="center-video-comment" align="center" onclick="alert('Autorská práva:\n\nFilm: Vlastní tvorba\nAutor: Dipl.Ing.Václav Bláha III\nNázev díla: Summer 2012\nAutorská práva: Copyleft (volná)\n\nFormát: mp3\n\nZvuková stopa:\nArchiv zvukaře Václava Bláhy II')">Info <img src="../../../icons/questmrk.gif" alt="Autorská práva..." title="Autorská práva..." /></div>
+<div class="right-video-comment">
+Stáhnout: [<a href="../../../video/actions/120726/manev_1.wmv" target="_blank" title="Stahněte ve formátu pro Windows WMV a&nbsp;pusťte přímo ve svém počitači!"><span class="abbr">wmv</span></a>] [<a href="../../../video/actions/120726/manev_1.mpg" target="_blank" title="Stahněte v&nbsp;univerzálním formátu MPEG a&nbsp;pusťte přímo ve svém počitači!"><span class="abbr">mpg</span></a>] [<a href="../../../video/actions/120726/manev_1.webm" target="_blank" title="Stahněte v&nbsp;internetovém formátu WEBM a&nbsp;pusťte přímo ve svém počitači!"><span class="abbr">webm</span></a>]</div>
+</div><!-- END-OF "bottom-video-comments" -->
+</div><!-- END-OF "paragraph" -->
+<div class="cleaner"></div>
+
+
+
+
+
+<img src="../../../icons/steam/governor.png" style="float:left; margin: 20px 0 0 0px; width:64px">
+<div class="paragraph">
+<h2></h2>
+</div>
+<div class="paragraph">
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/tests/20180519/185107.jpg" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/tests/20180519/185107.jpg', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px">Zauhlování bunkru</div></div>
+
+<p>Vše pracovalo jak má, ale ce 28 minutě jízdy stroje si dozorující vývojový pracovník Mr.Trick na vodoznaku všiml, že hladina vody je velmi, velmi nízko.</p>
+<p>
+...
+</p>
+<p>Při rozborce kotle bylo konstatováno následující: Uvolnilo se cínové zatěsnění v&nbsp;oblasti spojení spodní části uhelného bunkru a&nbsp;sropu ohniště, dále v&nbsp;oblasti spojení horní části uhelného bunkru a&nbsp;stropu kotle a&nbsp;konečně u&nbsp;jednoho horního šroubu svorníku v&nbsp;blízkosti žárové trubky. Zatěsnění žádné žárové trubky nepovolilo, neboť ty jsou do stropu kotle a&nbsp;do stropu ohniště nalisovány a&nbsp;těsnění je jen dodatečné.</p>
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/tests/20180519/185312.jpg" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/tests/20180519/185312.jpg', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px">Plný uhelný bunkr</div></div>
+<p>Co z&nbsp;toho plyne? Tavná teplota cínu Sn97Cu3 byla dosažena jen místně nikoli všeobecně. Kdyby byla dosažena všeobecně, povolilo by těsnění na mnoha místech. Navíc, to by znamenalo, že bylo dosaženo teploty minimálně 220 stupňů což odpovídá tlaku páry ... - a&nbsp;to je zjevně nerealistické.</p>
+<p>Došlo tedy k&nbsp; přehřátí jen několika zatěsněných míst v&nbsp;oblasti průchodu horkých spalin které nebyly chlazeny vodou. Čerpadlo ale celou dobu spolehlivě pracovalo. To znamená, že tlak v&nbsp;kotli byl tak vysoký že ho čerpadlo nemohlo překonat. Při měření tlaku dosaženého čerpadlem jsme se spokojili konstatováním že je schopno vytvořit tůak minimálně 1.5 atm, neboť bylo měřeno na manometru s tímto rozsahem a&nbsp;ručička šla na doraz. Je možné že čerpadlo dokáže vytvořit tlak až okolo 2 atm (viz ...). Bude třeba provést další lepší měření maximálního tlaku dosažitelného čerpadlem.</p>
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/tests/20180519/185345.jpg" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/tests/20180519/185345.jpg', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px">Víko bunkru s&nbsp;měřičem množství paliva</div></div>
+
+<p>To znamená, že tlak v&nbsp;kotli dosáhnul minimálně 1.5 atm (ručička manometru byla na dorazu 1 atm).</p>
+
+<p>20.5. bylo provedeno další měření tlaku dosahovaného použitým zubovým čerpadlem "Škoda 105" na celkem třech dalších manometrech a&nbsp;bylo dosaženo těchto výsledků:</p>
+<ul>
+<li>nic</li>
+<li>2 bary</li>
+<li>158 kPa</li>
+</ul>
+
+<p>Schrneme-li výsledek testů, je možno konstatovat že použitý, do prostoru kotle integrovaný nerezový plovákový snímač výšky hladiny fungoval naprosto spolehlivě. Spolehlivě fungovalo i&nbsp;čerpadlo pro doplňování vody. Po celou dobu testu kdy byl na tlakoměru registrován tlak do výše jedné atmosféry čerpadlo doplňovalo průběžně vodu v&nbsp;několikasekundových intervalech, hladina vody byla tedy na maximu a&nbsp;stroj běžel s konstantním výkonem a&nbsp;otáčkami.</p>
+<p>vyjma závěrubylo dosaženo, aniž by to tlakoměr s rozsahem do jedné atmosfér ukázal tlak páry při odběru stroje bez zátěže, a&nbsp;tedy s maximální spotřebou páry, tlaku nejméně 1.6 atmosféry při různém měnícím se nastavení ventilátoru mezi 1/3 až 2/5 výkonu. To je výsledek více než potěšitelný.</p>
+<p>Spotřeba vody během varu od 19:11 do 19:48, tedy za 37 minut, činila asi 2 litry (odhadováno dle úbytku v&nbsp;průhledném zásobníku).</p>
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/tests/20180519/185409.jpg" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/tests/20180519/185409.jpg', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px">Celkový pohled na testovací polygon</div></div>
+
+<h3>Závěr</h3>
+<pl>
+<li>Na kotel je třeba namontovat tlakoměr s vyšším rozsahem, komise doporučuje rozsah nejméně 4 atmosféry, ale nikoli více než 10 atmosfér.</li>
+<li>Při použití zubového vodního čerpadla "Škoda 105/Škoda 120" a&nbsp;pravděpodobně i&nbsp;"Favorit" je třeba regulovat přívod vzduchu i&nbsp;prohrabávání uhlí otočným pohrabáčem tak, aby tlak páry nepřesahoval 1.2 až 1.4 atmosféry (bude třeba vyzkoušet experimentálně). V&nbsp;případě nutnosti dosahování vyššího tlaku za použití výše zmíněných čerpadel je třeba aby řídící systém nikoli hned, ale po nějaké době dané odvařením ještě bezpečného množství vody (pravděpodobně do polovuny výšky mezi horním stropem ohniště a&nbsp;"plným vodním obsahem", což je běžná výška kdy se voda průběžně vždy za několik vteřin doplňuje, dočerpal vodu a&nbsp;na maximum. Tento režim doplňování vody ale rozkývá celou soustavu a&nbsp;nemusí být příliš vhodný.</li>
+<li>Zahájit připravovaný vývoj velkého plungerového čerpadla konstrukčně vycházejícího z&nbsp;návrhu úspěšného miniaturního krioského plungerového čerpadla Scotia vzor 2017, schopného dosahovat tlaku nejméně 6 atmosfér při průtoku nejméně litr za deset minut.</li>
+</div><!-- END-OF BACKGROUND COLOR FOR GOVERNORS -->
+<div class="cleaner"></div>
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/tests/20180519/185450.jpg" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/tests/20180519/185450.jpg', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px">Celkový pohled na testovací polygon</div></div>
+
+<p>Mnozstvi tepla <b>Q</b> potrebneho k&nbsp;ohrati 0.65 kg vody z&nbsp;teploty 23 stupnu Celsia na teplotu varu vody 116 stupnu Celsia pri tlaku 0.65 atmosfery je</p>
+<pre class="paragraph-code">
+Q = m * c * (t2 - t1)
+  = 0.65 * 4181,8 * (116 - 23) = 252789.81 J ~= 252.8 kJ
+                                             ===========
+</pre>
+<p>Obdobně mnozstvi tepla <b>Q</b> potrebneho k&nbsp;ohrati medeneho kotle o&nbsp;hmotnosti 3.9 kg z&nbsp;teploty 23 stupnu Celsia na teplotu varu vody 116 stupnu Celsia je</p>
+<pre class="paragraph-code">
+                          -1   -1
+Q = 3.9 [kg] * 390 [J * kg  * K&nbsp; ] * 93 [K] = 141453 J ~= 141.5 kJ
+                                                          ========
+</pre>
+<p>Celkem k&nbsp;počátečnímu ohřátí byla tedy treba energie 252.8 + 141.5 = 394.3 kJ</p>
+<p>Kolik jsme mohli spálit uhlí na roztopení kotle? Kdyby nebylo žádných úniků tepla pláštěm do okolí, sáláním pod popelník a&nbsp;úniku tepla kouřovými plyny komínem, tedy soustava by byla zcela izolovaná, potom při výhřevnosti černého uhlí 26000 kJ/kg bychom měli spálit 394.3 / 26000 = 15.2 g uhlí.
+
+
+<p>Během třiceti minut varu vody bylo do předtím plného kotle čerpadlem automaticky průběžně doplněno přibližně 2 litry vody. Tentokrát jsme to přesně neměřili, takže to není příliš přesné číslo, jen odhad z&nbsp;výrazného poklesu hladiny třílitrové nádrže.</p>
+<p>Tlak páry se asi patnáct minut pohyboval od 0.5 do 0.75 atmosfér, pak během asi 5 minut rychle vystoupil na 1 atmosféru (a tam jsme si mysleli že zůstal), ovšem ve skutečnosti ji po dobu těžko odhadnutelnou, snad oněch celých deset minut, snad na poněkud kratší dobu překročil (což jsme netušili) a&nbsp;vzhledem k&nbsp;tomu, že čerpadlo nezvládlo protitlak (čehož jsme si nevšimli), musel být nejméně 1.5 atmosféry.</p>
+<p>Při tlaku 0.75 atm se vaří voda při teplotě přibližně 116 stupňů celsia a&nbsp;1kg vody přemění na páru o&nbsp;objemu 1,0310 m3, při tlaku 1 atm voda vaří při tlaku přibližně 120 stupňů celsia a&nbsp;1kg vody se přemění na páru o&nbsp;objemu 0,8854 m3, a&nbsp;konečně při tlaku 1.5 atm voda vaří při teplotě 127.4 stupně celsia a&nbsp;1 kg vody se změní na páru o&nbsp;objemu 0,7185 m3.</p>
+<p>Pro změnu vody o&nbsp;teplotě 116 stupňů celsia na páru je třeba uvažovat měrné skupenské teplo vody 2257 kJ/kg a&nbsp;pro změnu vody o&nbsp;teplotě 127.4 stupně celsia pak měrné skupenské teplo 2215,7.</p>
+
+<pre class="paragraph-code">
+L  =  m * l       [J]
+ v&nbsp;        v
+</pre>
+<p>Po dosazení</p>
+<pre class="paragraph-code">
+L  =  0.7 * 2215.7 = 1550.99 kJ
+ v&nbsp;                 ===========
+</pre>
+
+<p>Počítejme výhřevnost černého uhlí 26000 kJ/kg. Za dobu hoření jsme spálili as 220 g černého uhlí a&nbsp;uhlí tedy uvolnilo přibližně 5720 kJ.</p>
+
+</div>
+
+
+<img src="../../../icons/steam/governor.png" style="float:left; margin: 20px 0 0 0px; width:64px">
+<div class="paragraph">
+<h2>Zubová čerpadla</h2>
+</div>
+<div class="paragraph">
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/tests/20180519/193429.jpg" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/tests/20180519/193429.jpg', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px">Světlá vodorovná čára zcela nahoře na podsvíceném vodoznaku ukazuje,<br />že kotel má maximální náplň vody</div></div>
+<p>
+
+Před testem byl změřen tlak vyvozovaný čerpadlem ostřikovače čelního skla <i>Škoda 105/120</i> a&nbsp;bylo dosaženo 1.5 atmosfér. V&nbsp;úterý 22.5. bylo zakoupeno další čerpadlo ostřikovače čelního skla, tentokrát typ <i>Favorit</i>. Jedná se o&nbsp;prakticky stejné čerpadlo jako čerpadlo předchozí, jen s tím rozdílem, že deska kryjící a&nbsp;těsnící ozubená kola nemá ohnutý držák do tvaru "L". Toto čerpadlo je bez držáku, neboť u&nbsp;Favorita je (prý) zapuštěno přímo do nádobky ostřikovací kapaliny. Obě čerpadla byla zapojena "do série", tzn. výstup zpětného ventilu prvního čerpadla <i>Škoda 105/120</i> byl připojen na vstup čerpadla <i>Favorit</i>. Jako výstupní zpětný ventil čerpadla <i>Favorit</i> byl použit chromovaný mosazný zpětný ventil od firmy <i>Sadílek</i> za cca 200,-&nbsp;Kč, který je sice mnohonásobně dražší než originální plastový zpětný ventil dodávaný za cca 15,-&nbsp;Kč k&nbsp;oběma čerpadlům, ale je otázka zda by tento plastikový ventil se svou zjevnou subtilní konstrukcí vydržel dvojnásobný tlak kapaliny než čerpadlo běžně vytváří.</p>
+<p>Jako tlakoměr byl tentokrát použit rozměrově poměrně malý tlakoměr s rozsahem do 4 barů, který se nám právě den předtím podařilo sehnat. Při spuštění obou čerpadel v&nbsp;sérii byl vytvořen celkový tlak 3.1 atmosféry, přičemž každé čerpadlo spuštěné samostatně ukázalo na tomto tlakoměru tlak přesně poloviční. Diferenci 0.1 atmosfér oproti sobotnímu měření lze přičíst nepřesnému odečtu u&nbsp;prvního tlakoměru s poměrně větším rozsahem, případně i&nbsp;chybám u&nbsp;jednoho či i&nbsp;u obou tlakoměrů.</p>
+<p>Jak je vidět, naše teorie se potvrdila a&nbsp;vyššího tlaku při stejném průtoku lze dosáhnout spojením více čerpadel za sebou. Je otázkou kolik čerpadel zapojených za sebou vydrží materiál čerpadla posledního v&nbsp;řadě, tedy čerpadla kde je nejyšší tlak. Vzhledem k&nbsp;tomu, že stěna čerpadla je poměrně silná, lze považovat za nejslabší místo výstupní trubičku odlitou z&nbsp;jednoho kusu s tělem čerpadla. Zuby budou i&nbsp;při různých tlacích u&nbsp;všech čerpadel v&nbsp;řadě namáhány stejně - budou totiž namáhány pouhou diferencí tlaků a&nbsp;ta je vždy 1.5 atmosfér. Ovšem tlak na plášť čerpadla i&nbsp;na výstupní trubičky se bude stupňovat. Z&nbsp;vývoje nových krioských pneumatických děl v&nbsp;letech 2013-2015 vyplývá, že použitý systém hadiček a&nbsp;spojek bez jakýchkoli úniků vydrží tlak 8 atmosfér stlačeného CO2, ale tlak jako tlak, nestlačitelnost vody zde nahradí pružnost hadiček a&nbsp;pokud by tato nestačila, není problém mezi stupně přidat větrník, tzn. nádobu se vzduchem. Zde by problém neměl nastat.</p>
+<p>Nevýhodou je poměrně velká energetická spotřeba obou čerpadel. U&nbsp;čerpadla <i>Škoda 105/120</i> byl při 12 V&nbsp;naměřen proud 3.68 A, u&nbsp;čerpadla <i>Favorit</i> při stejném napětí dokonce 4.11 A, při chodu obou čerpadel pak dokonce společný odběr 7.45 A. Že se nejedná o&nbsp;prostý součet předchozích dvou veličin je logické a&nbsp;lze to přičíst spíše k&nbsp;průchodnosti společného vedení od zdroje, než malé "tvrdosti" použitého společného zdroje napětí a&nbsp;proudu, kterým byl zdroj k&nbsp;radiostanicím Samlex 15-20 A, dodaný do Kriosu již před lety v&nbsp;roce 1992 z&nbsp;vlastní prodejny.</p>
+<div class="right-pict-320"><img src="../../../pictures/technics/steam/boiler/vertical/tests/20180519/193702.jpg" class="left-pict-320" onClick="openWindow('../../../pictures/technics/steam/boiler/vertical/tests/20180519/193702.jpg', toolbar='0', menubar='no', status='no', resizable='no')" alt="Obrázek: " title=" (kliknutím zvětšíte)" /><div class="pict-comment" style="text-align:center;text-indent:0px;color:#036;background-color:#ccc;padding:5px">Černé uhlí kouří poměrně málo</div></div>
+<p>Proud sedm a&nbsp;půl ampéru není málo, i&nbsp;když čerpadla beží jen občas, obvykle maximálně po polovinu chodu kotle. Pokud by byl použit systém dvou (či více) čerpadel, museli bycho řešit problém dostečného zdroje proudu. Vzhledem k&nbsp;tomu, že se předpokládá celkový operační čas "pod parou" minimálně dvě hodiny, je zřejmé, že s nějakou obvyklou modelářskou LiPo baterií asi nevystačíme. Ta sice dá velký proud, otázka je ale jak dlouho, nemluvě o&nbsp;ceně takové baterie. Pokud by taková baterie byla použita, museli bychom zvolit baterii o&nbsp;kapacitě okolo 8 Ah.</p>
+<p>U bitevní lodi o&nbsp;výtlaku 5000 až 7000 tun není problém - je lepší vést "aktivní" přítěž ve formě nabitých akumulátorů než "mrtvé" olovo. U&nbsp;malého křižníku či fregaty o&nbsp;výtlaku 1000 až 2000 tun to však již problém být může.</p>
+
+<p>Asi by bylo vhodné zadat krioským strojírnám vývoj vlastního zubového čerpadla.</p>
+
+<p>Jednou z&nbsp;možností je ovšem obětovat část výkonu parního stroje a&nbsp;integrovanou pístovou pumpou průběžně během jeho chodu dočerpávat vodu do kotle. Vše ovšem bude třeba pořádně experimentálně vyzkoušet a&nbsp;následně spočítat pro ten který stroj a&nbsp;kotel.</p>
+
+</div>
+<div class="cleaner"></div>
+
+
+<div class="division"><hr /></div>
+
+
+<div id="bottom-of-page" style="width:100%;padding:50px 0 50px 0;" align="center">
+<img src="../../../pictures/emblems/vynalezy.png" alt="Obrázek: Emblém krioského technicky zaměřeného časopisu 'Vynálezy a&nbsp;pokroky'" title="Emblém krioského technicky zaměřeného časopisu 'Vynálezy a&nbsp;pokroky'" style="width:320px" />
+</div>
+
+
+<div class="cleaner"></div>
+
+
+<!/div><!-- END OF id="news | monarch | imperial | steam-man" -->
+<!-- -^^^-[ TEXT CLANKU ]-^^^- -->
+<!-- -^^^-[ TEXT CLANKU ]-^^^- -->
+
+
+<!-- /div --><!-- of id="news" -->
+<div class="cleaner"></div>
+<!-- /div -->
+
+
+<!-- ODKAZY -->
+<div id="predecessor-page-of-article"><a href="20exper.html"><button class="btn btn-warning">Předchozí</button><span class="no-in-smartphone">Předchozí&nbsp;článek</span></a></div>
+<div id="next-page-of-article"><a href="22end.html"><button class="btn btn-next">Další&nbsp;...</button><span class="no-in-smartphone">Další&nbsp;článek</span></a></div>
+</div><!-- of id="article" -->
+<div id="predecessor-article"><a href="../171231un/index.html"><button class="btn btn-warning">Předch.&nbsp;č.</button><span class="no-in-smartphone">Předchozí&nbsp;časopis</span></a></div><div id="next-article"><a href="../../../1_html/news/_index/index.html"><button class="btn btn-warning">Další&nbsp;čas.</button><span class="no-in-smartphone">Další&nbsp;časopis</span></a></div><!-- -^^^-[ ODKAZY ]-^^^- -->
+
+
+</div><!-- END-OF id="main-bar" -->
+<!-- END OF MAIN BAR -->
+
+<!-- /div --><!-- END-OF id="middle-space" -->
+<!-- END OF MIDDLE SPACE WITH ARTICLE -->
+
+
+<div class="cleaner"></div>
+
+
+<!-- div class="skyscraperad" style="position:absolute;left:1005px;top:155px;margin:30px 0 0 5px;border:solid 1px #fff;">
+<ul>
+<li><a href="http://robodoupe.cz/" target="_blank">robodoupe.cz</a></li>
+<li><a href="http://forum.robodoupe.cz/" target="_blank">forum.robodoupe.cz</a></li>
+<li><a href="http://www.snailshop.cz/" target="_blank">snailshop.cz</a></li>
+</ul>
+</div -->
+
+
+<div id="article-index"><!-- VLASTNI POSTRANNI MENU -->
+<a href="01index.html" title="Otevřít stránku: L'Automoteur">L'Automoteur</a><br class="only-pc" />
+<a href="02bullw1.html" title="Otevřít stránku: Dno kotle">Dno kotle</a><br class="only-pc" />
+<a href="03bullw2.html" title="Otevřít stránku: Strop ohniště">Strop ohniště</a><br class="only-pc" />
+<a href="04bunker.html" title="Otevřít stránku: Uhelný bunkr">Uhelný bunkr</a><br class="only-pc" />
+<a href="05top.html" title="Otevřít stránku: Strop kotle">Strop kotle</a><br class="only-pc" />
+<a href="06inner.html" title="Otevřít stránku: Plášť ohniště">Plášť ohniště</a><br class="only-pc" />
+<a href="07outer.html" title="Otevřít stránku: Plášť kotle">Plášť kotle</a><br class="only-pc" />
+<a href="08float.html" title="Otevřít stránku: Plovak">Plovak</a><br class="only-pc" />
+<a href="09hole.html" title="Otevřít stránku: Otvor pro dvere">Otvor pro dvere</a><br class="only-pc" />
+<a href="10pipes.html" title="Otevřít stránku: Trubky">Trubky</a><br class="only-pc" />
+<a href="11bolts.html" title="Otevřít stránku: Svorníky">Svorníky</a><br class="only-pc" />
+<a href="12rivets.html" title="Otevřít stránku: Nýtování">Nýtování</a><br class="only-pc" />
+<a href="13solder.html" title="Otevřít stránku: Zatesneni">Zatesneni</a><br class="only-pc" />
+<a href="14furnac.html" title="Otevřít stránku: Ohniště">Ohniště</a><br class="only-pc" />
+<a href="15vent.html" title="Otevřít stránku: Ventilator">Ventilator</a><br class="only-pc" />
+<a href="16door.html" title="Otevřít stránku: Dveře">Dveře</a><br class="only-pc" />
+<a href="17poker.html" title="Otevřít stránku: Pohrabáč">Pohrabáč</a><br class="only-pc" />
+<a href="18wgauge.html" title="Otevřít stránku: Vodoznak">Vodoznak</a><br class="only-pc" />
+<a href="19exper.html" title="Otevřít stránku: Testy">Testy</a><br class="only-pc" />
+<a href="20exper.html" title="Otevřít stránku: Testy">Testy</a><br class="only-pc" />
+<a href="21exper.html" title="Otevřít stránku: Testy">Testy</a><br class="only-pc" />
+<a href="22end.html" title="Otevřít stránku: Využití">Využití</a><br class="only-pc" />
+</div><!-- END-OF id="article-index" -->
+
+
+<!-- BOTTOM LOGO -->
+<!--
+<table id="bottom-logo"><tr>
+<td align="center"><div id="copyright">
+Copyright &copy; 2000-2014 Vaclav Blaha<br />All rights reserved<br />
+<a href="mailto:vaclavblaha@yahoo.com" id="design-by"
+title="Send mail to Vaclav Blaha">Responsible Web Site<br />Design by Vaclav Blaha</a></div></td></tr></table>
+<div class="cleaner"></div>
+-->
+
+
+<!-- TOP LEFT TOP LOGO -->
+<!-- div id="logo"><img src="../../icons/krios.png" id="logo_image"></div -->
+<!-- TOP LEFT LOGO "KRIOS EMPIRE" -->
+<div id="logo-plate"><img src="../../../bkg/logo_plt.png" alt="Podklad loga" /></div>
+<div id="logo"><img src="../../../icons/logo.gif" alt="Logo Krios Empire" id="logo_image" /></div>
+
+
+<!-- VALIDATION -->
+<!--
+<a href="http://validator.w3.org/check/referer" target="_blank">
+<img src="../../icons/valxhtml.png" id="validation_xhtml" title="Valid XHTML 1.0 !"
+alt="[ Valid XHTML ]" /></a>
+<a href="http://jigsaw.w3.org/css-validator/check/referer/" target="_blank">
+<img src="../../icons/valcss.png" id="validation_css2" title="Valid CSS !"
+alt="[ Valid CSS ]" /></a></div>
+
+
+<div id="tests"><p>Programmed in HTLM5 and CSS3 under LINUX &reg; Fedora Core 14 Operating System<br />Tested under: LINUX &reg; and WINDOWS &reg; Operating Systems and Internet Viewer: Google Chrome, Mozilla, Opera, Konqueror and Microsoft Internet Explorer for Windows</p></div>
+-->
+
+
+<!-- BOTTOM LOGO -->
+<!-- =========== -->
+<!-- table id="bottom_logo"><tr>
+<td align="center" -->
+<!-- div id="bottom_logo" -->
+<div id="copyright">
+Copyright &copy; Václav&nbsp;Bláha<br />2000-2018<br />All rights reserved<br />
+Responsive Web&nbsp;Design: <br class="only-tablet-and-smartphone" /><a href="mailto:krios@volny.cz" class="design-by" title="Send mail to ...">Václav&nbsp;Bláha</a></div><!-- /div --><!-- /td></tr></table -->
+<div class="cleaner"></div>
+
+
+<!-- VALIDATION -->
+<!-- ========== -->
+<a href="http://validator.w3.org/check/referer" target="_blank">
+<img src="../../../icons/valxhtml.png" id="validation_xhtml" title="Valid XHTML 1.0 !"
+alt="[ Valid XHTML ]" /></a>
+<a href="http://jigsaw.w3.org/css-validator/check/referer/" target="_blank">
+<img src="../../../icons/valcss.png" id="validation_css2" title="Valid CSS !"
+alt="[ Valid CSS ]" /></a>
+<div class="cleaner"></div>
+
+
+<hr />
+
+
+<div id="tests">
+<p><span class="headline">Programmed in:</span><br />HTLM5 and CSS3 under LINUX &reg; Xubuntu Operating System as&nbsp;<a href="http://en.wikipedia.org/wiki/Responsive_web_design" style="external" target="_blank">Responsive&nbsp;Web&nbsp;Design</a> (RWD).</p>
+<p><span class="headline">Tested under:</span><br />LINUX &reg; and&nbsp;WINDOWS &reg; Operating Systems and&nbsp;Internet Viewers: Google Chrome, Mozilla, Opera, Konqueror and&nbsp;Microsoft Internet Explorer for&nbsp;Windows</p>
+</div>
+
+
+</body>
+</html>
