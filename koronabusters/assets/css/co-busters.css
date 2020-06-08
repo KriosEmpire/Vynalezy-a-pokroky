@@ -5,7 +5,7 @@ h3 { color: #060; text-shadow:#666 2px 2px 2px; }
 .co-upper-text { text-transform: uppercase; font-weight: bold; color: #030; text-shadow:#396 1px 1px 2px; }
 .long-text p { text-align: justify; font-size: 14pt; }
 
-.co-icon { float: left; margin: 5pt 10pt 5pt 0; width:48px; }
+.co-icon { float: left; margin: 5pt 10pt 5pt 0; width:48px; display:none; }
 .img-right { float: right; margin:0 0 30px 20px; width:320px; }
 .img-left { float: left; }
 
