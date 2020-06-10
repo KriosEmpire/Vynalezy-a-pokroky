@@ -30,6 +30,9 @@ table#song { float: left; margin-right: 15px; font-weight: bold; }
 #our-text { color: #cfc; background-color: #696; padding: 15px; }
 #orig-text { color: #ccf; background-color: #669; padding: 15px; }
 
+.hsf-warning { color: #f00; }
+.hsf-discount { color: #b00; font-weight: bold; }
+a:hover.hsf-discount { color: #d00; font-weight: bold; }
 
 .co-note { background-color: #600; color: #fff; font-weight: bold; }/*display:none;*/
 .co-dupl { background-color: #def; }}/*display:none;*/
