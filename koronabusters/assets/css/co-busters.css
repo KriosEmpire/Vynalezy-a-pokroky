@@ -37,7 +37,7 @@ table#song { float: left; margin-right: 15px; font-weight: bold; }
 .hsf-discount { color: #b00; font-weight: bold; }
 a:hover.hsf-discount { color: #d00; font-weight: bold; }
 
-.co-back { padding: 5pt; background-color: #669; color: white; }
+.co-back a { float: right; padding: 5pt; background-color: #693; color: white; font-weight: bold; }
 
 /* debug */
 .co-note { background-color: #600; color: #fff; font-weight: bold; }/*display:none;*/
